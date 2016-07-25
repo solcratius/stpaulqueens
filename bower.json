@@ -1,0 +1,23 @@
+{
+  "name": "app",
+  "version": "0.0.0",
+  "authors": [
+    "JAMES SOL <solcratius@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~3.1.0",
+    "angular": "~1.5.8"
+  },
+  "devDependencies": {
+    "breakpoint-sass": "~2.7.0",
+    "susy": "~2.2.12"
+  }
+}
