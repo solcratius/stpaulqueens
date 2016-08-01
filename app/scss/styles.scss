@@ -14,25 +14,25 @@
 // ***********************************
 @import "variables";
 @import "mixins";
-
+@import "layout";
 
 // ***********************************
 // BASE STYLES
 // ***********************************
 @import "base";
-@import "typography"; // typography and links
-@import "images";
-@import "icons";
+// @import "typography"; // typography and links
+// @import "images";
+@import "sprites";
 
 
 // ***********************************
 // UI ELEMENTS
 // ***********************************
-@import "ui/lists";
-@import "ui/buttons";
-@import "ui/tables";
-@import "ui/forms";
-@import "ui/panels-notifications";
+// @import "ui/lists";
+// @import "ui/buttons";
+// @import "ui/tables";
+// @import "ui/forms";
+// @import "ui/panels-notifications";
 
 // @import "ui/search";
 // @import "ui/pagination";
@@ -45,14 +45,11 @@
 // @import "ui/accordions";
 // @import "ui/breadcrumbs";
 
-
 // ***********************************
 // SECTIONS
-// ***********************************
-// @import "sections/404";
-
-
-// ***********************************
-// Navigation
 // ***********************************	
-@import "navigation";
+@import "sections/404";
+@import "sections/header";
+@import "sections/footer";
+@import "sections/content";
+

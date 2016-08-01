@@ -1,0 +1,154 @@
+
+$spriteSVG: url("../images/sprite.svg");
+$spritePNG: url("../images/sprite.png");
+
+%sprite-div {
+	display: inline-block;
+	background: $spritePNG;
+	background: $spriteSVG,
+    linear-gradient(transparent, transparent);
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+
+.sprite-logo {
+	@extend %sprite-div;
+	position: relative;
+	background-position: 0 0;
+	width: 30px;
+	height: 30px;
+
+	@include breakpoint($tablet-width) {
+	    background-position: -50px 0;
+		width: 40px;
+		height: 40px;
+	}
+}
+
+.sprite-bell {
+	@extend %sprite-div;
+	position: absolute;
+	background-position: 0 -50px;
+	width: 50px;
+	height: 40px;
+
+	&.icon-hover {
+		background-position: 0 -130px;
+	}
+}
+
+.sprite-fish {
+	@extend %sprite-div;
+	position: absolute;
+	background-position: -50px -50px;
+	width: 50px;
+	height: 40px;
+
+	&.icon-hover {
+		background-position: -50px -130px;
+	}
+}
+
+.sprite-grape {
+	@extend %sprite-div;
+	position: absolute;
+	background-position: -100px -50px;
+	width: 50px;
+	height: 40px;
+
+	&.icon-hover {
+		background-position: -100px -130px;
+	}
+}
+
+.sprite-cup {
+	@extend %sprite-div;
+	position: absolute;
+	background-position: -150px -50px;
+	width: 50px;
+	height: 40px;
+
+	&.icon-hover {
+		background-position: -150px -130px;
+	}
+}
+
+.sprite-bread {
+	@extend %sprite-div;
+	position: absolute;
+	background-position: -200px -50px;
+	width: 50px;
+	height: 40px;
+
+	&.icon-hover {
+		background-position: -200px -130px;
+	}
+}
+
+.sprite-album {
+	@extend %sprite-div;
+	position: absolute;
+	background-position: -250px -50px;
+	width: 50px;
+	height: 40px;
+
+	&.icon-hover {
+		background-position: -250px -130px;
+	}
+}
+
+.sprite-search {
+	@extend %sprite-div;
+	position: relative;
+	background-position: 0 -180px;
+	width: 40px;
+	height: 40px;
+}
+
+.sprite-footer-logo {
+	@extend %sprite-div;
+	position: relative;
+	background-position: 0 -320px;
+	width: 100px;
+	height: 100px;
+
+	@include breakpoint($mobile-width) {
+	    background-position: 0 -230px;
+		width: 70px;
+		height: 70px;
+	}
+
+	@include breakpoint($laptop-width) {
+	    background-position: 0 -320px;
+		width: 100px;
+		height: 100px;
+	}
+}
+
+.sprite-top-btn {
+	@extend %sprite-div;
+	position: relative;
+	background-position: -90px -187px;
+	width: 44px;
+	height: 30px;
+}
+
+.sprite-top-btn-black {
+	@extend .sprite-top-btn;
+	background-position: -140px -187px;
+}
+
+.sprite-download {
+	@extend %sprite-div;
+	position: relative;
+	background-position: -300px -190px;
+	width: 14px;
+	height: 14px;
+}
+
+.sprite-download.btn1 {
+	background-position: -325px -190px;
+}

@@ -1,0 +1,52 @@
+// ***********************************
+// PAGE STRUCTURE
+// ***********************************
+
+//Susy Maps
+$susy: (
+	columns: 9,
+	gutters: 1/4,
+	math: fluid,
+	column-width: 40px,
+	output: float,
+	gutter-position: split,//inside,//outside,//after,//
+	flow: ltr,//rtl,//
+	container: auto,
+	container-position: center,
+	last-flow: from,//to,//
+	global-box-sizing: border-box,
+	debug: (
+		image: hide,//show,//
+		color: rgba(#ffffff, .25),
+		output: background,
+		toggle: top right,
+	),
+	use-custom: (
+		background-image: true,
+		background-options: false,
+		box-sizing: true,
+		clearfix: false,
+		rem: true,
+	)
+);
+
+$susy-nav: layout(6 1/2 fluid float outside ltr);
+$susy-footer: layout(12 1 fluid float split ltr);
+$susy-footer-section: layout(6 1/4 fluid float after ltr);
+
+
+.wrapper {
+	@include container($desktop-width);
+	padding: 0 10px;
+	text-align: center;
+
+	@include breakpoint($tablet-width) {
+		padding: 0 20px;
+	}
+	
+	&:after {
+		// content: &quot; &quot;;
+		clear: both; 
+		display: block;
+	}
+}

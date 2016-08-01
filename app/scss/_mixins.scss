@@ -2,19 +2,25 @@
 // MIXINS
 // ***********************************
 
-@mixin transition-all($time:1s){
-	-webkit-transition: all $time ease-in-out;
-	-moz-transition: all $time ease-in-out;
-	-ms-transition: all $time ease-in-out;
-	-o-transition: all $time ease-in-out;
-	transition: all $time ease-in-out;
+@mixin trans($time:.5s, $prop:all, $ease:ease-in-out, $delay:0s) {
+	// -webkit-transition: $prop $time $ease $delay;
+	// -moz-transition: $prop $time $ease $delay;
+	// -ms-transition: $prop $time $ease $delay;
+	// -o-transition: $prop $time $ease $delay;
+	transition: $prop $time $ease $delay;
 }
 
-@mixin fade($time:0.5s){
-	-webkit-transition: background-color $time ease-in-out;
-	-moz-transition: background-color $time ease-in-out;
-	-o-transition: background-color $time ease-in-out;
-	-ms-transition: background-color $time ease-in-out;
-	transition: background-color $time ease-in-out;
-}
+/*
+$width:auto;
+@mixin clearfix($width) {
 
+   @if $width == 'auto' {
+
+    // if width is not passed, or empty do this
+
+   } @else {
+        display: inline-block;
+        width: $width;
+   }
+}
+*/

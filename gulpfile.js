@@ -12,7 +12,8 @@ var config = {
 		'build/scss/', 
 		'build/js/!(*.min.js)',
 		'build/bower.json',
-		'build/bower_components/',
+		// 'build/bower_components/',
+		'build/images/*.ai',
 		'build/maps/'
 	]
 };
@@ -68,10 +69,10 @@ gulp.task('scripts', function() {
 gulp.task('styles', function() {
 	gulp.src('app/scss/styles.scss')	
 	.pipe(sourcemaps.init())
-	.pipe(sass({outputStyle: 'expanded'}))//'compressed'}))
+	.pipe(sass({outputStyle: 'expanded'}))//'compressed'}))//
 	.on('error', errorlog)
 	.pipe(autoprefixer({
-        browsers: ['last 3 versions'],
+        browsers: ['last 3 versions', 'Firefox < 20', 'IE 8', 'IE 9', 'IE 10'],
         cascade: false
     }))
 	.pipe(sourcemaps.write('../maps'))
@@ -116,10 +117,33 @@ gulp.task('build', ['build:copy', 'build:remove']);
 
 
 gulp.task('build:serve', function() {
-	browserSync({
-		server:{
-			baseDir: './build/'
-		}
+	// browserSync({
+	// 	server:{
+	// 		baseDir: './build/'
+	// 	}
+	// });
+	var files = [
+			'**/*.php',
+			'**/*.html',
+			'**/*.{png,jpg,gif}',
+			'**/*.{svg}'
+		];
+	browserSync.init(files, {
+
+		// Read here http://www.browsersync.io/docs/options/
+		proxy: "http://localhost:8888/stpaulqueens/build/",
+
+		// port: 8080,
+
+		// Tunnel the Browsersync server through a random Public URL
+		// tunnel: true,
+
+		// Attempt to use the URL "http://my-private-site.localtunnel.me"
+		// tunnel: "ppress",
+
+		// Inject CSS changes
+		injectChanges: true
+
 	});
 });
 
@@ -129,10 +153,34 @@ gulp.task('build:serve', function() {
 ///////////////////////////////////////////////////////////////////////////
 
 gulp.task('browser-sync', function() {
-	browserSync({
-		server:{
-			baseDir: './app/'
-		}
+	// browserSync({
+	// 	server:{
+	// 		baseDir: './app/'
+	// 	}
+	// });
+
+	var files = [
+			'**/*.php',
+			'**/*.html',
+			'**/*.{png,jpg,gif}',
+			'**/*.{svg}'
+		];
+	browserSync.init(files, {
+
+		// Read here http://www.browsersync.io/docs/options/
+		proxy: "http://localhost:8888/stpaulqueens/app/",
+
+		// port: 8080,
+
+		// Tunnel the Browsersync server through a random Public URL
+		// tunnel: true,
+
+		// Attempt to use the URL "http://my-private-site.localtunnel.me"
+		// tunnel: "ppress",
+
+		// Inject CSS changes
+		injectChanges: true
+
 	});
 });
 

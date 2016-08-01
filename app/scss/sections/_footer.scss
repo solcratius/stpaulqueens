@@ -1,0 +1,281 @@
+// ***********************************
+// FOOTER
+// ***********************************
+
+#footer {
+	width: 100%;
+	background: $col-black;
+	color: $col-white;
+
+	a {
+		color: $col-white;
+
+		&:hover {
+			text-decoration: none;
+		}
+
+		&:visited {
+			color: $col-white;
+		}
+
+		&:active {
+			color: darken( $col-white, 75% );
+		}
+	}
+
+	.wrapper {
+		.masstime, .contact-direction {
+			margin-top: 30px;
+			text-align: center;
+
+			@include breakpoint($mobile-width) {
+				text-align: left;
+			}
+		}
+	}
+
+	ul {
+		@extend %no-style-ul;
+	}
+
+	.masstime {
+		@include span(12 of $susy-footer);
+
+		@include breakpoint($mobile-width) {
+			@include span(6 of $susy-footer);	
+		}
+
+		@include breakpoint($tablet-width) {
+			@include span(8 of $susy-footer);	
+		}
+
+		@include breakpoint($laptop-width) {
+			@include span(9 of $susy-footer);	
+		}
+
+		li.column {
+			@include span(6 of $susy-footer-section);
+			margin-top: 0;
+			font-size: 1rem;
+			letter-spacing: .5pt;
+			color: $col-grey-d;
+
+			&:first-child() {
+				margin-top: 10px;
+			}
+
+			@include breakpoint($tablet-width) {
+				@include span(3 of $susy-footer-section);
+
+				margin-top: 10px;
+
+				&:nth-child(2) {
+					margin-top: 10px;
+					margin-right: 0;
+				}
+
+				&:nth-child(3) {
+					margin-top: 0;
+				}
+			}
+
+			@include breakpoint($laptop-width) {
+				@include span(2 of $susy-footer-section);
+
+				&:nth-child(3) {
+					margin-top: 10px;
+					margin-right: 0;
+				}
+			}
+
+			.sub-title {
+				letter-spacing: 1pt;
+				font-weight: 700;
+			}
+
+			ul {
+				margin: 10px 0 25px;
+			}
+
+			ul li {
+				margin: 5px 0;
+				display: block;
+				font-size: .86rem;
+			}
+		}
+
+		a.lockup {
+			width: 100%;
+			display: none;
+			outline: none;
+			border: none;
+
+			&:active {
+				color: $col-white;
+			}
+
+			@include breakpoint($tablet-width) {
+				display: block;
+			}
+
+			.sprite-footer-logo, .footer-logo-text {
+				float: left;
+			}
+
+			.sprite-footer-logo {
+				margin: 15px 0 30px;
+				margin-left: -10px;
+			}
+
+			.footer-logo-text {
+				margin-left: 10px;
+				margin-top: 32px;
+				font-size: 1.25em;
+				font-weight: 700;
+				letter-spacing: 3pt;
+				line-height: 1em;
+
+				.eng {
+					display: block;
+					font-size: .5em;
+					font-weight: 400;
+					letter-spacing: .1pt;
+					margin-left: 1px;
+				}
+
+				@include breakpoint($laptop-width) {
+					margin-left: 15px;
+					margin-top: 38px;
+					font-size: 1.75em;
+					line-height: 1.1em;
+					.eng {
+						font-size: .475em;
+					}
+				}
+			}
+		}
+	}
+	.contact-direction {
+		@include span(12 of $susy-footer);
+
+		@include breakpoint($mobile-width) {
+			@include span(6 of $susy-footer);
+		}
+
+		@include breakpoint($tablet-width) {
+			@include span(4 of $susy-footer);
+		}
+
+		@include breakpoint($laptop-width) {
+			@include span(3 of $susy-footer);
+		}
+
+		li {
+			width: 100%;
+			margin: 0;
+			display: block;
+			font-size: .86rem;
+			letter-spacing: .5pt;
+
+			&.map {
+				margin: 5px 0 10px;
+			}
+
+			p {
+				margin: 0 0 10px;
+				color: $col-grey-d;
+			}
+
+			a {
+				display: block;
+				padding: 2px;
+				margin: 0;
+				font-size: .8rem;
+				letter-spacing: 1pt;
+			}
+		}
+	}
+
+	a.sect-title {
+		font-size: $h5;
+		font-family: $font-sans;
+		font-weight: 400;
+	}
+
+	.nav-divider {
+		margin: 15px 0;
+		border-bottom: 1px solid $col-grey-d4;
+	}
+
+	a.lockup-mobile {
+		width: 100%;
+		display: block;
+		margin-top: 25px;
+		outline: none;
+		border: none;
+		@include span(12 of $susy-footer);
+
+		&:active {
+			color: $col-white;
+		}
+
+		.sprite-footer-logo {
+			margin: 15px 0 30px;
+			float: none;
+		}
+
+		.footer-logo-text {
+			margin-left: 10px;
+			margin-top: 32px;
+			font-size: 1.25em;
+			font-weight: 700;
+			letter-spacing: 3pt;
+			line-height: 1em;
+			display: none;
+			float: none;
+
+			.eng {
+				display: block;
+				font-size: .5em;
+				font-weight: 400;
+				letter-spacing: .1pt;
+				margin-right: 4px;
+			}
+
+			@include breakpoint($mobile-width) {
+				display: block;
+			}
+		}
+
+		@include breakpoint($mobile-width) {
+			margin-top: 5px;
+			.sprite-footer-logo, .footer-logo-text {
+				float: left;
+			}
+		}
+
+		@include breakpoint($tablet-width) {
+			display: none;
+		}
+	}
+
+	.copyright {
+		@include span(100%);
+		padding: 12px 0;
+		text-align: center;
+		color: $col-grey-d1;
+		border-top: 1px solid $col-grey-d4;
+		font-size: .7rem;
+		font-weight: 400;
+		letter-spacing: 1pt;
+	}
+}
+
+.noTouch #footer {
+	.contact-direction li a:hover {
+		color: $col-home;
+		&:active {
+			color: darken( $col-white, 75% );
+		}
+	}
+}

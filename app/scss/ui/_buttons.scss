@@ -40,7 +40,7 @@ input[type="submit"]{
 
 input[type=submit][disabled=disabled], button[disabled=disabled], a.disabled, .button.disabled, button.disabled {
     background: $button-color-disabled;
-    color: $white !important;
+    color: $col-white !important;
     opacity:0.6;
     cursor: default;
     pointer-events: none;

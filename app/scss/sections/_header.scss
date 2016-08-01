@@ -1,0 +1,509 @@
+// ***********************************
+// HEADER
+// ***********************************
+
+html.nav-open, body.nav-open {
+	overflow: hidden;
+}
+
+#header {
+	position: fixed;
+	background: $col-black;
+	left: 0;
+	width: 100%;
+	height: 50px;
+	overflow: hidden;
+	z-index: 100000;
+
+	@include breakpoint($tablet-width) {
+	    height: 70px;
+	}
+
+	a {
+		color: $col-white;
+
+		&:hover {
+			text-decoration: none;
+		}
+
+		&:visited {
+			color: $col-white;
+		}
+
+		&:active {
+			color: $col-home;
+		}
+	}
+
+	.wrapper {
+		@include container(100%);
+		position: relative;
+	}
+
+	.masthead {
+		display: block;
+		position: relative;
+		height: 48px;
+		margin: 2px 10px 0;
+		padding: 0;
+		text-align: left;
+		border: none;
+		background: $col-black;
+
+		@include breakpoint($mobile-width) {
+		    text-align: center;
+		    // margin: 0 10px;
+		}
+		
+		@include breakpoint($tablet-width) {
+		    height: 68px;
+		    margin: 2px 20px 0;
+		}
+
+		a {
+			display: inline-block;
+			overflow: hidden;
+		}
+
+		a.logo-container {
+			height: 30px;
+			margin: 9px auto;
+			padding: 0 5px 0 8px;
+			color: $col-white;
+
+			@include breakpoint($mobile-width) {
+			    padding: 0 5px;
+			}
+			
+			@include breakpoint($tablet-width) {
+				height: 40px;
+			    margin: 14px auto;
+			    padding: 0 10px;
+			}
+		}
+
+		a.logo-container span.sprite-logo, a.logo-container h1 {
+			float: left;
+		}
+
+		a.logo-container h1 {
+			margin: 4px 0 0 8px;
+			color: $col-white;
+			font-size: $h1 * .75;
+			font-weight: 700;
+			line-height: $h1 * .75;
+			letter-spacing: 2pt;
+
+			span.eng {
+				display: block;
+				font-size: .46em;
+				font-weight: 400;
+				letter-spacing: .3pt;
+				margin-left: 2px;
+				margin-right: 0;
+
+				@include breakpoint($mobile-width) {
+					margin-left: 0;
+					margin-right: 2px;
+				}
+				
+				@include breakpoint($tablet-width) {
+					font-size: .45em;
+				}
+			}
+
+			@include breakpoint($tablet-width) {
+			    font-size: $h1;
+			    line-height: $h1 + 1;
+			}
+		}
+
+		a#nav-toggle {
+			position: absolute;
+			top: 4px;
+			right: 0;
+			width: 16px;
+			height: 14px;
+			padding: 20px;
+			margin: 0;
+			opacity: .75;
+			z-index: 500;
+			
+			@include breakpoint($tablet-width) {
+			    top: 14px;
+				right: 5px;
+			}
+
+			div {
+				position: inherit;
+				top: 13px;
+				left: 12px;
+				width: 16px;
+				height: 2px;
+				background: $col-white;
+				opacity: 1;
+				transform: rotate(0);
+				transform-origin: 0 50%;
+				@include trans(.35s);
+
+				&:nth-child(1) {
+					top: 19px;
+					@include trans(.35s, opacity, ease-in, .15s);
+				}
+
+				&:last-child {
+					top: 25px;
+					transform-origin: 0 0;
+				}
+			}
+		}
+	}
+
+	.navigation {
+		margin-top: 250px;
+		@include container($desktop-width);
+		@include trans(.75s, margin);
+
+		@extend %no-style-ul;
+
+		li.section {
+			@include span(6 of $susy-nav);
+			text-align: center;
+			margin-bottom: 50px;
+
+			@include breakpoint($mobile-width) {
+			    @include span(3 of $susy-nav);
+			}
+
+			@include breakpoint($tablet-width) {
+			    @include span(2 of $susy-nav);
+			}
+
+			@include breakpoint($desktop-width) {
+			    @include span(1 of $susy-nav);
+			}
+
+			span.icon, span.icon-hover {
+				top: 0;
+				left: 50%;
+				margin-left: -25px;
+			}
+
+			span.icon-hover {
+				z-index: 200;
+			}
+
+			a {
+				display: inline-block;
+				position: relative;
+				text-align: center;
+				font-size: 1.15rem;
+				margin: 0;
+				padding-top: 55px;
+
+				@include trans(.15s, color, ease-out);
+
+				.icon {
+					opacity: 1;
+				}
+
+				.icon-hover {
+					opacity: 0;
+				}
+
+				.icon, .icon-hover {
+					@include trans(.25s, opacity, ease-out);
+				}
+			}
+
+			.nav-divider {
+				margin: 16px 0 14px;
+				border-bottom: 1px solid $col-white;
+			}
+
+			a:active {
+				.icon {
+					opacity: 0;
+				}
+				.icon-hover {
+					opacity: 1;
+				}
+			}
+
+			&:nth-child(1) {
+				a:active {
+					color: $col-stPaulOffice;
+				}
+			}
+
+			&:nth-child(2) {
+				a:active {
+					color: $col-spiritualLife;
+				}
+			}
+
+			&:nth-child(3) {
+				a:active {
+					color: $col-community;
+				}
+			}
+
+			&:nth-child(4) {
+				a:active {
+					color: $col-ourParish;
+				}
+			}
+
+			&:nth-child(5) {
+				a:active {
+					color: $col-educationCenter;
+				}
+			}
+
+			&:nth-child(6) {
+				a:active {
+					color: $col-gallery;
+				}
+			}
+
+			ul {
+				@extend %no-style-ul;
+			}
+
+			ul li a {
+				display: inline-block;
+				padding: 10px 5px;
+				font-size: 1rem;
+				font-weight: 400;
+			}
+
+			span.noMobile {
+				display: none;
+			}
+
+			@include breakpoint($mobile-width) {
+				span.noMobile {
+					display: block;
+					padding: 10px 0;
+					font-size: 1rem;
+				}
+			}
+		}
+	}
+
+	.search {
+		display: inline-block;
+		padding: 60px 10px 50px;
+		margin: 0 auto;
+		border-top: 1px solid $col-grey-d4;
+
+		@include breakpoint($tablet-width) {
+			padding: 70px 100px 40px;
+		}
+
+		input {
+			display: block;
+			margin: 0;
+			padding: 10px;
+			font-family: $font-sans;
+			font-size: 1.15rem;
+			font-weight: 400;
+			appearance: none;
+			box-shadow: none;
+			border-radius: none;
+			border-radius: 0;
+			border: none;
+			outline: none;
+			float: left;
+		}
+
+		input[name="search-text"] {
+			width: 230px;
+			margin-left: 0;
+
+			@include breakpoint($mobile-width) {
+				width: 300px;
+			}
+
+			@include breakpoint($tablet-width) {
+				margin-left: 50px;
+			}
+
+			background-color: $col-grey-d3;
+			color: $col-white;
+			
+			&:focus {
+				border: solid 1px $col-grey-d1;
+				box-shadow: none;
+				outline: none;
+			}
+		}
+
+		input[type="submit"] {
+			margin-left: 8px;
+			padding: 0;
+			color: $col-white;
+			font: 0/0 a;
+		    overflow: hidden;
+		    opacity: .75;
+
+		    @include trans(.15s, opacity, ease-out);
+			
+			&:active {
+				background-position: -40px -180px;
+			}
+
+			&:focus {
+				box-shadow: none;
+				outline: none;
+			}
+		}
+	}
+
+	&.nav-open {
+		.masthead {
+			padding-top: 10px;
+			padding-bottom: 58px;
+
+			@include breakpoint($tablet-width) {
+				padding-top: 20px;
+				padding-bottom: 88px;
+			}
+
+			border-bottom: 1px solid $col-grey-d4;
+		}
+
+		.navigation {
+			margin-top: 70px;
+		}
+
+		a#nav-toggle {
+			top: 14px;
+
+			@include breakpoint($tablet-width) {
+				top: 34px;
+			}
+
+			div {
+				top: 26px;
+				left: 12px;
+				width: 22px;
+				transform: rotate(-45deg);
+
+				&:nth-child(1) {
+					opacity: 0;
+					top: 19px;
+					left: 12px;
+					width: 16px;
+					transform: none;
+					@include trans(.35s, opacity, ease-out);
+				}
+
+				&:last-child {
+					top: 11px;
+					left: 13px;
+					transform: rotate(45deg);
+				}
+			}
+		}
+
+		height: 100%;
+		border: none;
+		overflow: auto; //TODO
+		overflow-y: scroll;
+		-webkit-overflow-scrolling: touch;
+	}
+}
+
+.noTouch #header {
+	a#nav-toggle:hover {
+		opacity: 1;
+	}
+	.navigation {
+		li.section {
+			a:hover {
+				.icon {
+					opacity: 0;
+				}
+				.icon-hover {
+					opacity: 1;
+				}
+			}
+			a:active {
+				.icon-hover {
+					opacity: .5;
+				}
+			}
+
+			&:nth-child(1) {
+				a:hover {
+					color: $col-stPaulOffice;
+				}
+				a:active {
+					color: $col-stPaulOffice-sub;
+				}
+			}
+
+			&:nth-child(2) {
+				a:hover {
+					color: $col-spiritualLife;
+				}
+				a:active {
+					color: $col-spiritualLife-sub;
+				}
+			}
+
+			&:nth-child(3) {
+				a:hover {
+					color: $col-community;
+				}
+				a:active {
+					color: $col-community-sub;
+				}
+			}
+
+			&:nth-child(4) {
+				a:hover {
+					color: $col-ourParish;
+				}
+				a:active {
+					color: $col-ourParish-sub;
+				}
+			}
+
+			&:nth-child(5) {
+				a:hover {
+					color: $col-educationCenter;
+				}
+				a:active {
+					color: $col-educationCenter-sub;
+				}
+			}
+
+			&:nth-child(6) {
+				a:hover {
+					color: $col-gallery;
+				}
+				a:active {
+					color: $col-gallery-sub;
+				}
+			}
+		}
+	}
+
+	.search {
+		input[type="submit"]:hover {
+			opacity: 1;
+		}
+	}
+}
+
+.noResize #header {
+	@include trans(.5s, all, cubic-bezier(.75,.01,.25,.99));
+	.masthead {
+		transition: padding .5s ease-in-out, border .15s ease-in-out .5s;
+		a#nav-toggle {
+			transition: top .5s ease-in-out, opacity .15s ease-out;
+		}
+	}
+}
