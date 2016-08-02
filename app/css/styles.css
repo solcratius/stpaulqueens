@@ -376,14 +376,14 @@ ul li {
 .sprite-logo {
   position: relative;
   background-position: 0 0;
-  width: 30px;
+  width: 234px;
   height: 30px;
 }
 
 @media (min-width: 640px) {
   .sprite-logo {
-    background-position: -50px 0;
-    width: 40px;
+    background-position: -250px 0;
+    width: 299px;
     height: 40px;
   }
 }
@@ -471,7 +471,7 @@ ul li {
 @media (min-width: 420px) {
   .sprite-footer-logo {
     background-position: 0 -230px;
-    width: 70px;
+    width: 382px;
     height: 70px;
   }
 }
@@ -479,7 +479,7 @@ ul li {
 @media (min-width: 920px) {
   .sprite-footer-logo {
     background-position: 0 -320px;
-    width: 100px;
+    width: 576px;
     height: 100px;
   }
 }
@@ -514,10 +514,6 @@ ul li {
 .error404 .page {
   padding-top: 50px;
   padding-bottom: 50px;
-}
-
-html.nav-open, body.nav-open {
-  overflow: hidden;
 }
 
 #header {
@@ -594,90 +590,54 @@ html.nav-open, body.nav-open {
   overflow: hidden;
 }
 
-#header .masthead a.logo-container {
-  height: 30px;
-  margin: 9px auto;
-  padding: 0 5px 0 8px;
-  color: #fff;
+#header .masthead h1 {
+  margin: 0;
+  line-height: 0;
 }
 
-@media (min-width: 420px) {
-  #header .masthead a.logo-container {
-    padding: 0 5px;
-  }
+#header .masthead h1 a.logo-container {
+  padding: 9px 5px;
+  margin-right: 10px;
 }
 
-@media (min-width: 640px) {
-  #header .masthead a.logo-container {
-    height: 40px;
-    margin: 14px auto;
-    padding: 0 10px;
-  }
-}
-
-#header .masthead a.logo-container span.sprite-logo, #header .masthead a.logo-container h1 {
-  float: left;
-}
-
-#header .masthead a.logo-container h1 {
-  margin: 4px 0 0 8px;
+#header .masthead h1 a.logo-container span.name {
+  display: none;
   color: #fff;
   font-size: 13.5px;
   font-weight: 700;
   line-height: 13.5px;
   letter-spacing: 2pt;
-}
-
-#header .masthead a.logo-container h1 span.eng {
-  display: block;
-  font-size: .46em;
-  font-weight: 400;
-  letter-spacing: .3pt;
-  margin-left: 2px;
-  margin-right: 0;
-}
-
-@media (min-width: 420px) {
-  #header .masthead a.logo-container h1 span.eng {
-    margin-left: 0;
-    margin-right: 2px;
-  }
+  font: 0/0 a;
 }
 
 @media (min-width: 640px) {
-  #header .masthead a.logo-container h1 span.eng {
-    font-size: .45em;
-  }
-}
-
-@media (min-width: 640px) {
-  #header .masthead a.logo-container h1 {
-    font-size: 18px;
-    line-height: 19px;
+  #header .masthead h1 a.logo-container {
+    padding: 14px 10px;
+    margin-right: 20px;
   }
 }
 
 #header .masthead a#nav-toggle {
-  position: absolute;
+  position: fixed;
   top: 4px;
-  right: 0;
+  right: 10px;
   width: 16px;
   height: 14px;
   padding: 20px;
   margin: 0;
   opacity: .75;
-  z-index: 500;
+  z-index: 150000;
 }
 
 @media (min-width: 640px) {
   #header .masthead a#nav-toggle {
     top: 14px;
-    right: 5px;
+    right: 25px;
   }
 }
 
 #header .masthead a#nav-toggle div {
-  position: inherit;
+  position: absolute;
   top: 13px;
   left: 12px;
   width: 16px;
@@ -918,6 +878,9 @@ html.nav-open, body.nav-open {
   font: 0/0 a;
   overflow: hidden;
   opacity: .75;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-appearance: none;
   -moz-transition: opacity 0.15s ease-out 0s;
   transition: opacity 0.15s ease-out 0s;
 }
@@ -932,42 +895,45 @@ html.nav-open, body.nav-open {
   outline: none;
 }
 
-#header.nav-open {
+body.nav-open {
+  overflow: hidden;
+}
+
+body.nav-open #header {
   height: 100%;
-  border: none;
   overflow: auto;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
 }
 
-#header.nav-open .masthead {
+body.nav-open #header .masthead {
   padding-top: 10px;
   padding-bottom: 58px;
   border-bottom: 1px solid #2d2d2d;
 }
 
 @media (min-width: 640px) {
-  #header.nav-open .masthead {
+  body.nav-open #header .masthead {
     padding-top: 20px;
     padding-bottom: 88px;
   }
 }
 
-#header.nav-open .navigation {
+body.nav-open #header .navigation {
   margin-top: 70px;
 }
 
-#header.nav-open a#nav-toggle {
+body.nav-open #header a#nav-toggle {
   top: 14px;
 }
 
 @media (min-width: 640px) {
-  #header.nav-open a#nav-toggle {
+  body.nav-open #header a#nav-toggle {
     top: 34px;
   }
 }
 
-#header.nav-open a#nav-toggle div {
+body.nav-open #header a#nav-toggle div {
   top: 26px;
   left: 12px;
   width: 22px;
@@ -977,7 +943,7 @@ html.nav-open, body.nav-open {
   transform: rotate(-45deg);
 }
 
-#header.nav-open a#nav-toggle div:nth-child(1) {
+body.nav-open #header a#nav-toggle div:nth-child(1) {
   opacity: 0;
   top: 19px;
   left: 12px;
@@ -990,13 +956,23 @@ html.nav-open, body.nav-open {
   transition: opacity 0.35s ease-out 0s;
 }
 
-#header.nav-open a#nav-toggle div:last-child {
+body.nav-open #header a#nav-toggle div:last-child {
   top: 11px;
   left: 13px;
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
+}
+
+.noTouch body.nav-open #header a#nav-toggle {
+  right: 25px;
+}
+
+@media (min-width: 640px) {
+  .noTouch body.nav-open #header a#nav-toggle {
+    right: 40px;
+  }
 }
 
 .noTouch #header a#nav-toggle:hover {
@@ -1224,42 +1200,20 @@ html.nav-open, body.nav-open {
   }
 }
 
-#footer .masstime a.lockup .sprite-footer-logo, #footer .masstime a.lockup .footer-logo-text {
-  float: left;
-}
-
 #footer .masstime a.lockup .sprite-footer-logo {
   margin: 15px 0 30px;
   margin-left: -10px;
 }
 
-#footer .masstime a.lockup .footer-logo-text {
+#footer .masstime a.lockup .name {
+  display: none;
   margin-left: 10px;
   margin-top: 32px;
   font-size: 1.25em;
   font-weight: 700;
   letter-spacing: 3pt;
   line-height: 1em;
-}
-
-#footer .masstime a.lockup .footer-logo-text .eng {
-  display: block;
-  font-size: .5em;
-  font-weight: 400;
-  letter-spacing: .1pt;
-  margin-left: 1px;
-}
-
-@media (min-width: 920px) {
-  #footer .masstime a.lockup .footer-logo-text {
-    margin-left: 15px;
-    margin-top: 38px;
-    font-size: 1.75em;
-    line-height: 1.1em;
-  }
-  #footer .masstime a.lockup .footer-logo-text .eng {
-    font-size: .475em;
-  }
+  font: 0/0 a;
 }
 
 #footer .contact-direction {
@@ -1350,40 +1304,23 @@ html.nav-open, body.nav-open {
 
 #footer a.lockup-mobile .sprite-footer-logo {
   margin: 15px 0 30px;
-  float: none;
 }
 
-#footer a.lockup-mobile .footer-logo-text {
+#footer a.lockup-mobile .name {
   margin-left: 10px;
   margin-top: 32px;
   font-size: 1.25em;
+  font: 0/0 a;
   font-weight: 700;
   letter-spacing: 3pt;
   line-height: 1em;
   display: none;
-  float: none;
-}
-
-#footer a.lockup-mobile .footer-logo-text .eng {
-  display: block;
-  font-size: .5em;
-  font-weight: 400;
-  letter-spacing: .1pt;
-  margin-right: 4px;
-}
-
-@media (min-width: 420px) {
-  #footer a.lockup-mobile .footer-logo-text {
-    display: block;
-  }
 }
 
 @media (min-width: 420px) {
   #footer a.lockup-mobile {
     margin-top: 5px;
-  }
-  #footer a.lockup-mobile .sprite-footer-logo, #footer a.lockup-mobile .footer-logo-text {
-    float: left;
+    text-align: left;
   }
 }
 

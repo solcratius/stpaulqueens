@@ -118,40 +118,20 @@
 				display: block;
 			}
 
-			.sprite-footer-logo, .footer-logo-text {
-				float: left;
-			}
-
 			.sprite-footer-logo {
 				margin: 15px 0 30px;
 				margin-left: -10px;
 			}
 
-			.footer-logo-text {
+			.name {
+				display: none;
 				margin-left: 10px;
 				margin-top: 32px;
 				font-size: 1.25em;
 				font-weight: 700;
 				letter-spacing: 3pt;
 				line-height: 1em;
-
-				.eng {
-					display: block;
-					font-size: .5em;
-					font-weight: 400;
-					letter-spacing: .1pt;
-					margin-left: 1px;
-				}
-
-				@include breakpoint($laptop-width) {
-					margin-left: 15px;
-					margin-top: 38px;
-					font-size: 1.75em;
-					line-height: 1.1em;
-					.eng {
-						font-size: .475em;
-					}
-				}
+				font: 0/0 a;
 			}
 		}
 	}
@@ -221,37 +201,23 @@
 
 		.sprite-footer-logo {
 			margin: 15px 0 30px;
-			float: none;
 		}
 
-		.footer-logo-text {
+		.name {
 			margin-left: 10px;
 			margin-top: 32px;
 			font-size: 1.25em;
+			font: 0/0 a;
 			font-weight: 700;
 			letter-spacing: 3pt;
 			line-height: 1em;
 			display: none;
-			float: none;
-
-			.eng {
-				display: block;
-				font-size: .5em;
-				font-weight: 400;
-				letter-spacing: .1pt;
-				margin-right: 4px;
-			}
-
-			@include breakpoint($mobile-width) {
-				display: block;
-			}
 		}
 
 		@include breakpoint($mobile-width) {
 			margin-top: 5px;
-			.sprite-footer-logo, .footer-logo-text {
-				float: left;
-			}
+			// margin-left: 5px;
+			text-align: left;
 		}
 
 		@include breakpoint($tablet-width) {

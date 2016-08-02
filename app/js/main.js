@@ -98,15 +98,13 @@ $WIN.on('scroll', function(e) {
 
 
 
-
 $navBtn.on('click', function(e) {
 	e.preventDefault();
     e.stopPropagation();
 
-	if ($header.hasClass('nav-open'))
+	if ($body.hasClass('nav-open'))
 	{
-		$html.removeClass('nav-open');
-		$header.removeClass('nav-open');
+		$body.removeClass('nav-open');
 		$header.delay(250).animate({
 			scrollTop: 0
 		}, 500);
@@ -115,8 +113,7 @@ $navBtn.on('click', function(e) {
 	}
 	else
 	{
-		$html.addClass('nav-open');
-		$header.addClass('nav-open');
+		$body.addClass('nav-open');
 		// setTimeout(function(i) {
 		// 	$header.css('overflow', 'auto');
 		// }, 750);

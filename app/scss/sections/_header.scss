@@ -2,10 +2,6 @@
 // HEADER
 // ***********************************
 
-html.nav-open, body.nav-open {
-	overflow: hidden;
-}
-
 #header {
 	position: fixed;
 	background: $col-black;
@@ -52,7 +48,6 @@ html.nav-open, body.nav-open {
 
 		@include breakpoint($mobile-width) {
 		    text-align: center;
-		    // margin: 0 10px;
 		}
 		
 		@include breakpoint($tablet-width) {
@@ -65,77 +60,54 @@ html.nav-open, body.nav-open {
 			overflow: hidden;
 		}
 
-		a.logo-container {
-			height: 30px;
-			margin: 9px auto;
-			padding: 0 5px 0 8px;
-			color: $col-white;
+		h1 {
+			margin: 0;
+			line-height: 0;
 
-			@include breakpoint($mobile-width) {
-			    padding: 0 5px;
-			}
-			
-			@include breakpoint($tablet-width) {
-				height: 40px;
-			    margin: 14px auto;
-			    padding: 0 10px;
-			}
-		}
-
-		a.logo-container span.sprite-logo, a.logo-container h1 {
-			float: left;
-		}
-
-		a.logo-container h1 {
-			margin: 4px 0 0 8px;
-			color: $col-white;
-			font-size: $h1 * .75;
-			font-weight: 700;
-			line-height: $h1 * .75;
-			letter-spacing: 2pt;
-
-			span.eng {
-				display: block;
-				font-size: .46em;
-				font-weight: 400;
-				letter-spacing: .3pt;
-				margin-left: 2px;
-				margin-right: 0;
-
-				@include breakpoint($mobile-width) {
-					margin-left: 0;
-					margin-right: 2px;
-				}
+			a.logo-container {
+				padding: 9px 5px;
+				margin-right: 10px;
 				
-				@include breakpoint($tablet-width) {
-					font-size: .45em;
+				span.name {
+					display: none;
+					color: $col-white;
+					font-size: $h1 * .75;
+					font-weight: 700;
+					line-height: $h1 * .75;
+					letter-spacing: 2pt;
+					font: 0/0 a;
 				}
-			}
 
-			@include breakpoint($tablet-width) {
-			    font-size: $h1;
-			    line-height: $h1 + 1;
+				@include breakpoint($tablet-width) {
+				    padding: 14px 10px;
+				    margin-right: 20px;
+				}
 			}
 		}
 
 		a#nav-toggle {
-			position: absolute;
+			position: fixed;
 			top: 4px;
-			right: 0;
+			right: 10px;
+			// position: absolute;
+			// top: 4px;
+			// right: 0;
 			width: 16px;
 			height: 14px;
 			padding: 20px;
 			margin: 0;
 			opacity: .75;
-			z-index: 500;
+			z-index: 150000;
+			// z-index: 500;
 			
 			@include breakpoint($tablet-width) {
 			    top: 14px;
-				right: 5px;
+			    right: 25px;
+				// right: 5px;
 			}
 
 			div {
-				position: inherit;
+				position: absolute;
 				top: 13px;
 				left: 12px;
 				width: 16px;
@@ -347,6 +319,9 @@ html.nav-open, body.nav-open {
 		    overflow: hidden;
 		    opacity: .75;
 
+		    appearance: none;
+		    -webkit-appearance: none;
+
 		    @include trans(.15s, opacity, ease-out);
 			
 			&:active {
@@ -359,8 +334,12 @@ html.nav-open, body.nav-open {
 			}
 		}
 	}
+}
 
-	&.nav-open {
+body.nav-open {
+	overflow: hidden;
+
+	#header {
 		.masthead {
 			padding-top: 10px;
 			padding-bottom: 58px;
@@ -379,9 +358,11 @@ html.nav-open, body.nav-open {
 
 		a#nav-toggle {
 			top: 14px;
+			// right: 27px;
 
 			@include breakpoint($tablet-width) {
 				top: 34px;
+				// right: 42px;
 			}
 
 			div {
@@ -408,91 +389,101 @@ html.nav-open, body.nav-open {
 		}
 
 		height: 100%;
-		border: none;
-		overflow: auto; //TODO
+		overflow: auto;
 		overflow-y: scroll;
 		-webkit-overflow-scrolling: touch;
 	}
 }
 
-.noTouch #header {
-	a#nav-toggle:hover {
-		opacity: 1;
-	}
-	.navigation {
-		li.section {
-			a:hover {
-				.icon {
-					opacity: 0;
-				}
-				.icon-hover {
-					opacity: 1;
-				}
-			}
-			a:active {
-				.icon-hover {
-					opacity: .5;
-				}
-			}
+.noTouch {
+	body.nav-open #header {
+		a#nav-toggle {
+			right: 25px;
 
-			&:nth-child(1) {
-				a:hover {
-					color: $col-stPaulOffice;
-				}
-				a:active {
-					color: $col-stPaulOffice-sub;
-				}
-			}
-
-			&:nth-child(2) {
-				a:hover {
-					color: $col-spiritualLife;
-				}
-				a:active {
-					color: $col-spiritualLife-sub;
-				}
-			}
-
-			&:nth-child(3) {
-				a:hover {
-					color: $col-community;
-				}
-				a:active {
-					color: $col-community-sub;
-				}
-			}
-
-			&:nth-child(4) {
-				a:hover {
-					color: $col-ourParish;
-				}
-				a:active {
-					color: $col-ourParish-sub;
-				}
-			}
-
-			&:nth-child(5) {
-				a:hover {
-					color: $col-educationCenter;
-				}
-				a:active {
-					color: $col-educationCenter-sub;
-				}
-			}
-
-			&:nth-child(6) {
-				a:hover {
-					color: $col-gallery;
-				}
-				a:active {
-					color: $col-gallery-sub;
-				}
+			@include breakpoint($tablet-width) {
+				right: 40px;
 			}
 		}
 	}
 
-	.search {
-		input[type="submit"]:hover {
+	#header {
+		a#nav-toggle:hover {
+			opacity: 1;
+		}
+
+		.navigation {
+			li.section {
+				a:hover {
+					.icon {
+						opacity: 0;
+					}
+					.icon-hover {
+						opacity: 1;
+					}
+				}
+				a:active {
+					.icon-hover {
+						opacity: .5;
+					}
+				}
+
+				&:nth-child(1) {
+					a:hover {
+						color: $col-stPaulOffice;
+					}
+					a:active {
+						color: $col-stPaulOffice-sub;
+					}
+				}
+
+				&:nth-child(2) {
+					a:hover {
+						color: $col-spiritualLife;
+					}
+					a:active {
+						color: $col-spiritualLife-sub;
+					}
+				}
+
+				&:nth-child(3) {
+					a:hover {
+						color: $col-community;
+					}
+					a:active {
+						color: $col-community-sub;
+					}
+				}
+
+				&:nth-child(4) {
+					a:hover {
+						color: $col-ourParish;
+					}
+					a:active {
+						color: $col-ourParish-sub;
+					}
+				}
+
+				&:nth-child(5) {
+					a:hover {
+						color: $col-educationCenter;
+					}
+					a:active {
+						color: $col-educationCenter-sub;
+					}
+				}
+
+				&:nth-child(6) {
+					a:hover {
+						color: $col-gallery;
+					}
+					a:active {
+						color: $col-gallery-sub;
+					}
+				}
+			}
+		}
+
+		.search input[type="submit"]:hover {
 			opacity: 1;
 		}
 	}
