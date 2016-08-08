@@ -190,7 +190,8 @@
 	a.lockup-mobile {
 		width: 100%;
 		display: block;
-		margin-top: 25px;
+		// margin-top: 25px;
+		margin-top: 15px;
 		outline: none;
 		border: none;
 		@include span(12 of $susy-footer);
@@ -215,8 +216,9 @@
 		}
 
 		@include breakpoint($mobile-width) {
-			margin-top: 5px;
-			// margin-left: 5px;
+			// margin-top: 5px;
+			margin-top: 0;
+			margin-left: 5px;
 			text-align: left;
 		}
 
@@ -239,7 +241,7 @@
 
 .noTouch #footer {
 	.contact-direction li a:hover {
-		color: $col-home;
+		color: $col-stPaulHome;
 		&:active {
 			color: darken( $col-white, 75% );
 		}

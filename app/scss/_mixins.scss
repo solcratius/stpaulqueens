@@ -24,3 +24,107 @@ $width:auto;
    }
 }
 */
+
+
+@mixin stylize-hero($theme, $color) {
+  $primary: $color;
+  $secondary: darken($color, 20%);
+
+  #content.#{$theme} {
+    .hero {
+      background: $primary;
+
+      a {
+        &:active {
+          color: $secondary;
+        }
+      }
+
+      .wrapper {
+        .hero-content a:active {
+          color: $col-black;
+        }
+
+        a.util-box-btn {
+          background: $secondary;
+          .sprite-download {
+            background-position: 0 -440px;
+          }
+          .sprite-link {
+            background-position: 0 -500px;
+          }
+          .sprite-link-ext {
+            background-position: 0 -470px;
+          } 
+
+          &:active {
+            background: darken($secondary, 15%);
+            color: $col-white;
+            border-color: $col-white;
+          }
+        }
+      }
+
+      .sub-nav {
+        background: $secondary;
+
+        a.sub-nav-btn {
+          color: lighten( $primary, 20% );
+        }
+      }
+    }
+  }
+
+  .noTouch #content.#{$theme} {
+    .hero {
+      .wrapper {
+        .hero-content a {
+          &:hover {
+            // color: darken($secondary, 10%);
+            color: $secondary;
+          }
+          &:active {
+            color: $col-black;
+          }
+        }
+
+        a.util-box-btn {
+          &:hover {
+            color: $secondary;
+            border-color: $secondary;
+          }
+
+          &:active {
+            color: $col-white;
+            border-color: $col-white;
+            background: darken($secondary, 15%);
+
+            .sprite-download {
+              background-position: 0 -440px;
+            }
+            .sprite-link {
+              background-position: 0 -500px;
+            }
+            .sprite-link-ext {
+              background-position: 0 -470px;
+            } 
+          }
+        }
+      }
+    }
+  } 
+}
+
+
+
+
+@mixin stylize-contentBody($theme, $color) {
+  $primary: $color;
+  $secondary: darken($color, 20%);
+
+  #content.#{$theme} {
+    .content-body {
+      
+    }
+  }
+}

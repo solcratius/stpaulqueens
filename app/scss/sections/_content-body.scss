@@ -1,0 +1,106 @@
+// ***********************************
+// CONTENT-BODY
+// ***********************************
+
+@each $theme, $color in $themes {
+	@include stylize-contentBody($theme, $color);
+}
+
+#content {
+	.content-body {
+		position: relative;
+
+		& > div {
+			padding-top: 60px;
+			padding-bottom: 40px;
+
+			&:first-child {
+				padding-top: 80px;
+			}
+
+			&:last-child {
+				padding-bottom: 80px;
+			}
+		}
+
+		.main-body {
+			@include span(9);
+
+			@include breakpoint($tablet-width) {
+				@include span(6);
+			}
+		}
+
+		.side-body {
+			@include span(9);
+
+			@include breakpoint($tablet-width) {
+				@include span(3);
+			}
+		}
+
+		h3 {
+			margin-bottom: 30px;
+		}
+
+		.content-sect2 {
+			background: $col-grey-d;
+		}
+	}
+}
+
+.noTouch #content {
+	.hero {
+		.sub-nav {
+			a:hover {
+				color: $col-white;
+			}
+		}
+
+		a.util-box-btn:hover {
+			background: $col-white;
+		}
+	}
+
+	&.sticky-nav {
+		.hero .sub-nav {
+			a.sprite-top-btn:hover {
+				opacity: 1;
+				&:active {
+					opacity: .5;
+				}
+			}
+		}
+	}
+}
+
+.noResize #content {
+	.hero a.util-box-btn {
+		@include trans(.15s, all, ease-out);
+	}
+}
+
+.iOS-detect.noResize #content {
+	.hero {
+		transition: none;
+		.sub-nav {
+			transition: none;
+			@include trans(.25s, margin-top);
+
+			a {
+				transition: none;
+			}
+		}
+	}
+
+	&.sticky-nav {
+		.hero .sub-nav {
+			margin-top: 40px;
+			top: 10px;
+
+			@include breakpoint($tablet-width) {
+				top: 30px;
+			}
+		}
+	}
+}

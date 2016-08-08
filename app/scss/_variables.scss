@@ -69,12 +69,16 @@
 }
 
 
+
+
 // LAYOUT
 $mobile-width: 420px;
 $tablet-width: 640px;
 $laptop-width: 920px;
 $desktop-width: 1024px;
 $wide-width: 1200px;
+
+
 
 
 // TYPOGRAPHY
@@ -94,11 +98,13 @@ $h5: 1.4em;
 $h6: 0.6em;
 
 
+
+
 // COLORS
 $col-white: #fff;
 $col-black: #202020;
 $col-grey: #dfdfdf;
-$col-grey-l: lighten( $col-grey, 16% );
+$col-grey-l: lighten( $col-grey, 10% );
 $col-grey-d: darken( $col-grey, 10% );
 $col-grey-d1: #afafaf;
 $col-grey-d2: #9d9d9d;
@@ -106,38 +112,48 @@ $col-grey-d3: #4d4d4d;
 $col-grey-d4: #2d2d2d;
 
 $col-lightBlue: #42a4db;
-$col-mutedBlue: #68adcb;
-$col-mint: #78cac0;
-$col-green: #97b76e;
-$col-purple: #8776b6;
-$col-mustard: #c0b563;
-$col-navy: #5a748c;
-$col-pink: #d08fae;
 
-$col-home: $col-mutedBlue;
-$col-home-sub: darken( $col-home, 20% );
+$col-stPaulHome: #68adcb;
+$col-stPaulHome-sub: darken( $col-stPaulHome, 20% );
 
-$col-stPaulOffice: $col-mint;
+$col-stPaulOffice: #78cac0;
 $col-stPaulOffice-sub: darken( $col-stPaulOffice, 20% );
 
-$col-spiritualLife: $col-green;
+$col-spiritualLife: #97b76e;
 $col-spiritualLife-sub: darken( $col-spiritualLife, 20% );
 
-$col-ourParish: $col-purple;
+$col-ourParish: #8776b6;
 $col-ourParish-sub: darken( $col-ourParish, 20% );
 
-$col-community: $col-mustard;
-$col-community-sub: darken( $col-community, 20% );
+$col-oneCommunity: #c0b563;
+$col-oneCommunity-sub: darken( $col-oneCommunity, 20% );
 
-$col-educationCenter: $col-navy;
+$col-educationCenter: #5a748c;
 $col-educationCenter-sub: darken( $col-educationCenter, 20% );
 
-$col-gallery: $col-pink;
-$col-gallery-sub: darken( $col-gallery, 20% );
+$col-mediaLibrary: #d08fae;
+$col-mediaLibrary-sub: darken( $col-mediaLibrary, 20% );
 
 
 $col-body: $col-white;//$col-grey;//
 $col-body-txt: $col-black;
 
+
+
+
 // Other
 $border-radius: 5px;
+
+
+
+
+$themes: (
+  stPaulHome: $col-stPaulHome,
+  stPaulOffice: $col-stPaulOffice,
+  spiritualLife: $col-spiritualLife,
+  oneCommunity: $col-oneCommunity,
+  ourParish: $col-ourParish,
+  educationCenter: $col-educationCenter,
+  mediaLibrary: $col-mediaLibrary
+) !default;
+

@@ -29,6 +29,8 @@ body {
 		font-size: $font-size;
 		line-height: $line-height;
 	}
+
+	overflow-x: hidden;
 }
 
 #content {
@@ -78,6 +80,14 @@ ul li {
 	list-style: inside;
 }
 
+span {
+	white-space: nowrap;
+}
+
+span.sm-txt {
+	font-size: .7em;
+}
+
 %no-style-ul {
 	list-style: none;
 	margin: 0;
@@ -94,4 +104,25 @@ ul li {
 
 .clear {
 	clear: both;
+}
+
+.show-mobileOnly {
+	display: block;
+	@include breakpoint($mobile-width) {
+		display: none;
+	}
+}
+
+.show-tablet {
+	display: none;
+	@include breakpoint($tablet-width) {
+		display: block;
+	}
+}
+
+.show-desktop {
+	display: none;
+	@include breakpoint($laptop-width) {
+		display: block;
+	}
 }

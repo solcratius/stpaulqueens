@@ -7,11 +7,16 @@ var $WIN = $(window),
 	$navBtn = $('#nav-toggle'),
 	$content = $('#content'),
 	$hero = $('#content .hero'),
-	$subNav = $('#content .sub-nav');
+	$subNav = $('#content .sub-nav'),
+	$subNavBtn = $('#content .sub-nav .sub-nav-btn'),
+	$contentBody = $('#content .content-body'),
+	$contentSect = $('#content .content-body > div');
 
 $html.addClass('noResize');
 $html.addClass('noTouch');
 
+
+//window resize stops css animation and resets on callback
 var wrTime;
 var wrTimeout = false;
 var wrDelta = 200;
@@ -30,6 +35,7 @@ function resizeEnd() {
     } else {
         wrTimeout = false;
         $html.addClass('noResize');
+        setPageSectPos();
     }               
 }
 
@@ -52,7 +58,7 @@ if (iOS) $html.addClass('iOS-detect');
 
 
 
-
+//window scroll callback for sticky nav on iOS
 var lastScrollTop = 0;
 $WIN.on('scroll', function(e) {
 	var $THIS = $(this),
@@ -80,7 +86,8 @@ $WIN.on('scroll', function(e) {
 	    		$content.addClass('sticky-nav');
 	    	}
 		}
-		// console.log(st+", "+(heroH - 60 - 70));
+
+		checkPageSectID(st, 'down');
     }
     else
     {
@@ -89,15 +96,19 @@ $WIN.on('scroll', function(e) {
     	{
     		$content.removeClass('sticky-nav');
     	}
+
+    	checkPageSectID(st, 'up');
     }
     lastScrollTop = st;
+
+    // console.log(st);
 });
 
 
 
 
 
-
+//hamburger button function
 $navBtn.on('click', function(e) {
 	e.preventDefault();
     e.stopPropagation();
@@ -107,16 +118,11 @@ $navBtn.on('click', function(e) {
 		$body.removeClass('nav-open');
 		$header.delay(250).animate({
 			scrollTop: 0
-		}, 500);
-
-		// $header.removeAttr('style');
+		}, 0);
 	}
 	else
 	{
 		$body.addClass('nav-open');
-		// setTimeout(function(i) {
-		// 	$header.css('overflow', 'auto');
-		// }, 750);
 	}
 	console.log("Toggle clicked");
 });
@@ -125,7 +131,7 @@ $navBtn.on('click', function(e) {
 
 
 
-
+//back to top button function
 $('a.sprite-top-btn').on('click', function(e) {
     e.preventDefault();
     e.stopPropagation();
@@ -135,4 +141,56 @@ $('a.sprite-top-btn').on('click', function(e) {
     }, 500, 'easeInOutCubic');
     return false;
 });
+
+
+
+
+var pageSectID = 0,
+	pageSectTop = [],
+	contentBodyY = $contentBody.position().top;
+
+function setPageSectPos() {
+	pageSectTop = [];
+	$contentSect.each(function(i) {
+		var y = $(this).position().top;
+		pageSectTop.push(contentBodyY + y - 85);
+	});
+};
+
+//subnav functions
+function checkPageSectID(y, dir) {
+	for (var i = 0; i < pageSectTop.length; i ++)
+	{
+		if (dir == "down")
+		{
+			if (y >= pageSectTop[pageSectID]) pageSectID ++;
+			else pageSectID = 0;
+			console.log("Going down");
+		}
+		else
+		{
+			if (y <= pageSectTop[pageSectID]) pageSectID = --;
+			else pageSectID = 0;
+			console.log("Going up");
+		}
+	};
+
+	console.log(pageSectID+", curY:"+y+", pageSectY:"+pageSectTop[pageSectID]);
+};
+
+$subNavBtn.each(function(i) {
+	var id = i,
+		$THIS = $(this);
+
+	$THIS.on('click', function(e) {
+	    e.preventDefault();
+	    e.stopPropagation();
+
+	    $('html,body').animate({
+	        scrollTop: pageSectTop[id]
+	    }, 500, 'easeInOutCubic');
+	});
+});
+
+setPageSectPos();
 

@@ -27,7 +27,7 @@
 		}
 
 		&:active {
-			color: $col-home;
+			color: $col-stPaulHome;
 		}
 	}
 
@@ -87,7 +87,7 @@
 
 		a#nav-toggle {
 			position: fixed;
-			top: 4px;
+			top: 5px;
 			right: 10px;
 			// position: absolute;
 			// top: 4px;
@@ -101,7 +101,7 @@
 			// z-index: 500;
 			
 			@include breakpoint($tablet-width) {
-			    top: 14px;
+			    top: 15px;
 			    right: 25px;
 				// right: 5px;
 			}
@@ -216,7 +216,7 @@
 
 			&:nth-child(3) {
 				a:active {
-					color: $col-community;
+					color: $col-oneCommunity;
 				}
 			}
 
@@ -234,7 +234,7 @@
 
 			&:nth-child(6) {
 				a:active {
-					color: $col-gallery;
+					color: $col-mediaLibrary;
 				}
 			}
 
@@ -273,6 +273,15 @@
 			padding: 70px 100px 40px;
 		}
 
+		.icon, form {
+			display: block;
+			float: left;
+		}
+
+		.icon {
+			margin-right: 10px;
+		}
+
 		input {
 			display: block;
 			margin: 0;
@@ -290,15 +299,10 @@
 		}
 
 		input[name="search-text"] {
-			width: 230px;
-			margin-left: 0;
+			width: 270px;
 
 			@include breakpoint($mobile-width) {
-				width: 300px;
-			}
-
-			@include breakpoint($tablet-width) {
-				margin-left: 50px;
+				width: 340px;
 			}
 
 			background-color: $col-grey-d3;
@@ -312,6 +316,7 @@
 		}
 
 		input[type="submit"] {
+			display: none;
 			margin-left: 8px;
 			padding: 0;
 			color: $col-white;
@@ -357,11 +362,11 @@ body.nav-open {
 		}
 
 		a#nav-toggle {
-			top: 14px;
+			top: 15px;
 			// right: 27px;
 
 			@include breakpoint($tablet-width) {
-				top: 34px;
+				top: 35px;
 				// right: 42px;
 			}
 
@@ -447,10 +452,10 @@ body.nav-open {
 
 				&:nth-child(3) {
 					a:hover {
-						color: $col-community;
+						color: $col-oneCommunity;
 					}
 					a:active {
-						color: $col-community-sub;
+						color: $col-oneCommunity-sub;
 					}
 				}
 
@@ -474,23 +479,47 @@ body.nav-open {
 
 				&:nth-child(6) {
 					a:hover {
-						color: $col-gallery;
+						color: $col-mediaLibrary;
 					}
 					a:active {
-						color: $col-gallery-sub;
+						color: $col-mediaLibrary-sub;
 					}
 				}
 			}
 		}
 
-		.search input[type="submit"]:hover {
-			opacity: 1;
+		.search {
+			// .icon {
+			// 	display: none;
+			// }
+
+			// input[name="search-text"] {
+			// 	width: 230px;
+			// 	margin-left: 0;
+
+			// 	@include breakpoint($mobile-width) {
+			// 		width: 300px;
+			// 	}
+
+			// 	@include breakpoint($tablet-width) {
+			// 		margin-left: 50px;
+			// 	}
+			// }
+
+			// input[type="submit"] {
+			// 	display: block;
+
+			// 	&:hover {
+			// 		opacity: 1;
+			// 	}
+			// }
 		}
 	}
 }
 
 .noResize #header {
 	@include trans(.5s, all, cubic-bezier(.75,.01,.25,.99));
+	
 	.masthead {
 		transition: padding .5s ease-in-out, border .15s ease-in-out .5s;
 		a#nav-toggle {
