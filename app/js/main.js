@@ -1,196 +1,252 @@
-console.log("Main code");
+STPAULQUEENS.namespace( 'main' );
 
-var $WIN = $(window),
-	$html = $('html'),
-	$body = $('body'),
-	$header = $('#header'),
-	$navBtn = $('#nav-toggle'),
-	$content = $('#content'),
-	$hero = $('#content .hero'),
-	$subNav = $('#content .sub-nav'),
-	$subNavBtn = $('#content .sub-nav .sub-nav-btn'),
-	$contentBody = $('#content .content-body'),
-	$contentSect = $('#content .content-body > div');
+STPAULQUEENS.main = (function($) {
+	var OBJ_NAV,
+  		OBJ_SECT;
 
-$html.addClass('noResize');
-$html.addClass('noTouch');
+	var $WIN,
+		$ROOT,
+		$HTML,
+		$BODY_P_NAME,
+		$HEADER,
+		$NAV_SECT,
+		$STICKYNAV_BTN,
+		$CONTENT,
+		$HERO,
+		$SUBNAV,
+		$SUBNAV_UL,
+		$SUBNAV_BTN,
+		$CONTENT_SECT;
+		
+	var init = function() {
+	    cache_dom();
+	    OBJ_NAV = STPAULQUEENS.main.nav;
+  		OBJ_SECT = STPAULQUEENS.main.landing;
+	    
+	    $HTML.addClass('noResize');
+		$HTML.addClass('noTouch');
+		var subHash = window.location.hash.slice(1);
 
+		user_agent.init();
+		w_resize.init();
+		w_scroll.init();
 
-//window resize stops css animation and resets on callback
-var wrTime;
-var wrTimeout = false;
-var wrDelta = 200;
-$WIN.resize(function() {
-    wrTime = new Date();
-    if (wrTimeout === false) {
-        wrTimeout = true;
-        $html.removeClass('noResize');
-        setTimeout(resizeEnd, wrDelta);
-    }
-});
+		p_main.init();
+		p_sect.init();
+		p_sect.setPosId();
 
-function resizeEnd() {
-    if (new Date() - wrTime < wrDelta) {
-        setTimeout(resizeEnd, wrDelta);
-    } else {
-        wrTimeout = false;
-        $html.addClass('noResize');
-        setPageSectPos();
-    }               
-}
-
-
-
-
-var is_touch_device = function () {
-  return 'ontouchstart' in window        // works on most browsers 
-      || navigator.maxTouchPoints;       // works on IE10/11 and Surface
-};
-
-if (is_touch_device()) {
-	$html.removeClass('noTouch');
-	document.addEventListener("touchstart", function(){}, true); 
-}
-
-var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-if (iOS) $html.addClass('iOS-detect');
-
-
-
-
-//window scroll callback for sticky nav on iOS
-var lastScrollTop = 0;
-$WIN.on('scroll', function(e) {
-	var $THIS = $(this),
-		st = $THIS.scrollTop(),
-		heroH = $hero.height();
-
-	if (st > lastScrollTop)
-	{
-		if (iOS)
+		if (subHash)
 		{
-			clearTimeout($.data(this, 'scrollTimer'));
-		    $.data(this, 'scrollTimer', setTimeout(function() {
-		        if ((st > (heroH - 70) && $subNav.find('ul').is(':visible')) ||
-	    		(st > (heroH - 50) && !$subNav.find('ul').is(':visible')))
-		    	{
-		    		$content.addClass('sticky-nav');
-		    	}
-		    }, 250));
+			w_scroll.hash = true;
+			var target = $('[name=' + subHash +']');
+			p_sect.anchorAnim(target.index() + 1, "#"+subHash);
 		}
 		else
 		{
-			if ((st > (heroH - 50 - 70) && $subNav.find('ul').is(':visible')) ||
-    		(st > (heroH - 6 - 50) && !$subNav.find('ul').is(':visible')))
-	    	{
-	    		$content.addClass('sticky-nav');
-	    	}
+			p_sect.anchorAnim(0, " ");
 		}
 
-		checkPageSectID(st, 'down');
-    }
-    else
-    {
-    	if ((st <= (heroH - 40 - 70) && $subNav.find('ul').is(':visible')) ||
-    		(st <= (heroH - 6 - 50) && !$subNav.find('ul').is(':visible')))
-    	{
-    		$content.removeClass('sticky-nav');
-    	}
+		OBJ_NAV.init();
+	};
 
-    	checkPageSectID(st, 'up');
-    }
-    lastScrollTop = st;
+	//cache_dom: cache DOM elements for optimization
+	var cache_dom = function() {
+		$WIN = $(window);
+		$ROOT = $('html, body');
+		$HTML = $('html');
+		$BODY_P_NAME = $('body[class^="stpaul-"]');
+		$HEADER = $('#header');
+		$NAV_SECT = $HEADER.find('ul.navigation li.section');
+		$STICKYNAV_BTN = $HEADER.find('.sub-nav .sub-nav-btn');
+		$CONTENT = $('#content');
+		$HERO = $CONTENT.find('.hero');
+		$SUBNAV = $CONTENT.find('.sub-nav');
+		$SUBNAV_UL = $SUBNAV.find('ul');
+		$SUBNAV_BTN = $SUBNAV.find('.sub-nav-btn');
+		$CONTENT_SECT = $CONTENT.find('.content-body .section');
+	};
 
-    // console.log(st);
-});
-
-
-
-
-
-//hamburger button function
-$navBtn.on('click', function(e) {
-	e.preventDefault();
-    e.stopPropagation();
-
-	if ($body.hasClass('nav-open'))
-	{
-		$body.removeClass('nav-open');
-		$header.delay(250).animate({
-			scrollTop: 0
-		}, 0);
-	}
-	else
-	{
-		$body.addClass('nav-open');
-	}
-	console.log("Toggle clicked");
-});
-
-
-
-
-
-//back to top button function
-$('a.sprite-top-btn').on('click', function(e) {
-    e.preventDefault();
-    e.stopPropagation();
-
-    $('html,body').animate({
-        scrollTop: 0
-    }, 500, 'easeInOutCubic');
-    return false;
-});
-
-
-
-
-var pageSectID = 0,
-	pageSectTop = [],
-	contentBodyY = $contentBody.position().top;
-
-function setPageSectPos() {
-	pageSectTop = [];
-	$contentSect.each(function(i) {
-		var y = $(this).position().top;
-		pageSectTop.push(contentBodyY + y - 85);
-	});
-};
-
-//subnav functions
-function checkPageSectID(y, dir) {
-	for (var i = 0; i < pageSectTop.length; i ++)
-	{
-		if (dir == "down")
-		{
-			if (y >= pageSectTop[pageSectID]) pageSectID ++;
-			else pageSectID = 0;
-			console.log("Going down");
-		}
-		else
-		{
-			if (y <= pageSectTop[pageSectID]) pageSectID = --;
-			else pageSectID = 0;
-			console.log("Going up");
+	//user_agent: check for touch device and iOS detection
+	var user_agent = {
+		isTouch: false,
+		init: function() {
+			if (this.is_touch_device()) {
+				this.isTouch = true;
+				$HTML.removeClass('noTouch');
+				document.addEventListener("touchstart", function(){}, true); 
+			}
+		},
+		is_touch_device: function () {
+  			return 'ontouchstart' in window    // works on most browsers 
+			|| navigator.maxTouchPoints;       // works on IE10/11 and Surface
 		}
 	};
 
-	console.log(pageSectID+", curY:"+y+", pageSectY:"+pageSectTop[pageSectID]);
-};
+	//w_resize: window resize stops css animation and resets on callback, reposition to top anchor upon resize
+	var w_resize = {
+		width: 0,
+		height: 0,
+		m_view: false,
+		time: null,
+		timeout: false,
+		delta: 200,
+		init: function() {
+			w_resize.width = $WIN.width();
+			w_resize.height = $WIN.height();
 
-$subNavBtn.each(function(i) {
-	var id = i,
-		$THIS = $(this);
+			if (!$SUBNAV_UL.is(':visible')) w_resize.m_view = true;
+	    	else w_resize.m_view = false;
+			
+			if (!user_agent.isTouch) $WIN.on('resize', this.start.bind(this));
+			else $WIN.on('orientationchange', this.start.bind(this));
+		},
+		start: function() {
+			this.time = new Date();
+		    if (w_resize.timeout === false) {
+		        w_resize.timeout = true;
+		        $HTML.removeClass('noResize');
+		        setTimeout(this.end, this.delta);
+		    }
+		},
+		end: function() {
+		    if (new Date() - this.time < this.delta) {
+		        setTimeout(this.end, this.delta);
+		    } else {
+		        w_resize.timeout = false;
+		        $HTML.addClass('noResize');
+		        
+		        if (!$SUBNAV_UL.is(':visible')) w_resize.m_view = true;
+		    	else w_resize.m_view = false;
 
-	$THIS.on('click', function(e) {
-	    e.preventDefault();
-	    e.stopPropagation();
+		    	w_resize.width = $WIN.width();
+				w_resize.height = $WIN.height();
 
-	    $('html,body').animate({
-	        scrollTop: pageSectTop[id]
-	    }, 500, 'easeInOutCubic');
-	});
-});
+		        p_sect.init();
+		        p_sect.anchorAnim();
+		        p_main.p_feature();
+		    }
+		}
+	};
 
-setPageSectPos();
+	//w_scroll: window scroll callback for sticky nav with iOS support
+	var w_scroll = {
+		lastScrollTop: 0,
+		st: 0,
+		hash: false,
+		init: function() {
+			$WIN.on('scroll', this.start.bind(this));
+		},
+		start: function() {
+			this.st = $WIN.scrollTop();
 
+		 	if (this.st > 5) $CONTENT.addClass('skinny-nav');
+		 	else $CONTENT.removeClass('skinny-nav');
+
+		 	if (this.st > this.lastScrollTop)
+			{				
+				if ((this.st > (p_sect.heroH - 109) && !w_resize.m_view && !$HEADER.hasClass('sticky-nav') && p_main.id < 100) 
+					|| (this.st > (p_sect.heroH - 77) && !w_resize.m_view && !$HEADER.hasClass('sticky-nav') && p_main.id >= 100)
+					|| (this.st > (p_sect.heroH - 57) && w_resize.m_view && !$HEADER.hasClass('sticky-nav'))) $HEADER.addClass('sticky-nav');
+				p_sect.setPosId(this.st, 'down');
+		    }
+		    else
+		    {
+		    	if ((this.st <= (p_sect.heroH - 108) && !w_resize.m_view && $HEADER.hasClass('sticky-nav') && p_main.id < 100) 
+		    		|| (this.st <= (p_sect.heroH - 76) && !w_resize.m_view && $HEADER.hasClass('sticky-nav') && p_main.id >= 100)
+		    		|| (this.st <= (p_sect.heroH - 56) && w_resize.m_view && $HEADER.hasClass('sticky-nav'))) $HEADER.removeClass('sticky-nav');
+		    	p_sect.setPosId(this.st, 'up');
+		    }
+			
+		    this.lastScrollTop = this.st;
+		}
+	};
+
+	//p_main: main page indexing and custom triggers
+	var p_main = {
+		id: 100,
+		init: function() {
+			var curPageClass = $BODY_P_NAME.attr('class');
+			p_main.id = 100;
+
+			$NAV_SECT.each(function(i) {
+				var navClass = $(this).find('*[class^="stpaul-"]').attr('class');
+				if (navClass == curPageClass) p_main.id = i;
+			});
+
+			this.p_feature();
+		},
+		p_feature: function() {
+			if (p_main.id >= 100)
+			{
+				if (!w_resize.m_view) $HERO.css('height', w_resize.height+'px');
+				
+			}
+		}
+	}
+
+	//p_sect: sections top y position, section id, animate to section top anchors
+	var p_sect = {
+		id: 0,
+		posTop: [0],
+		heroH: 0,
+		duration: 100,
+		velocity: 1,
+		init: function() {
+			this.heroH = $HERO.height();
+			this.setPosTop();
+		},
+		setPosTop: function() {
+			p_sect.posTop = [0];
+
+			$CONTENT_SECT.each(function(i) {
+				var stickyNavDiff, yPos;
+				stickyNavDiff = (!w_resize.m_view) ? 108 : 54;
+				yPos = $(this).position().top - stickyNavDiff;
+
+				p_sect.posTop.push(Math.floor(yPos));
+			});
+		},
+		setPosId: function(y, dir) {
+			if (dir == "down")
+			{
+				if (y >= this.posTop[this.id + 1] && this.id < (this.posTop.length-1)) this.id += 1;
+			}
+			else
+			{
+				if (y < this.posTop[this.id] && this.id > 0) this.id -= 1;
+			}
+
+			$STICKYNAV_BTN.removeClass('on');
+			$SUBNAV_BTN.removeClass('on');
+
+			if (this.id <= 0) $SUBNAV_BTN.addClass('on');
+			else $STICKYNAV_BTN.eq(this.id-1).addClass('on');
+		},
+		anchorAnim: function(i, hash) {
+			if (i == undefined)
+			{
+				i = this.id;
+				this.duration = 100;
+			}
+			else
+			{
+				this.velocity = Math.abs(this.id - i);
+				if (this.velocity <= 0) this.velocity = 1;
+				this.duration = (this.velocity > 2) ? 250 * this.velocity : 400 * this.velocity;
+				this.id = i;
+			}
+
+			$ROOT.animate({
+		        scrollTop: this.posTop[i]
+		    }, this.duration, 'easeInOutCubic', function() {
+		    	if (hash) window.location.hash = hash;
+		    });
+		}	
+	};
+
+	return {
+		init: init,
+		getSectID: function() { return p_sect.id; },
+		anchorAnim: function(i, h) { p_sect.anchorAnim(i, h); }
+	};
+})(jQuery);

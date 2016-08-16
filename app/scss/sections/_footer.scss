@@ -19,7 +19,8 @@
 		}
 
 		&:active {
-			color: darken( $col-white, 75% );
+			// color: darken( $col-white, 75% );
+			color: $col-stPaulHome;
 		}
 	}
 
@@ -172,6 +173,10 @@
 				margin: 0;
 				font-size: .8rem;
 				letter-spacing: 1pt;
+
+				@include breakpoint($mobile-width) {
+					display: inline-block;
+				}
 			}
 		}
 	}

@@ -10,6 +10,7 @@
 	transition: $prop $time $ease $delay;
 }
 
+
 /*
 $width:auto;
 @mixin clearfix($width) {
@@ -26,11 +27,31 @@ $width:auto;
 */
 
 
+@mixin stylize-header($theme, $color) {
+  $primary: $color;
+  $secondary: darken($color, 20%);
+
+  body.#{$theme} #header {
+    .sub-nav {
+      background: $secondary;
+
+      a.sub-nav-btn {
+        color: lighten( $primary, 10% );//20% );
+
+        &:active {
+          color: $col-black;
+        }
+      }
+    }
+  }
+}
+
+
 @mixin stylize-hero($theme, $color) {
   $primary: $color;
   $secondary: darken($color, 20%);
 
-  #content.#{$theme} {
+  body.#{$theme} #content {
     .hero {
       background: $primary;
 
@@ -69,13 +90,17 @@ $width:auto;
         background: $secondary;
 
         a.sub-nav-btn {
-          color: lighten( $primary, 20% );
+          color: lighten( $primary, 10% );//20% );
+
+          &:active {
+            color: $col-black;
+          }
         }
       }
     }
   }
 
-  .noTouch #content.#{$theme} {
+  .noTouch body.#{$theme} #content {
     .hero {
       .wrapper {
         .hero-content a {
@@ -116,15 +141,58 @@ $width:auto;
 }
 
 
-
-
 @mixin stylize-contentBody($theme, $color) {
   $primary: $color;
   $secondary: darken($color, 20%);
 
-  #content.#{$theme} {
+  body.#{$theme} #content {
     .content-body {
-      
+      a {
+        color: $primary;
+      }
+
+      h3 {
+        a, a:hover, a:visited {
+          color: $secondary;
+        }
+        a:active {
+          color: $col-black;
+        }
+      }
+
+      .section.media {
+        background: $primary;
+
+        a:hover {
+          color: $secondary;
+        }
+
+        a:active {
+          color: $col-black;
+        }
+
+        h3 {
+          a, a:hover, a:visited {
+            color: $col-white;
+          }
+          a:active {
+            color: $secondary;
+          }
+        }
+      }
+    }
+  }
+
+  .noTouch body.#{$theme} #content {
+    .content-body {
+      a {
+        &:hover {
+          color: $secondary;
+        }
+        &:active {
+          color: $col-black;
+        }
+      }
     }
   }
 }

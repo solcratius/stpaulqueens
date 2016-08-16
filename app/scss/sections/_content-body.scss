@@ -6,16 +6,33 @@
 	@include stylize-contentBody($theme, $color);
 }
 
-#content {
+body #content {
 	.content-body {
-		position: relative;
+		// position: relative;
+		
+		color: $col-grey-d3;
 
-		& > div {
-			padding-top: 60px;
-			padding-bottom: 40px;
+		a {
+			color: $col-grey-d3;
 
-			&:first-child {
-				padding-top: 80px;
+			&:hover {
+				text-decoration: none;
+			}
+
+			&:visited {
+				color: $col-black;
+			}
+		}
+
+		.section {
+			padding-top: 70px;
+			padding-bottom: 50px;
+
+			@include breakpoint($tablet-width) {
+				&:first-child {
+					padding-top: 90px;
+					border-bottom: 1px solid $col-grey-l; //REMOVE
+				}
 			}
 
 			&:last-child {
@@ -25,17 +42,21 @@
 
 		.main-body {
 			@include span(9);
+			text-align: center;
 
 			@include breakpoint($tablet-width) {
 				@include span(6);
+				text-align: left;
 			}
 		}
 
 		.side-body {
 			@include span(9);
+			text-align: center;
 
 			@include breakpoint($tablet-width) {
 				@include span(3);
+				text-align: left;
 			}
 		}
 
@@ -43,64 +64,39 @@
 			margin-bottom: 30px;
 		}
 
-		.content-sect2 {
-			background: $col-grey-d;
-		}
-	}
-}
+		.media {
+			color: $col-white;
 
-.noTouch #content {
-	.hero {
-		.sub-nav {
-			a:hover {
+			.main-body {
+				@include span(9);
+			}
+
+			a, a:visited {
 				color: $col-white;
 			}
 		}
-
-		a.util-box-btn:hover {
-			background: $col-white;
-		}
-	}
-
-	&.sticky-nav {
-		.hero .sub-nav {
-			a.sprite-top-btn:hover {
-				opacity: 1;
-				&:active {
-					opacity: .5;
-				}
-			}
-		}
 	}
 }
 
-.noResize #content {
-	.hero a.util-box-btn {
-		@include trans(.15s, all, ease-out);
-	}
-}
+// .noResize #content {
+// 	.content-body {
 
-.iOS-detect.noResize #content {
-	.hero {
-		transition: none;
-		.sub-nav {
-			transition: none;
-			@include trans(.25s, margin-top);
+// 	}
+// }
 
-			a {
-				transition: none;
-			}
-		}
-	}
 
-	&.sticky-nav {
-		.hero .sub-nav {
-			margin-top: 40px;
-			top: 10px;
+// #content.sticky-nav {
+// 	.content-body {
+// 		.anchor {
+// 			padding-bottom: 55px;
 
-			@include breakpoint($tablet-width) {
-				top: 30px;
-			}
-		}
-	}
-}
+// 			@include breakpoint($tablet-width) {
+// 				padding-bottom: 108px;
+// 			}
+// 		}
+
+// 		.section {
+// 			padding-bottom: 0;
+// 		}
+// 	}
+// }

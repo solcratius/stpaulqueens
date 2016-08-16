@@ -2,7 +2,11 @@
 // HEADER
 // ***********************************
 
-#header {
+@each $theme, $color in $themes {
+	@include stylize-header($theme, $color);
+}
+
+body #header {
 	position: fixed;
 	background: $col-black;
 	left: 0;
@@ -131,6 +135,85 @@
 		}
 	}
 
+	.sub-nav {
+		display: block;
+		position: relative;
+		width: 100%;
+		height: 5px;
+		margin-top: 0;
+		text-align: center;
+		border-bottom: none;
+		overflow: hidden;
+
+		ul {
+			@extend %no-style-ul;
+
+			display: none;
+			position: relative;
+			height: 100%;
+			max-width: $tablet-width;
+			margin: 0 auto;
+		}
+
+		ul li {
+			float: left;
+			font-size: 0;
+
+			a.sub-nav-btn {
+				padding: 7px 13px;
+				line-height: 38px;
+				margin: 0;
+				letter-spacing: 1pt;
+				font-size: 1rem;
+				font-weight: 400;
+				opacity: 1;
+				@include trans(.15s, color, ease-out);
+
+				&:active {
+					color: $col-black;
+				}
+
+				&.on {
+					color: $col-white;
+				}
+			}
+
+			a.sprite-top-btn {
+				padding: 0;
+				margin: 4px 0;
+				font: 0/0 a;
+				opacity: .65;
+				cursor: pointer;
+				@include trans(.15s, opacity, ease-out);
+
+				&:active {
+					background-position: -140px -187px;
+					opacity: .5;
+				}
+			}
+
+			.sub-nav-divider {
+				width: 1px;
+				height: 12px;
+				margin: 13px 0;
+				background: $col-white;
+				opacity: .25;
+			}
+
+			&:last-child {
+				margin-right: 12px;
+			}
+		}
+
+		@include breakpoint($tablet-width) {
+			height: 38px;
+
+			ul {
+				display: inline-block;
+			}
+		}
+	}
+
 	.navigation {
 		margin-top: 250px;
 		@include container($desktop-width);
@@ -173,7 +256,7 @@
 				margin: 0;
 				padding-top: 55px;
 
-				@include trans(.15s, color, ease-out);
+				// @include trans(.15s, color, ease-out);
 
 				.icon {
 					opacity: 1;
@@ -183,9 +266,9 @@
 					opacity: 0;
 				}
 
-				.icon, .icon-hover {
-					@include trans(.25s, opacity, ease-out);
-				}
+				// .icon, .icon-hover {
+				// 	@include trans(.25s, opacity, ease-out);
+				// }
 			}
 
 			.nav-divider {
@@ -339,9 +422,36 @@
 			}
 		}
 	}
+
+	&.sticky-nav {
+		height: 56px;
+		transition: none;
+
+		@include breakpoint($tablet-width) {
+			height: 109px;
+		}
+	}
 }
 
-body.nav-open {
+body.stpaul-stPaulHome #header.sticky-nav {
+	.sub-nav {
+		height: 6px;
+		ul {
+			height: 6px;
+
+			li {
+				line-height: 0;
+				height: 0;
+			}
+		}
+	}
+
+	@include breakpoint($tablet-width) {
+		height: 76px;
+	}
+}
+
+body.nav-open, body.stpaul-stPaulHome.nav-open {
 	overflow: hidden;
 
 	#header {
@@ -355,6 +465,10 @@ body.nav-open {
 			}
 
 			border-bottom: 1px solid $col-grey-d4;
+		}
+
+		.sub-nav {
+			display: none;
 		}
 
 		.navigation {
@@ -411,13 +525,32 @@ body.nav-open {
 		}
 	}
 
-	#header {
+	body #header {
 		a#nav-toggle:hover {
 			opacity: 1;
 		}
 
+		.sub-nav {
+			a:hover {
+				color: $col-white;
+			}
+			a:active {
+	            color: $col-black;
+	        }
+
+	        a.sprite-top-btn:hover {
+				opacity: 1;
+				&:active {
+					opacity: .5;
+				}
+			}
+		}
+
 		.navigation {
 			li.section {
+				a {
+					@include trans(.15s, color, ease-out);
+				}
 				a:hover {
 					.icon {
 						opacity: 0;
@@ -427,9 +560,17 @@ body.nav-open {
 					}
 				}
 				a:active {
+					.icon {
+						opacity: 0;
+					}
+
 					.icon-hover {
 						opacity: .5;
 					}
+				}
+
+				.icon, .icon-hover {
+					@include trans(.25s, opacity, ease-out);
 				}
 
 				&:nth-child(1) {
@@ -517,13 +658,20 @@ body.nav-open {
 	}
 }
 
-.noResize #header {
-	@include trans(.5s, all, cubic-bezier(.75,.01,.25,.99));
-	
-	.masthead {
-		transition: padding .5s ease-in-out, border .15s ease-in-out .5s;
-		a#nav-toggle {
+.noResize {
+	body #header {
+		transition: none;
+
+		.masthead a#nav-toggle {
 			transition: top .5s ease-in-out, opacity .15s ease-out;
+		}
+	}
+
+	body.nav-open #header {
+		@include trans(.5s, all, cubic-bezier(.75,.01,.25,.75));
+
+		.masthead {
+			transition: padding .5s ease-in-out, border .15s ease-in-out .5s;
 		}
 	}
 }

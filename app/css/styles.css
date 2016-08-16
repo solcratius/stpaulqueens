@@ -353,13 +353,13 @@ span.sm-txt {
   font-size: .7em;
 }
 
-#header .navigation, #header .navigation li.section ul, #footer ul, #content .hero .wrapper .hero-content ul, #content .hero .sub-nav ul {
+body #header .sub-nav ul, body #header .navigation, body #header .navigation li.section ul, #footer ul, body #content .hero .wrapper .hero-content ul, body #content .hero .sub-nav ul, body.stpaul-stPaulHome #content .hero .sub-nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-#header .navigation li, #header .navigation li.section ul li, #footer ul li, #content .hero .wrapper .hero-content ul li, #content .hero .sub-nav ul li {
+body #header .sub-nav ul li, body #header .navigation li, body #header .navigation li.section ul li, #footer ul li, body #content .hero .wrapper .hero-content ul li, body #content .hero .sub-nav ul li, body.stpaul-stPaulHome #content .hero .sub-nav ul li {
   list-style: none;
 }
 
@@ -372,32 +372,32 @@ span.sm-txt {
 }
 
 .show-mobileOnly {
-  display: block;
+  display: block !important;
 }
 
 @media (min-width: 420px) {
   .show-mobileOnly {
-    display: none;
+    display: none !important;
   }
 }
 
 .show-tablet {
-  display: none;
+  display: none !important;
 }
 
 @media (min-width: 640px) {
   .show-tablet {
-    display: block;
+    display: block !important;
   }
 }
 
 .show-desktop {
-  display: none;
+  display: none !important;
 }
 
 @media (min-width: 920px) {
   .show-desktop {
-    display: block;
+    display: block !important;
   }
 }
 
@@ -545,38 +545,38 @@ span.sm-txt {
   background-position: -40px -440px;
 }
 
-.noTouch #content.stPaulHome .hero a.util-box-btn:hover .sprite-download,
-#content.stPaulHome .content-body .sprite-download {
+.noTouch body.stpaul-stPaulHome #content .hero a.util-box-btn:hover .sprite-download,
+body.stpaul-stPaulHome #content .content-body .sprite-download {
   background-position: -80px -440px;
 }
 
-.noTouch #content.stPaulOffice .hero a.util-box-btn:hover .sprite-download,
-#content.stPaulOffice .content-body .sprite-download {
+.noTouch body.stpaul-stPaulOffice #content .hero a.util-box-btn:hover .sprite-download,
+body.stpaul-stPaulOffice #content .content-body .sprite-download {
   background-position: -120px -440px;
 }
 
-.noTouch #content.spiritualLife .hero a.util-box-btn:hover .sprite-download,
-#content.spiritualLife .content-body .sprite-download {
+.noTouch body.stpaul-spiritualLife #content .hero a.util-box-btn:hover .sprite-download,
+body.stpaul-spiritualLife #content .content-body .sprite-download {
   background-position: -160px -440px;
 }
 
-.noTouch #content.oneCommunity .hero a.util-box-btn:hover .sprite-download,
-#content.oneCommunity .content-body .sprite-download {
+.noTouch body.stpaul-oneCommunity #content .hero a.util-box-btn:hover .sprite-download,
+body.stpaul-oneCommunity #content .content-body .sprite-download {
   background-position: -200px -440px;
 }
 
-.noTouch #content.ourParish .hero a.util-box-btn:hover .sprite-download,
-#content.ourParish .content-body .sprite-download {
+.noTouch body.stpaul-ourParish #content .hero a.util-box-btn:hover .sprite-download,
+body.stpaul-ourParish #content .content-body .sprite-download {
   background-position: -240px -440px;
 }
 
-.noTouch #content.educationCenter .hero a.util-box-btn:hover .sprite-download,
-#content.educationCenter .content-body .sprite-download {
+.noTouch body.stpaul-educationCenter #content .hero a.util-box-btn:hover .sprite-download,
+body.stpaul-educationCenter #content .content-body .sprite-download {
   background-position: -280px -440px;
 }
 
-.noTouch #content.mediaLibrary .hero a.util-box-btn:hover .sprite-download,
-#content.mediaLibrary .content-body .sprite-download {
+.noTouch body.stpaul-mediaLibrary #content .hero a.util-box-btn:hover .sprite-download,
+body.stpaul-mediaLibrary #content .content-body .sprite-download {
   background-position: -320px -440px;
 }
 
@@ -591,38 +591,38 @@ span.sm-txt {
   background-position: -40px -500px;
 }
 
-.noTouch #content.stPaulHome .hero a.util-box-btn:hover .sprite-link,
-#content.stPaulHome .content-body .sprite-link {
+.noTouch body.stpaul-stPaulHome #content .hero a.util-box-btn:hover .sprite-link,
+body.stpaul-stPaulHome #content .content-body .sprite-link {
   background-position: -80px -500px;
 }
 
-.noTouch #content.stPaulOffice .hero a.util-box-btn:hover .sprite-link,
-#content.stPaulOffice .content-body .sprite-link {
+.noTouch body.stpaul-stPaulOffice #content .hero a.util-box-btn:hover .sprite-link,
+body.stpaul-stPaulOffice #content .content-body .sprite-link {
   background-position: -120px -500px;
 }
 
-.noTouch #content.spiritualLife .hero a.util-box-btn:hover .sprite-link,
-#content.spiritualLife .content-body .sprite-link {
+.noTouch body.stpaul-spiritualLife #content .hero a.util-box-btn:hover .sprite-link,
+body.stpaul-spiritualLife #content .content-body .sprite-link {
   background-position: -160px -500px;
 }
 
-.noTouch #content.oneCommunity .hero a.util-box-btn:hover .sprite-link,
-#content.oneCommunity .content-body .sprite-link {
+.noTouch body.stpaul-oneCommunity #content .hero a.util-box-btn:hover .sprite-link,
+body.stpaul-oneCommunity #content .content-body .sprite-link {
   background-position: -200px -500px;
 }
 
-.noTouch #content.ourParish .hero a.util-box-btn:hover .sprite-link,
-#content.ourParish .content-body .sprite-link {
+.noTouch body.stpaul-ourParish #content .hero a.util-box-btn:hover .sprite-link,
+body.stpaul-ourParish #content .content-body .sprite-link {
   background-position: -240px -500px;
 }
 
-.noTouch #content.educationCenter .hero a.util-box-btn:hover .sprite-link,
-#content.educationCenter .content-body .sprite-link {
+.noTouch body.stpaul-educationCenter #content .hero a.util-box-btn:hover .sprite-link,
+body.stpaul-educationCenter #content .content-body .sprite-link {
   background-position: -280px -500px;
 }
 
-.noTouch #content.mediaLibrary .hero a.util-box-btn:hover .sprite-link,
-#content.mediaLibrary .content-body .sprite-link {
+.noTouch body.stpaul-mediaLibrary #content .hero a.util-box-btn:hover .sprite-link,
+body.stpaul-mediaLibrary #content .content-body .sprite-link {
   background-position: -320px -500px;
 }
 
@@ -637,38 +637,38 @@ span.sm-txt {
   background-position: -40px -470px;
 }
 
-.noTouch #content.stPaulHome .hero a.util-box-btn:hover .sprite-link-ext,
-#content.stPaulHome .content-body .sprite-link-ext {
+.noTouch body.stpaul-stPaulHome #content .hero a.util-box-btn:hover .sprite-link-ext,
+body.stpaul-stPaulHome #content .content-body .sprite-link-ext {
   background-position: -80px -470px;
 }
 
-.noTouch #content.stPaulOffice .hero a.util-box-btn:hover .sprite-link-ext,
-#content.stPaulOffice .content-body .sprite-link-ext {
+.noTouch body.stpaul-stPaulOffice #content .hero a.util-box-btn:hover .sprite-link-ext,
+body.stpaul-stPaulOffice #content .content-body .sprite-link-ext {
   background-position: -120px -470px;
 }
 
-.noTouch #content.spiritualLife .hero a.util-box-btn:hover .sprite-link-ext,
-#content.spiritualLife .content-body .sprite-link-ext {
+.noTouch body.stpaul-spiritualLife #content .hero a.util-box-btn:hover .sprite-link-ext,
+body.stpaul-spiritualLife #content .content-body .sprite-link-ext {
   background-position: -160px -470px;
 }
 
-.noTouch #content.oneCommunity .hero a.util-box-btn:hover .sprite-link-ext,
-#content.oneCommunity .content-body .sprite-link-ext {
+.noTouch body.stpaul-oneCommunity #content .hero a.util-box-btn:hover .sprite-link-ext,
+body.stpaul-oneCommunity #content .content-body .sprite-link-ext {
   background-position: -200px -470px;
 }
 
-.noTouch #content.ourParish .hero a.util-box-btn:hover .sprite-link-ext,
-#content.ourParish .content-body .sprite-link-ext {
+.noTouch body.stpaul-ourParish #content .hero a.util-box-btn:hover .sprite-link-ext,
+body.stpaul-ourParish #content .content-body .sprite-link-ext {
   background-position: -240px -470px;
 }
 
-.noTouch #content.educationCenter .hero a.util-box-btn:hover .sprite-link-ext,
-#content.educationCenter .content-body .sprite-link-ext {
+.noTouch body.stpaul-educationCenter #content .hero a.util-box-btn:hover .sprite-link-ext,
+body.stpaul-educationCenter #content .content-body .sprite-link-ext {
   background-position: -280px -470px;
 }
 
-.noTouch #content.mediaLibrary .hero a.util-box-btn:hover .sprite-link-ext,
-#content.mediaLibrary .content-body .sprite-link-ext {
+.noTouch body.stpaul-mediaLibrary #content .hero a.util-box-btn:hover .sprite-link-ext,
+body.stpaul-mediaLibrary #content .content-body .sprite-link-ext {
   background-position: -320px -470px;
 }
 
@@ -683,38 +683,38 @@ span.sm-txt {
   background-position: -40px -550px;
 }
 
-.noTouch #content.stPaulHome .hero a.hero-txt-btn:hover .sprite-link-sm,
-#content.stPaulHome .content-body .sprite-link-sm {
+.noTouch body.stpaul-stPaulHome #content .hero a.hero-txt-btn:hover .sprite-link-sm,
+body.stpaul-stPaulHome #content .content-body .sprite-link-sm {
   background-position: -80px -550px;
 }
 
-.noTouch #content.stPaulOffice .hero a.hero-txt-btn:hover .sprite-link-sm,
-#content.stPaulOffice .content-body .sprite-link-sm {
+.noTouch body.stpaul-stPaulOffice #content .hero a.hero-txt-btn:hover .sprite-link-sm,
+body.stpaul-stPaulOffice #content .content-body .sprite-link-sm {
   background-position: -120px -550px;
 }
 
-.noTouch #content.spiritualLife .hero a.hero-txt-btn:hover .sprite-link-sm,
-#content.spiritualLife .content-body .sprite-link-sm {
+.noTouch body.stpaul-spiritualLife #content .hero a.hero-txt-btn:hover .sprite-link-sm,
+body.stpaul-spiritualLife #content .content-body .sprite-link-sm {
   background-position: -160px -550px;
 }
 
-.noTouch #content.oneCommunity .hero a.hero-txt-btn:hover .sprite-link-sm,
-#content.oneCommunity .content-body .sprite-link-sm {
+.noTouch body.stpaul-oneCommunity #content .hero a.hero-txt-btn:hover .sprite-link-sm,
+body.stpaul-oneCommunity #content .content-body .sprite-link-sm {
   background-position: -200px -550px;
 }
 
-.noTouch #content.ourParish .hero a.hero-txt-btn:hover .sprite-link-sm,
-#content.ourParish .content-body .sprite-link-sm {
+.noTouch body.stpaul-ourParish #content .hero a.hero-txt-btn:hover .sprite-link-sm,
+body.stpaul-ourParish #content .content-body .sprite-link-sm {
   background-position: -240px -550px;
 }
 
-.noTouch #content.educationCenter .hero a.hero-txt-btn:hover .sprite-link-sm,
-#content.educationCenter .content-body .sprite-link-sm {
+.noTouch body.stpaul-educationCenter #content .hero a.hero-txt-btn:hover .sprite-link-sm,
+body.stpaul-educationCenter #content .content-body .sprite-link-sm {
   background-position: -280px -550px;
 }
 
-.noTouch #content.mediaLibrary .hero a.hero-txt-btn:hover .sprite-link-sm,
-#content.mediaLibrary .content-body .sprite-link-sm {
+.noTouch body.stpaul-mediaLibrary #content .hero a.hero-txt-btn:hover .sprite-link-sm,
+body.stpaul-mediaLibrary #content .content-body .sprite-link-sm {
   background-position: -320px -550px;
 }
 
@@ -729,38 +729,38 @@ span.sm-txt {
   background-position: -40px -530px;
 }
 
-.noTouch #content.stPaulHome .hero a.hero-txt-btn:hover .sprite-link-ext-sm,
-#content.stPaulHome .content-body .sprite-link-ext-sm {
+.noTouch body.stpaul-stPaulHome #content .hero a.hero-txt-btn:hover .sprite-link-ext-sm,
+body.stpaul-stPaulHome #content .content-body .sprite-link-ext-sm {
   background-position: -80px -530px;
 }
 
-.noTouch #content.stPaulOffice .hero a.hero-txt-btn:hover .sprite-link-ext-sm,
-#content.stPaulOffice .content-body .sprite-link-ext-sm {
+.noTouch body.stpaul-stPaulOffice #content .hero a.hero-txt-btn:hover .sprite-link-ext-sm,
+body.stpaul-stPaulOffice #content .content-body .sprite-link-ext-sm {
   background-position: -120px -530px;
 }
 
-.noTouch #content.spiritualLife .hero a.hero-txt-btn:hover .sprite-link-ext-sm,
-#content.spiritualLife .content-body .sprite-link-ext-sm {
+.noTouch body.stpaul-spiritualLife #content .hero a.hero-txt-btn:hover .sprite-link-ext-sm,
+body.stpaul-spiritualLife #content .content-body .sprite-link-ext-sm {
   background-position: -160px -530px;
 }
 
-.noTouch #content.oneCommunity .hero a.hero-txt-btn:hover .sprite-link-ext-sm,
-#content.oneCommunity .content-body .sprite-link-ext-sm {
+.noTouch body.stpaul-oneCommunity #content .hero a.hero-txt-btn:hover .sprite-link-ext-sm,
+body.stpaul-oneCommunity #content .content-body .sprite-link-ext-sm {
   background-position: -200px -530px;
 }
 
-.noTouch #content.ourParish .hero a.hero-txt-btn:hover .sprite-link-ext-sm,
-#content.ourParish .content-body .sprite-link-ext-sm {
+.noTouch body.stpaul-ourParish #content .hero a.hero-txt-btn:hover .sprite-link-ext-sm,
+body.stpaul-ourParish #content .content-body .sprite-link-ext-sm {
   background-position: -240px -530px;
 }
 
-.noTouch #content.educationCenter .hero a.hero-txt-btn:hover .sprite-link-ext-sm,
-#content.educationCenter .content-body .sprite-link-ext-sm {
+.noTouch body.stpaul-educationCenter #content .hero a.hero-txt-btn:hover .sprite-link-ext-sm,
+body.stpaul-educationCenter #content .content-body .sprite-link-ext-sm {
   background-position: -280px -530px;
 }
 
-.noTouch #content.mediaLibrary .hero a.hero-txt-btn:hover .sprite-link-ext-sm,
-#content.mediaLibrary .content-body .sprite-link-ext-sm {
+.noTouch body.stpaul-mediaLibrary #content .hero a.hero-txt-btn:hover .sprite-link-ext-sm,
+body.stpaul-mediaLibrary #content .content-body .sprite-link-ext-sm {
   background-position: -320px -530px;
 }
 
@@ -774,7 +774,91 @@ span.sm-txt {
   padding-bottom: 50px;
 }
 
-#header {
+body.stpaul-stPaulHome #header .sub-nav {
+  background: #357a98;
+}
+
+body.stpaul-stPaulHome #header .sub-nav a.sub-nav-btn {
+  color: #8ec2d8;
+}
+
+body.stpaul-stPaulHome #header .sub-nav a.sub-nav-btn:active {
+  color: #202020;
+}
+
+body.stpaul-stPaulOffice #header .sub-nav {
+  background: #3e9e92;
+}
+
+body.stpaul-stPaulOffice #header .sub-nav a.sub-nav-btn {
+  color: #9dd8d1;
+}
+
+body.stpaul-stPaulOffice #header .sub-nav a.sub-nav-btn:active {
+  color: #202020;
+}
+
+body.stpaul-spiritualLife #header .sub-nav {
+  background: #63803f;
+}
+
+body.stpaul-spiritualLife #header .sub-nav a.sub-nav-btn {
+  color: #afc890;
+}
+
+body.stpaul-spiritualLife #header .sub-nav a.sub-nav-btn:active {
+  color: #202020;
+}
+
+body.stpaul-oneCommunity #header .sub-nav {
+  background: #877d36;
+}
+
+body.stpaul-oneCommunity #header .sub-nav a.sub-nav-btn {
+  color: #cfc687;
+}
+
+body.stpaul-oneCommunity #header .sub-nav a.sub-nav-btn:active {
+  color: #202020;
+}
+
+body.stpaul-ourParish #header .sub-nav {
+  background: #554581;
+}
+
+body.stpaul-ourParish #header .sub-nav a.sub-nav-btn {
+  color: #a497c8;
+}
+
+body.stpaul-ourParish #header .sub-nav a.sub-nav-btn:active {
+  color: #202020;
+}
+
+body.stpaul-educationCenter #header .sub-nav {
+  background: #32414e;
+}
+
+body.stpaul-educationCenter #header .sub-nav a.sub-nav-btn {
+  color: #748da5;
+}
+
+body.stpaul-educationCenter #header .sub-nav a.sub-nav-btn:active {
+  color: #202020;
+}
+
+body.stpaul-mediaLibrary #header .sub-nav {
+  background: #af4a7a;
+}
+
+body.stpaul-mediaLibrary #header .sub-nav a.sub-nav-btn {
+  color: #dfb3c8;
+}
+
+body.stpaul-mediaLibrary #header .sub-nav a.sub-nav-btn:active {
+  color: #202020;
+}
+
+body #header {
   position: fixed;
   background: #202020;
   left: 0;
@@ -785,41 +869,41 @@ span.sm-txt {
 }
 
 @media (min-width: 640px) {
-  #header {
+  body #header {
     height: 70px;
   }
 }
 
-#header a {
+body #header a {
   color: #fff;
 }
 
-#header a:hover {
+body #header a:hover {
   text-decoration: none;
 }
 
-#header a:visited {
+body #header a:visited {
   color: #fff;
 }
 
-#header a:active {
+body #header a:active {
   color: #68adcb;
 }
 
-#header .wrapper {
+body #header .wrapper {
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
   position: relative;
 }
 
-#header .wrapper:after {
+body #header .wrapper:after {
   content: " ";
   display: block;
   clear: both;
 }
 
-#header .masthead {
+body #header .masthead {
   display: block;
   position: relative;
   height: 48px;
@@ -831,34 +915,34 @@ span.sm-txt {
 }
 
 @media (min-width: 420px) {
-  #header .masthead {
+  body #header .masthead {
     text-align: center;
   }
 }
 
 @media (min-width: 640px) {
-  #header .masthead {
+  body #header .masthead {
     height: 68px;
     margin: 2px 20px 0;
   }
 }
 
-#header .masthead a {
+body #header .masthead a {
   display: inline-block;
   overflow: hidden;
 }
 
-#header .masthead h1 {
+body #header .masthead h1 {
   margin: 0;
   line-height: 0;
 }
 
-#header .masthead h1 a.logo-container {
+body #header .masthead h1 a.logo-container {
   padding: 9px 5px;
   margin-right: 10px;
 }
 
-#header .masthead h1 a.logo-container span.name {
+body #header .masthead h1 a.logo-container span.name {
   display: none;
   color: #fff;
   font-size: 13.5px;
@@ -869,13 +953,13 @@ span.sm-txt {
 }
 
 @media (min-width: 640px) {
-  #header .masthead h1 a.logo-container {
+  body #header .masthead h1 a.logo-container {
     padding: 14px 10px;
     margin-right: 20px;
   }
 }
 
-#header .masthead a#nav-toggle {
+body #header .masthead a#nav-toggle {
   position: fixed;
   top: 5px;
   right: 10px;
@@ -888,13 +972,13 @@ span.sm-txt {
 }
 
 @media (min-width: 640px) {
-  #header .masthead a#nav-toggle {
+  body #header .masthead a#nav-toggle {
     top: 15px;
     right: 25px;
   }
 }
 
-#header .masthead a#nav-toggle div {
+body #header .masthead a#nav-toggle div {
   position: absolute;
   top: 13px;
   left: 12px;
@@ -914,13 +998,13 @@ span.sm-txt {
   transition: all 0.35s ease-in-out 0s;
 }
 
-#header .masthead a#nav-toggle div:nth-child(1) {
+body #header .masthead a#nav-toggle div:nth-child(1) {
   top: 19px;
   -moz-transition: opacity 0.35s ease-in 0.15s;
   transition: opacity 0.35s ease-in 0.15s;
 }
 
-#header .masthead a#nav-toggle div:last-child {
+body #header .masthead a#nav-toggle div:last-child {
   top: 25px;
   -webkit-transform-origin: 0 0;
   -moz-transform-origin: 0 0;
@@ -928,7 +1012,87 @@ span.sm-txt {
   transform-origin: 0 0;
 }
 
-#header .navigation {
+body #header .sub-nav {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 5px;
+  margin-top: 0;
+  text-align: center;
+  border-bottom: none;
+  overflow: hidden;
+}
+
+body #header .sub-nav ul {
+  display: none;
+  position: relative;
+  height: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+body #header .sub-nav ul li {
+  float: left;
+  font-size: 0;
+}
+
+body #header .sub-nav ul li a.sub-nav-btn {
+  padding: 7px 13px;
+  line-height: 38px;
+  margin: 0;
+  letter-spacing: 1pt;
+  font-size: 1rem;
+  font-weight: 400;
+  opacity: 1;
+  -moz-transition: color 0.15s ease-out 0s;
+  transition: color 0.15s ease-out 0s;
+}
+
+body #header .sub-nav ul li a.sub-nav-btn:active {
+  color: #202020;
+}
+
+body #header .sub-nav ul li a.sub-nav-btn.on {
+  color: #fff;
+}
+
+body #header .sub-nav ul li a.sprite-top-btn, body #header .sub-nav ul li a.sprite-top-btn-black {
+  padding: 0;
+  margin: 4px 0;
+  font: 0/0 a;
+  opacity: .65;
+  cursor: pointer;
+  -moz-transition: opacity 0.15s ease-out 0s;
+  transition: opacity 0.15s ease-out 0s;
+}
+
+body #header .sub-nav ul li a.sprite-top-btn:active, body #header .sub-nav ul li a.sprite-top-btn-black:active {
+  background-position: -140px -187px;
+  opacity: .5;
+}
+
+body #header .sub-nav ul li .sub-nav-divider {
+  width: 1px;
+  height: 12px;
+  margin: 13px 0;
+  background: #fff;
+  opacity: .25;
+}
+
+body #header .sub-nav ul li:last-child {
+  margin-right: 12px;
+}
+
+@media (min-width: 640px) {
+  body #header .sub-nav {
+    height: 38px;
+  }
+  body #header .sub-nav ul {
+    display: inline-block;
+  }
+}
+
+body #header .navigation {
   margin-top: 250px;
   max-width: 1024px;
   margin-left: auto;
@@ -937,13 +1101,13 @@ span.sm-txt {
   transition: margin 0.75s ease-in-out 0s;
 }
 
-#header .navigation:after {
+body #header .navigation:after {
   content: " ";
   display: block;
   clear: both;
 }
 
-#header .navigation li.section {
+body #header .navigation li.section {
   width: 94.44444%;
   float: left;
   margin-left: 2.77778%;
@@ -953,7 +1117,7 @@ span.sm-txt {
 }
 
 @media (min-width: 420px) {
-  #header .navigation li.section {
+  body #header .navigation li.section {
     width: 44.44444%;
     float: left;
     margin-left: 2.77778%;
@@ -962,7 +1126,7 @@ span.sm-txt {
 }
 
 @media (min-width: 640px) {
-  #header .navigation li.section {
+  body #header .navigation li.section {
     width: 27.77778%;
     float: left;
     margin-left: 2.77778%;
@@ -971,7 +1135,7 @@ span.sm-txt {
 }
 
 @media (min-width: 1024px) {
-  #header .navigation li.section {
+  body #header .navigation li.section {
     width: 11.11111%;
     float: left;
     margin-left: 2.77778%;
@@ -979,97 +1143,90 @@ span.sm-txt {
   }
 }
 
-#header .navigation li.section span.icon, #header .navigation li.section span.icon-hover {
+body #header .navigation li.section span.icon, body #header .navigation li.section span.icon-hover {
   top: 0;
   left: 50%;
   margin-left: -25px;
 }
 
-#header .navigation li.section span.icon-hover {
+body #header .navigation li.section span.icon-hover {
   z-index: 200;
 }
 
-#header .navigation li.section a {
+body #header .navigation li.section a {
   display: inline-block;
   position: relative;
   text-align: center;
   font-size: 1.15rem;
   margin: 0;
   padding-top: 55px;
-  -moz-transition: color 0.15s ease-out 0s;
-  transition: color 0.15s ease-out 0s;
 }
 
-#header .navigation li.section a .icon {
+body #header .navigation li.section a .icon {
   opacity: 1;
 }
 
-#header .navigation li.section a .icon-hover {
+body #header .navigation li.section a .icon-hover {
   opacity: 0;
 }
 
-#header .navigation li.section a .icon, #header .navigation li.section a .icon-hover {
-  -moz-transition: opacity 0.25s ease-out 0s;
-  transition: opacity 0.25s ease-out 0s;
-}
-
-#header .navigation li.section .nav-divider {
+body #header .navigation li.section .nav-divider {
   margin: 16px 0 14px;
   border-bottom: 1px solid #fff;
 }
 
-#header .navigation li.section a:active .icon {
+body #header .navigation li.section a:active .icon {
   opacity: 0;
 }
 
-#header .navigation li.section a:active .icon-hover {
+body #header .navigation li.section a:active .icon-hover {
   opacity: 1;
 }
 
-#header .navigation li.section:nth-child(1) a:active {
+body #header .navigation li.section:nth-child(1) a:active {
   color: #78cac0;
 }
 
-#header .navigation li.section:nth-child(2) a:active {
+body #header .navigation li.section:nth-child(2) a:active {
   color: #97b76e;
 }
 
-#header .navigation li.section:nth-child(3) a:active {
+body #header .navigation li.section:nth-child(3) a:active {
   color: #c0b563;
 }
 
-#header .navigation li.section:nth-child(4) a:active {
+body #header .navigation li.section:nth-child(4) a:active {
   color: #8776b6;
 }
 
-#header .navigation li.section:nth-child(5) a:active {
+body #header .navigation li.section:nth-child(5) a:active {
   color: #5a748c;
 }
 
-#header .navigation li.section:nth-child(6) a:active {
+body #header .navigation li.section:nth-child(6) a:active {
   color: #d08fae;
 }
 
-#header .navigation li.section ul li a {
+body #header .navigation li.section ul li a {
   display: inline-block;
   padding: 10px 5px;
   font-size: 1rem;
   font-weight: 400;
 }
 
-#header .navigation li.section span.noMobile {
+body #header .navigation li.section span.noMobile {
   display: none;
 }
 
 @media (min-width: 420px) {
-  #header .navigation li.section span.noMobile {
+  body #header .navigation li.section span.noMobile {
     display: block;
     padding: 10px 0;
     font-size: 1rem;
   }
 }
 
-#header .search {
+body #header .search {
   display: inline-block;
   padding: 60px 10px 50px;
   margin: 0 auto;
@@ -1077,21 +1234,21 @@ span.sm-txt {
 }
 
 @media (min-width: 640px) {
-  #header .search {
+  body #header .search {
     padding: 70px 100px 40px;
   }
 }
 
-#header .search .icon, #header .search form {
+body #header .search .icon, body #header .search form {
   display: block;
   float: left;
 }
 
-#header .search .icon {
+body #header .search .icon {
   margin-right: 10px;
 }
 
-#header .search input {
+body #header .search input {
   display: block;
   margin: 0;
   padding: 10px;
@@ -1112,26 +1269,26 @@ span.sm-txt {
   float: left;
 }
 
-#header .search input[name="search-text"] {
+body #header .search input[name="search-text"] {
   width: 270px;
   background-color: #4d4d4d;
   color: #fff;
 }
 
 @media (min-width: 420px) {
-  #header .search input[name="search-text"] {
+  body #header .search input[name="search-text"] {
     width: 340px;
   }
 }
 
-#header .search input[name="search-text"]:focus {
+body #header .search input[name="search-text"]:focus {
   border: solid 1px #afafaf;
   -moz-box-shadow: none;
   box-shadow: none;
   outline: none;
 }
 
-#header .search input[type="submit"] {
+body #header .search input[type="submit"] {
   display: none;
   margin-left: 8px;
   padding: 0;
@@ -1146,55 +1303,90 @@ span.sm-txt {
   transition: opacity 0.15s ease-out 0s;
 }
 
-#header .search input[type="submit"]:active {
+body #header .search input[type="submit"]:active {
   background-position: -40px -180px;
 }
 
-#header .search input[type="submit"]:focus {
+body #header .search input[type="submit"]:focus {
   -moz-box-shadow: none;
   box-shadow: none;
   outline: none;
 }
 
-body.nav-open {
+body #header.sticky-nav {
+  height: 56px;
+  -moz-transition: none;
+  transition: none;
+}
+
+@media (min-width: 640px) {
+  body #header.sticky-nav {
+    height: 109px;
+  }
+}
+
+body.stpaul-stPaulHome #header.sticky-nav .sub-nav {
+  height: 6px;
+}
+
+body.stpaul-stPaulHome #header.sticky-nav .sub-nav ul {
+  height: 6px;
+}
+
+body.stpaul-stPaulHome #header.sticky-nav .sub-nav ul li {
+  line-height: 0;
+  height: 0;
+}
+
+@media (min-width: 640px) {
+  body.stpaul-stPaulHome #header.sticky-nav {
+    height: 76px;
+  }
+}
+
+body.nav-open, body.stpaul-stPaulHome.nav-open {
   overflow: hidden;
 }
 
-body.nav-open #header {
+body.nav-open #header, body.stpaul-stPaulHome.nav-open #header {
   height: 100%;
   overflow: auto;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
 }
 
-body.nav-open #header .masthead {
+body.nav-open #header .masthead, body.stpaul-stPaulHome.nav-open #header .masthead {
   padding-top: 10px;
   padding-bottom: 58px;
   border-bottom: 1px solid #2d2d2d;
 }
 
 @media (min-width: 640px) {
-  body.nav-open #header .masthead {
+  body.nav-open #header .masthead, body.stpaul-stPaulHome.nav-open #header .masthead {
     padding-top: 20px;
     padding-bottom: 88px;
   }
 }
 
-body.nav-open #header .navigation {
+body.nav-open #header .sub-nav, body.stpaul-stPaulHome.nav-open #header .sub-nav {
+  display: none;
+}
+
+body.nav-open #header .navigation, body.stpaul-stPaulHome.nav-open #header .navigation {
   margin-top: 70px;
 }
 
-body.nav-open #header a#nav-toggle {
+body.nav-open #header a#nav-toggle, body.stpaul-stPaulHome.nav-open #header a#nav-toggle {
   top: 15px;
 }
 
 @media (min-width: 640px) {
-  body.nav-open #header a#nav-toggle {
+  body.nav-open #header a#nav-toggle, body.stpaul-stPaulHome.nav-open #header a#nav-toggle {
     top: 35px;
   }
 }
 
-body.nav-open #header a#nav-toggle div {
+body.nav-open #header a#nav-toggle div, body.stpaul-stPaulHome.nav-open #header a#nav-toggle div {
   top: 26px;
   left: 12px;
   width: 22px;
@@ -1204,7 +1396,7 @@ body.nav-open #header a#nav-toggle div {
   transform: rotate(-45deg);
 }
 
-body.nav-open #header a#nav-toggle div:nth-child(1) {
+body.nav-open #header a#nav-toggle div:nth-child(1), body.stpaul-stPaulHome.nav-open #header a#nav-toggle div:nth-child(1) {
   opacity: 0;
   top: 19px;
   left: 12px;
@@ -1217,7 +1409,7 @@ body.nav-open #header a#nav-toggle div:nth-child(1) {
   transition: opacity 0.35s ease-out 0s;
 }
 
-body.nav-open #header a#nav-toggle div:last-child {
+body.nav-open #header a#nav-toggle div:last-child, body.stpaul-stPaulHome.nav-open #header a#nav-toggle div:last-child {
   top: 11px;
   left: 13px;
   -webkit-transform: rotate(45deg);
@@ -1236,83 +1428,118 @@ body.nav-open #header a#nav-toggle div:last-child {
   }
 }
 
-.noTouch #header a#nav-toggle:hover {
+.noTouch body #header a#nav-toggle:hover {
   opacity: 1;
 }
 
-.noTouch #header .navigation li.section a:hover .icon {
-  opacity: 0;
+.noTouch body #header .sub-nav a:hover {
+  color: #fff;
 }
 
-.noTouch #header .navigation li.section a:hover .icon-hover {
+.noTouch body #header .sub-nav a:active {
+  color: #202020;
+}
+
+.noTouch body #header .sub-nav a.sprite-top-btn:hover, .noTouch body #header .sub-nav a.sprite-top-btn-black:hover {
   opacity: 1;
 }
 
-.noTouch #header .navigation li.section a:active .icon-hover {
+.noTouch body #header .sub-nav a.sprite-top-btn:hover:active, .noTouch body #header .sub-nav a.sprite-top-btn-black:hover:active {
   opacity: .5;
 }
 
-.noTouch #header .navigation li.section:nth-child(1) a:hover {
+.noTouch body #header .navigation li.section a {
+  -moz-transition: color 0.15s ease-out 0s;
+  transition: color 0.15s ease-out 0s;
+}
+
+.noTouch body #header .navigation li.section a:hover .icon {
+  opacity: 0;
+}
+
+.noTouch body #header .navigation li.section a:hover .icon-hover {
+  opacity: 1;
+}
+
+.noTouch body #header .navigation li.section a:active .icon {
+  opacity: 0;
+}
+
+.noTouch body #header .navigation li.section a:active .icon-hover {
+  opacity: .5;
+}
+
+.noTouch body #header .navigation li.section .icon, .noTouch body #header .navigation li.section .icon-hover {
+  -moz-transition: opacity 0.25s ease-out 0s;
+  transition: opacity 0.25s ease-out 0s;
+}
+
+.noTouch body #header .navigation li.section:nth-child(1) a:hover {
   color: #78cac0;
 }
 
-.noTouch #header .navigation li.section:nth-child(1) a:active {
+.noTouch body #header .navigation li.section:nth-child(1) a:active {
   color: #3e9e92;
 }
 
-.noTouch #header .navigation li.section:nth-child(2) a:hover {
+.noTouch body #header .navigation li.section:nth-child(2) a:hover {
   color: #97b76e;
 }
 
-.noTouch #header .navigation li.section:nth-child(2) a:active {
+.noTouch body #header .navigation li.section:nth-child(2) a:active {
   color: #63803f;
 }
 
-.noTouch #header .navigation li.section:nth-child(3) a:hover {
+.noTouch body #header .navigation li.section:nth-child(3) a:hover {
   color: #c0b563;
 }
 
-.noTouch #header .navigation li.section:nth-child(3) a:active {
+.noTouch body #header .navigation li.section:nth-child(3) a:active {
   color: #877d36;
 }
 
-.noTouch #header .navigation li.section:nth-child(4) a:hover {
+.noTouch body #header .navigation li.section:nth-child(4) a:hover {
   color: #8776b6;
 }
 
-.noTouch #header .navigation li.section:nth-child(4) a:active {
+.noTouch body #header .navigation li.section:nth-child(4) a:active {
   color: #554581;
 }
 
-.noTouch #header .navigation li.section:nth-child(5) a:hover {
+.noTouch body #header .navigation li.section:nth-child(5) a:hover {
   color: #5a748c;
 }
 
-.noTouch #header .navigation li.section:nth-child(5) a:active {
+.noTouch body #header .navigation li.section:nth-child(5) a:active {
   color: #32414e;
 }
 
-.noTouch #header .navigation li.section:nth-child(6) a:hover {
+.noTouch body #header .navigation li.section:nth-child(6) a:hover {
   color: #d08fae;
 }
 
-.noTouch #header .navigation li.section:nth-child(6) a:active {
+.noTouch body #header .navigation li.section:nth-child(6) a:active {
   color: #af4a7a;
 }
 
-.noResize #header {
-  -moz-transition: all 0.5s cubic-bezier(0.75, 0.01, 0.25, 0.99) 0s;
-  transition: all 0.5s cubic-bezier(0.75, 0.01, 0.25, 0.99) 0s;
+.noResize body #header {
+  -moz-transition: none;
+  transition: none;
 }
 
-.noResize #header .masthead {
-  -moz-transition: padding .5s ease-in-out, border .15s ease-in-out .5s;
-  transition: padding .5s ease-in-out, border .15s ease-in-out .5s;
-}
-
-.noResize #header .masthead a#nav-toggle {
+.noResize body #header .masthead a#nav-toggle {
   -moz-transition: top .5s ease-in-out, opacity .15s ease-out;
   transition: top .5s ease-in-out, opacity .15s ease-out;
+}
+
+.noResize body.nav-open #header {
+  -moz-transition: all 0.5s cubic-bezier(0.75, 0.01, 0.25, 0.75) 0s;
+  transition: all 0.5s cubic-bezier(0.75, 0.01, 0.25, 0.75) 0s;
+}
+
+.noResize body.nav-open #header .masthead {
+  -moz-transition: padding .5s ease-in-out, border .15s ease-in-out .5s;
+  transition: padding .5s ease-in-out, border .15s ease-in-out .5s;
 }
 
 #footer {
@@ -1334,7 +1561,7 @@ body.nav-open #header a#nav-toggle div:last-child {
 }
 
 #footer a:active {
-  color: #404040;
+  color: #68adcb;
 }
 
 #footer .wrapper .masstime, #footer .wrapper .contact-direction {
@@ -1532,6 +1759,12 @@ body.nav-open #header a#nav-toggle div:last-child {
   letter-spacing: 1pt;
 }
 
+@media (min-width: 420px) {
+  #footer .contact-direction li a {
+    display: inline-block;
+  }
+}
+
 #footer a.sect-title {
   font-size: 1.4em;
   font-family: "Nanum Gothic", sans-serif;
@@ -1610,551 +1843,587 @@ body.nav-open #header a#nav-toggle div:last-child {
   color: #404040;
 }
 
-#content.stPaulHome .hero {
+body.stpaul-stPaulHome #content .hero {
   background: #68adcb;
 }
 
-#content.stPaulHome .hero a:active {
+body.stpaul-stPaulHome #content .hero a:active {
   color: #357a98;
 }
 
-#content.stPaulHome .hero .wrapper .hero-content a:active {
+body.stpaul-stPaulHome #content .hero .wrapper .hero-content a:active {
   color: #202020;
 }
 
-#content.stPaulHome .hero .wrapper a.util-box-btn {
+body.stpaul-stPaulHome #content .hero .wrapper a.util-box-btn {
   background: #357a98;
 }
 
-#content.stPaulHome .hero .wrapper a.util-box-btn .sprite-download {
+body.stpaul-stPaulHome #content .hero .wrapper a.util-box-btn .sprite-download {
   background-position: 0 -440px;
 }
 
-#content.stPaulHome .hero .wrapper a.util-box-btn .sprite-link {
+body.stpaul-stPaulHome #content .hero .wrapper a.util-box-btn .sprite-link {
   background-position: 0 -500px;
 }
 
-#content.stPaulHome .hero .wrapper a.util-box-btn .sprite-link-ext {
+body.stpaul-stPaulHome #content .hero .wrapper a.util-box-btn .sprite-link-ext {
   background-position: 0 -470px;
 }
 
-#content.stPaulHome .hero .wrapper a.util-box-btn:active {
+body.stpaul-stPaulHome #content .hero .wrapper a.util-box-btn:active {
   background: #214d60;
   color: #fff;
   border-color: #fff;
 }
 
-#content.stPaulHome .hero .sub-nav {
+body.stpaul-stPaulHome #content .hero .sub-nav {
   background: #357a98;
 }
 
-#content.stPaulHome .hero .sub-nav a.sub-nav-btn {
-  color: #b4d6e5;
+body.stpaul-stPaulHome #content .hero .sub-nav a.sub-nav-btn {
+  color: #8ec2d8;
 }
 
-.noTouch #content.stPaulHome .hero .wrapper .hero-content a:hover {
-  color: #357a98;
-}
-
-.noTouch #content.stPaulHome .hero .wrapper .hero-content a:active {
+body.stpaul-stPaulHome #content .hero .sub-nav a.sub-nav-btn:active {
   color: #202020;
 }
 
-.noTouch #content.stPaulHome .hero .wrapper a.util-box-btn:hover {
+.noTouch body.stpaul-stPaulHome #content .hero .wrapper .hero-content a:hover {
+  color: #357a98;
+}
+
+.noTouch body.stpaul-stPaulHome #content .hero .wrapper .hero-content a:active {
+  color: #202020;
+}
+
+.noTouch body.stpaul-stPaulHome #content .hero .wrapper a.util-box-btn:hover {
   color: #357a98;
   border-color: #357a98;
 }
 
-.noTouch #content.stPaulHome .hero .wrapper a.util-box-btn:active {
+.noTouch body.stpaul-stPaulHome #content .hero .wrapper a.util-box-btn:active {
   color: #fff;
   border-color: #fff;
   background: #214d60;
 }
 
-.noTouch #content.stPaulHome .hero .wrapper a.util-box-btn:active .sprite-download {
+.noTouch body.stpaul-stPaulHome #content .hero .wrapper a.util-box-btn:active .sprite-download {
   background-position: 0 -440px;
 }
 
-.noTouch #content.stPaulHome .hero .wrapper a.util-box-btn:active .sprite-link {
+.noTouch body.stpaul-stPaulHome #content .hero .wrapper a.util-box-btn:active .sprite-link {
   background-position: 0 -500px;
 }
 
-.noTouch #content.stPaulHome .hero .wrapper a.util-box-btn:active .sprite-link-ext {
+.noTouch body.stpaul-stPaulHome #content .hero .wrapper a.util-box-btn:active .sprite-link-ext {
   background-position: 0 -470px;
 }
 
-#content.stPaulOffice .hero {
+body.stpaul-stPaulOffice #content .hero {
   background: #78cac0;
 }
 
-#content.stPaulOffice .hero a:active {
+body.stpaul-stPaulOffice #content .hero a:active {
   color: #3e9e92;
 }
 
-#content.stPaulOffice .hero .wrapper .hero-content a:active {
+body.stpaul-stPaulOffice #content .hero .wrapper .hero-content a:active {
   color: #202020;
 }
 
-#content.stPaulOffice .hero .wrapper a.util-box-btn {
+body.stpaul-stPaulOffice #content .hero .wrapper a.util-box-btn {
   background: #3e9e92;
 }
 
-#content.stPaulOffice .hero .wrapper a.util-box-btn .sprite-download {
+body.stpaul-stPaulOffice #content .hero .wrapper a.util-box-btn .sprite-download {
   background-position: 0 -440px;
 }
 
-#content.stPaulOffice .hero .wrapper a.util-box-btn .sprite-link {
+body.stpaul-stPaulOffice #content .hero .wrapper a.util-box-btn .sprite-link {
   background-position: 0 -500px;
 }
 
-#content.stPaulOffice .hero .wrapper a.util-box-btn .sprite-link-ext {
+body.stpaul-stPaulOffice #content .hero .wrapper a.util-box-btn .sprite-link-ext {
   background-position: 0 -470px;
 }
 
-#content.stPaulOffice .hero .wrapper a.util-box-btn:active {
+body.stpaul-stPaulOffice #content .hero .wrapper a.util-box-btn:active {
   background: #28675f;
   color: #fff;
   border-color: #fff;
 }
 
-#content.stPaulOffice .hero .sub-nav {
+body.stpaul-stPaulOffice #content .hero .sub-nav {
   background: #3e9e92;
 }
 
-#content.stPaulOffice .hero .sub-nav a.sub-nav-btn {
-  color: #c1e7e2;
+body.stpaul-stPaulOffice #content .hero .sub-nav a.sub-nav-btn {
+  color: #9dd8d1;
 }
 
-.noTouch #content.stPaulOffice .hero .wrapper .hero-content a:hover {
-  color: #3e9e92;
-}
-
-.noTouch #content.stPaulOffice .hero .wrapper .hero-content a:active {
+body.stpaul-stPaulOffice #content .hero .sub-nav a.sub-nav-btn:active {
   color: #202020;
 }
 
-.noTouch #content.stPaulOffice .hero .wrapper a.util-box-btn:hover {
+.noTouch body.stpaul-stPaulOffice #content .hero .wrapper .hero-content a:hover {
+  color: #3e9e92;
+}
+
+.noTouch body.stpaul-stPaulOffice #content .hero .wrapper .hero-content a:active {
+  color: #202020;
+}
+
+.noTouch body.stpaul-stPaulOffice #content .hero .wrapper a.util-box-btn:hover {
   color: #3e9e92;
   border-color: #3e9e92;
 }
 
-.noTouch #content.stPaulOffice .hero .wrapper a.util-box-btn:active {
+.noTouch body.stpaul-stPaulOffice #content .hero .wrapper a.util-box-btn:active {
   color: #fff;
   border-color: #fff;
   background: #28675f;
 }
 
-.noTouch #content.stPaulOffice .hero .wrapper a.util-box-btn:active .sprite-download {
+.noTouch body.stpaul-stPaulOffice #content .hero .wrapper a.util-box-btn:active .sprite-download {
   background-position: 0 -440px;
 }
 
-.noTouch #content.stPaulOffice .hero .wrapper a.util-box-btn:active .sprite-link {
+.noTouch body.stpaul-stPaulOffice #content .hero .wrapper a.util-box-btn:active .sprite-link {
   background-position: 0 -500px;
 }
 
-.noTouch #content.stPaulOffice .hero .wrapper a.util-box-btn:active .sprite-link-ext {
+.noTouch body.stpaul-stPaulOffice #content .hero .wrapper a.util-box-btn:active .sprite-link-ext {
   background-position: 0 -470px;
 }
 
-#content.spiritualLife .hero {
+body.stpaul-spiritualLife #content .hero {
   background: #97b76e;
 }
 
-#content.spiritualLife .hero a:active {
+body.stpaul-spiritualLife #content .hero a:active {
   color: #63803f;
 }
 
-#content.spiritualLife .hero .wrapper .hero-content a:active {
+body.stpaul-spiritualLife #content .hero .wrapper .hero-content a:active {
   color: #202020;
 }
 
-#content.spiritualLife .hero .wrapper a.util-box-btn {
+body.stpaul-spiritualLife #content .hero .wrapper a.util-box-btn {
   background: #63803f;
 }
 
-#content.spiritualLife .hero .wrapper a.util-box-btn .sprite-download {
+body.stpaul-spiritualLife #content .hero .wrapper a.util-box-btn .sprite-download {
   background-position: 0 -440px;
 }
 
-#content.spiritualLife .hero .wrapper a.util-box-btn .sprite-link {
+body.stpaul-spiritualLife #content .hero .wrapper a.util-box-btn .sprite-link {
   background-position: 0 -500px;
 }
 
-#content.spiritualLife .hero .wrapper a.util-box-btn .sprite-link-ext {
+body.stpaul-spiritualLife #content .hero .wrapper a.util-box-btn .sprite-link-ext {
   background-position: 0 -470px;
 }
 
-#content.spiritualLife .hero .wrapper a.util-box-btn:active {
+body.stpaul-spiritualLife #content .hero .wrapper a.util-box-btn:active {
   background: #3c4d26;
   color: #fff;
   border-color: #fff;
 }
 
-#content.spiritualLife .hero .sub-nav {
+body.stpaul-spiritualLife #content .hero .sub-nav {
   background: #63803f;
 }
 
-#content.spiritualLife .hero .sub-nav a.sub-nav-btn {
-  color: #c8d9b2;
+body.stpaul-spiritualLife #content .hero .sub-nav a.sub-nav-btn {
+  color: #afc890;
 }
 
-.noTouch #content.spiritualLife .hero .wrapper .hero-content a:hover {
-  color: #63803f;
-}
-
-.noTouch #content.spiritualLife .hero .wrapper .hero-content a:active {
+body.stpaul-spiritualLife #content .hero .sub-nav a.sub-nav-btn:active {
   color: #202020;
 }
 
-.noTouch #content.spiritualLife .hero .wrapper a.util-box-btn:hover {
+.noTouch body.stpaul-spiritualLife #content .hero .wrapper .hero-content a:hover {
+  color: #63803f;
+}
+
+.noTouch body.stpaul-spiritualLife #content .hero .wrapper .hero-content a:active {
+  color: #202020;
+}
+
+.noTouch body.stpaul-spiritualLife #content .hero .wrapper a.util-box-btn:hover {
   color: #63803f;
   border-color: #63803f;
 }
 
-.noTouch #content.spiritualLife .hero .wrapper a.util-box-btn:active {
+.noTouch body.stpaul-spiritualLife #content .hero .wrapper a.util-box-btn:active {
   color: #fff;
   border-color: #fff;
   background: #3c4d26;
 }
 
-.noTouch #content.spiritualLife .hero .wrapper a.util-box-btn:active .sprite-download {
+.noTouch body.stpaul-spiritualLife #content .hero .wrapper a.util-box-btn:active .sprite-download {
   background-position: 0 -440px;
 }
 
-.noTouch #content.spiritualLife .hero .wrapper a.util-box-btn:active .sprite-link {
+.noTouch body.stpaul-spiritualLife #content .hero .wrapper a.util-box-btn:active .sprite-link {
   background-position: 0 -500px;
 }
 
-.noTouch #content.spiritualLife .hero .wrapper a.util-box-btn:active .sprite-link-ext {
+.noTouch body.stpaul-spiritualLife #content .hero .wrapper a.util-box-btn:active .sprite-link-ext {
   background-position: 0 -470px;
 }
 
-#content.oneCommunity .hero {
+body.stpaul-oneCommunity #content .hero {
   background: #c0b563;
 }
 
-#content.oneCommunity .hero a:active {
+body.stpaul-oneCommunity #content .hero a:active {
   color: #877d36;
 }
 
-#content.oneCommunity .hero .wrapper .hero-content a:active {
+body.stpaul-oneCommunity #content .hero .wrapper .hero-content a:active {
   color: #202020;
 }
 
-#content.oneCommunity .hero .wrapper a.util-box-btn {
+body.stpaul-oneCommunity #content .hero .wrapper a.util-box-btn {
   background: #877d36;
 }
 
-#content.oneCommunity .hero .wrapper a.util-box-btn .sprite-download {
+body.stpaul-oneCommunity #content .hero .wrapper a.util-box-btn .sprite-download {
   background-position: 0 -440px;
 }
 
-#content.oneCommunity .hero .wrapper a.util-box-btn .sprite-link {
+body.stpaul-oneCommunity #content .hero .wrapper a.util-box-btn .sprite-link {
   background-position: 0 -500px;
 }
 
-#content.oneCommunity .hero .wrapper a.util-box-btn .sprite-link-ext {
+body.stpaul-oneCommunity #content .hero .wrapper a.util-box-btn .sprite-link-ext {
   background-position: 0 -470px;
 }
 
-#content.oneCommunity .hero .wrapper a.util-box-btn:active {
+body.stpaul-oneCommunity #content .hero .wrapper a.util-box-btn:active {
   background: #504a20;
   color: #fff;
   border-color: #fff;
 }
 
-#content.oneCommunity .hero .sub-nav {
+body.stpaul-oneCommunity #content .hero .sub-nav {
   background: #877d36;
 }
 
-#content.oneCommunity .hero .sub-nav a.sub-nav-btn {
-  color: #ddd7ac;
+body.stpaul-oneCommunity #content .hero .sub-nav a.sub-nav-btn {
+  color: #cfc687;
 }
 
-.noTouch #content.oneCommunity .hero .wrapper .hero-content a:hover {
-  color: #877d36;
-}
-
-.noTouch #content.oneCommunity .hero .wrapper .hero-content a:active {
+body.stpaul-oneCommunity #content .hero .sub-nav a.sub-nav-btn:active {
   color: #202020;
 }
 
-.noTouch #content.oneCommunity .hero .wrapper a.util-box-btn:hover {
+.noTouch body.stpaul-oneCommunity #content .hero .wrapper .hero-content a:hover {
+  color: #877d36;
+}
+
+.noTouch body.stpaul-oneCommunity #content .hero .wrapper .hero-content a:active {
+  color: #202020;
+}
+
+.noTouch body.stpaul-oneCommunity #content .hero .wrapper a.util-box-btn:hover {
   color: #877d36;
   border-color: #877d36;
 }
 
-.noTouch #content.oneCommunity .hero .wrapper a.util-box-btn:active {
+.noTouch body.stpaul-oneCommunity #content .hero .wrapper a.util-box-btn:active {
   color: #fff;
   border-color: #fff;
   background: #504a20;
 }
 
-.noTouch #content.oneCommunity .hero .wrapper a.util-box-btn:active .sprite-download {
+.noTouch body.stpaul-oneCommunity #content .hero .wrapper a.util-box-btn:active .sprite-download {
   background-position: 0 -440px;
 }
 
-.noTouch #content.oneCommunity .hero .wrapper a.util-box-btn:active .sprite-link {
+.noTouch body.stpaul-oneCommunity #content .hero .wrapper a.util-box-btn:active .sprite-link {
   background-position: 0 -500px;
 }
 
-.noTouch #content.oneCommunity .hero .wrapper a.util-box-btn:active .sprite-link-ext {
+.noTouch body.stpaul-oneCommunity #content .hero .wrapper a.util-box-btn:active .sprite-link-ext {
   background-position: 0 -470px;
 }
 
-#content.ourParish .hero {
+body.stpaul-ourParish #content .hero {
   background: #8776b6;
 }
 
-#content.ourParish .hero a:active {
+body.stpaul-ourParish #content .hero a:active {
   color: #554581;
 }
 
-#content.ourParish .hero .wrapper .hero-content a:active {
+body.stpaul-ourParish #content .hero .wrapper .hero-content a:active {
   color: #202020;
 }
 
-#content.ourParish .hero .wrapper a.util-box-btn {
+body.stpaul-ourParish #content .hero .wrapper a.util-box-btn {
   background: #554581;
 }
 
-#content.ourParish .hero .wrapper a.util-box-btn .sprite-download {
+body.stpaul-ourParish #content .hero .wrapper a.util-box-btn .sprite-download {
   background-position: 0 -440px;
 }
 
-#content.ourParish .hero .wrapper a.util-box-btn .sprite-link {
+body.stpaul-ourParish #content .hero .wrapper a.util-box-btn .sprite-link {
   background-position: 0 -500px;
 }
 
-#content.ourParish .hero .wrapper a.util-box-btn .sprite-link-ext {
+body.stpaul-ourParish #content .hero .wrapper a.util-box-btn .sprite-link-ext {
   background-position: 0 -470px;
 }
 
-#content.ourParish .hero .wrapper a.util-box-btn:active {
+body.stpaul-ourParish #content .hero .wrapper a.util-box-btn:active {
   background: #342a4f;
   color: #fff;
   border-color: #fff;
 }
 
-#content.ourParish .hero .sub-nav {
+body.stpaul-ourParish #content .hero .sub-nav {
   background: #554581;
 }
 
-#content.ourParish .hero .sub-nav a.sub-nav-btn {
-  color: #c1b9d9;
+body.stpaul-ourParish #content .hero .sub-nav a.sub-nav-btn {
+  color: #a497c8;
 }
 
-.noTouch #content.ourParish .hero .wrapper .hero-content a:hover {
-  color: #554581;
-}
-
-.noTouch #content.ourParish .hero .wrapper .hero-content a:active {
+body.stpaul-ourParish #content .hero .sub-nav a.sub-nav-btn:active {
   color: #202020;
 }
 
-.noTouch #content.ourParish .hero .wrapper a.util-box-btn:hover {
+.noTouch body.stpaul-ourParish #content .hero .wrapper .hero-content a:hover {
+  color: #554581;
+}
+
+.noTouch body.stpaul-ourParish #content .hero .wrapper .hero-content a:active {
+  color: #202020;
+}
+
+.noTouch body.stpaul-ourParish #content .hero .wrapper a.util-box-btn:hover {
   color: #554581;
   border-color: #554581;
 }
 
-.noTouch #content.ourParish .hero .wrapper a.util-box-btn:active {
+.noTouch body.stpaul-ourParish #content .hero .wrapper a.util-box-btn:active {
   color: #fff;
   border-color: #fff;
   background: #342a4f;
 }
 
-.noTouch #content.ourParish .hero .wrapper a.util-box-btn:active .sprite-download {
+.noTouch body.stpaul-ourParish #content .hero .wrapper a.util-box-btn:active .sprite-download {
   background-position: 0 -440px;
 }
 
-.noTouch #content.ourParish .hero .wrapper a.util-box-btn:active .sprite-link {
+.noTouch body.stpaul-ourParish #content .hero .wrapper a.util-box-btn:active .sprite-link {
   background-position: 0 -500px;
 }
 
-.noTouch #content.ourParish .hero .wrapper a.util-box-btn:active .sprite-link-ext {
+.noTouch body.stpaul-ourParish #content .hero .wrapper a.util-box-btn:active .sprite-link-ext {
   background-position: 0 -470px;
 }
 
-#content.educationCenter .hero {
+body.stpaul-educationCenter #content .hero {
   background: #5a748c;
 }
 
-#content.educationCenter .hero a:active {
+body.stpaul-educationCenter #content .hero a:active {
   color: #32414e;
 }
 
-#content.educationCenter .hero .wrapper .hero-content a:active {
+body.stpaul-educationCenter #content .hero .wrapper .hero-content a:active {
   color: #202020;
 }
 
-#content.educationCenter .hero .wrapper a.util-box-btn {
+body.stpaul-educationCenter #content .hero .wrapper a.util-box-btn {
   background: #32414e;
 }
 
-#content.educationCenter .hero .wrapper a.util-box-btn .sprite-download {
+body.stpaul-educationCenter #content .hero .wrapper a.util-box-btn .sprite-download {
   background-position: 0 -440px;
 }
 
-#content.educationCenter .hero .wrapper a.util-box-btn .sprite-link {
+body.stpaul-educationCenter #content .hero .wrapper a.util-box-btn .sprite-link {
   background-position: 0 -500px;
 }
 
-#content.educationCenter .hero .wrapper a.util-box-btn .sprite-link-ext {
+body.stpaul-educationCenter #content .hero .wrapper a.util-box-btn .sprite-link-ext {
   background-position: 0 -470px;
 }
 
-#content.educationCenter .hero .wrapper a.util-box-btn:active {
+body.stpaul-educationCenter #content .hero .wrapper a.util-box-btn:active {
   background: #141a1f;
   color: #fff;
   border-color: #fff;
 }
 
-#content.educationCenter .hero .sub-nav {
+body.stpaul-educationCenter #content .hero .sub-nav {
   background: #32414e;
 }
 
-#content.educationCenter .hero .sub-nav a.sub-nav-btn {
-  color: #93a7b9;
+body.stpaul-educationCenter #content .hero .sub-nav a.sub-nav-btn {
+  color: #748da5;
 }
 
-.noTouch #content.educationCenter .hero .wrapper .hero-content a:hover {
-  color: #32414e;
-}
-
-.noTouch #content.educationCenter .hero .wrapper .hero-content a:active {
+body.stpaul-educationCenter #content .hero .sub-nav a.sub-nav-btn:active {
   color: #202020;
 }
 
-.noTouch #content.educationCenter .hero .wrapper a.util-box-btn:hover {
+.noTouch body.stpaul-educationCenter #content .hero .wrapper .hero-content a:hover {
+  color: #32414e;
+}
+
+.noTouch body.stpaul-educationCenter #content .hero .wrapper .hero-content a:active {
+  color: #202020;
+}
+
+.noTouch body.stpaul-educationCenter #content .hero .wrapper a.util-box-btn:hover {
   color: #32414e;
   border-color: #32414e;
 }
 
-.noTouch #content.educationCenter .hero .wrapper a.util-box-btn:active {
+.noTouch body.stpaul-educationCenter #content .hero .wrapper a.util-box-btn:active {
   color: #fff;
   border-color: #fff;
   background: #141a1f;
 }
 
-.noTouch #content.educationCenter .hero .wrapper a.util-box-btn:active .sprite-download {
+.noTouch body.stpaul-educationCenter #content .hero .wrapper a.util-box-btn:active .sprite-download {
   background-position: 0 -440px;
 }
 
-.noTouch #content.educationCenter .hero .wrapper a.util-box-btn:active .sprite-link {
+.noTouch body.stpaul-educationCenter #content .hero .wrapper a.util-box-btn:active .sprite-link {
   background-position: 0 -500px;
 }
 
-.noTouch #content.educationCenter .hero .wrapper a.util-box-btn:active .sprite-link-ext {
+.noTouch body.stpaul-educationCenter #content .hero .wrapper a.util-box-btn:active .sprite-link-ext {
   background-position: 0 -470px;
 }
 
-#content.mediaLibrary .hero {
+body.stpaul-mediaLibrary #content .hero {
   background: #d08fae;
 }
 
-#content.mediaLibrary .hero a:active {
+body.stpaul-mediaLibrary #content .hero a:active {
   color: #af4a7a;
 }
 
-#content.mediaLibrary .hero .wrapper .hero-content a:active {
+body.stpaul-mediaLibrary #content .hero .wrapper .hero-content a:active {
   color: #202020;
 }
 
-#content.mediaLibrary .hero .wrapper a.util-box-btn {
+body.stpaul-mediaLibrary #content .hero .wrapper a.util-box-btn {
   background: #af4a7a;
 }
 
-#content.mediaLibrary .hero .wrapper a.util-box-btn .sprite-download {
+body.stpaul-mediaLibrary #content .hero .wrapper a.util-box-btn .sprite-download {
   background-position: 0 -440px;
 }
 
-#content.mediaLibrary .hero .wrapper a.util-box-btn .sprite-link {
+body.stpaul-mediaLibrary #content .hero .wrapper a.util-box-btn .sprite-link {
   background-position: 0 -500px;
 }
 
-#content.mediaLibrary .hero .wrapper a.util-box-btn .sprite-link-ext {
+body.stpaul-mediaLibrary #content .hero .wrapper a.util-box-btn .sprite-link-ext {
   background-position: 0 -470px;
 }
 
-#content.mediaLibrary .hero .wrapper a.util-box-btn:active {
+body.stpaul-mediaLibrary #content .hero .wrapper a.util-box-btn:active {
   background: #7a3355;
   color: #fff;
   border-color: #fff;
 }
 
-#content.mediaLibrary .hero .sub-nav {
+body.stpaul-mediaLibrary #content .hero .sub-nav {
   background: #af4a7a;
 }
 
-#content.mediaLibrary .hero .sub-nav a.sub-nav-btn {
-  color: #eed7e2;
+body.stpaul-mediaLibrary #content .hero .sub-nav a.sub-nav-btn {
+  color: #dfb3c8;
 }
 
-.noTouch #content.mediaLibrary .hero .wrapper .hero-content a:hover {
-  color: #af4a7a;
-}
-
-.noTouch #content.mediaLibrary .hero .wrapper .hero-content a:active {
+body.stpaul-mediaLibrary #content .hero .sub-nav a.sub-nav-btn:active {
   color: #202020;
 }
 
-.noTouch #content.mediaLibrary .hero .wrapper a.util-box-btn:hover {
+.noTouch body.stpaul-mediaLibrary #content .hero .wrapper .hero-content a:hover {
+  color: #af4a7a;
+}
+
+.noTouch body.stpaul-mediaLibrary #content .hero .wrapper .hero-content a:active {
+  color: #202020;
+}
+
+.noTouch body.stpaul-mediaLibrary #content .hero .wrapper a.util-box-btn:hover {
   color: #af4a7a;
   border-color: #af4a7a;
 }
 
-.noTouch #content.mediaLibrary .hero .wrapper a.util-box-btn:active {
+.noTouch body.stpaul-mediaLibrary #content .hero .wrapper a.util-box-btn:active {
   color: #fff;
   border-color: #fff;
   background: #7a3355;
 }
 
-.noTouch #content.mediaLibrary .hero .wrapper a.util-box-btn:active .sprite-download {
+.noTouch body.stpaul-mediaLibrary #content .hero .wrapper a.util-box-btn:active .sprite-download {
   background-position: 0 -440px;
 }
 
-.noTouch #content.mediaLibrary .hero .wrapper a.util-box-btn:active .sprite-link {
+.noTouch body.stpaul-mediaLibrary #content .hero .wrapper a.util-box-btn:active .sprite-link {
   background-position: 0 -500px;
 }
 
-.noTouch #content.mediaLibrary .hero .wrapper a.util-box-btn:active .sprite-link-ext {
+.noTouch body.stpaul-mediaLibrary #content .hero .wrapper a.util-box-btn:active .sprite-link-ext {
   background-position: 0 -470px;
 }
 
 @media (min-width: 640px) {
-  #content.stPaulOffice .hero {
+  body.stpaul-stPaulHome #content .hero {
+    background: #68adcb;
+  }
+  body.stpaul-stPaulHome #content .hero .wrapper {
+    background: url("../images/stpaulHome-bg.jpg") no-repeat bottom right;
+    -moz-background-size: cover;
+    background-size: cover;
+  }
+  body.stpaul-stPaulOffice #content .hero {
     background: #78cac0 url("../images/stpaulOffice-bg.jpg") no-repeat top right;
     -moz-background-size: cover;
     background-size: cover;
   }
-  #content.spiritualLife .hero {
+  body.stpaul-spiritualLife #content .hero {
     background: #97b76e url("../images/spiritualLife-bg.jpg") no-repeat top right;
     -moz-background-size: cover;
     background-size: cover;
   }
-  #content.oneCommunity .hero {
+  body.stpaul-oneCommunity #content .hero {
     background: #c0b563 url("../images/oneCommunity-bg.jpg") no-repeat top right;
     -moz-background-size: cover;
     background-size: cover;
   }
-  #content.ourParish .hero {
+  body.stpaul-ourParish #content .hero {
     background: #8776b6 url("../images/ourParish-bg.jpg") no-repeat top right;
     -moz-background-size: cover;
     background-size: cover;
   }
-  #content.educationCenter .hero {
+  body.stpaul-educationCenter #content .hero {
     background: #5a748c url("../images/educationCenter-bg.jpg") no-repeat top right;
     -moz-background-size: cover;
     background-size: cover;
   }
-  #content.mediaLibrary .hero {
+  body.stpaul-mediaLibrary #content .hero {
     background: #d08fae url("../images/mediaLibrary-bg.jpg") no-repeat top right;
     -moz-background-size: cover;
     background-size: cover;
   }
 }
 
-#content .hero {
+body #content .hero {
   display: block;
   position: relative;
   margin: 0;
@@ -2166,24 +2435,24 @@ body.nav-open #header a#nav-toggle div:last-child {
 }
 
 @media (min-width: 640px) {
-  #content .hero {
+  body #content .hero {
     min-height: 550px;
   }
 }
 
-#content .hero a {
+body #content .hero a {
   color: #fff;
 }
 
-#content .hero a:hover {
+body #content .hero a:hover {
   text-decoration: none;
 }
 
-#content .hero a:visited {
+body #content .hero a:visited {
   color: #fff;
 }
 
-#content .hero .wrapper {
+body #content .hero .wrapper {
   text-align: center;
   position: relative;
   height: auto;
@@ -2192,14 +2461,14 @@ body.nav-open #header a#nav-toggle div:last-child {
 }
 
 @media (min-width: 640px) {
-  #content .hero .wrapper {
+  body #content .hero .wrapper {
     padding-top: 70px;
     padding-bottom: 60px;
     text-align: left;
   }
 }
 
-#content .hero .wrapper h3 {
+body #content .hero .wrapper h3 {
   width: 97.77778%;
   float: left;
   margin-left: 1.11111%;
@@ -2208,18 +2477,18 @@ body.nav-open #header a#nav-toggle div:last-child {
 }
 
 @media (min-width: 640px) {
-  #content .hero .wrapper h3 {
+  body #content .hero .wrapper h3 {
     padding: 60px 0 0;
   }
 }
 
-#content .hero .wrapper h3 span {
+body #content .hero .wrapper h3 span {
   margin-left: 55px;
   margin-right: 20px;
   line-height: 40px;
 }
 
-#content .hero .wrapper .hero-content {
+body #content .hero .wrapper .hero-content {
   width: 97.77778%;
   float: left;
   margin-left: 1.11111%;
@@ -2229,7 +2498,7 @@ body.nav-open #header a#nav-toggle div:last-child {
 }
 
 @media (min-width: 920px) {
-  #content .hero .wrapper .hero-content {
+  body #content .hero .wrapper .hero-content {
     width: 64.44444%;
     float: left;
     margin-left: 1.11111%;
@@ -2237,37 +2506,37 @@ body.nav-open #header a#nav-toggle div:last-child {
   }
 }
 
-#content .hero .wrapper .hero-content ul {
+body #content .hero .wrapper .hero-content ul {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
 
-#content .hero .wrapper .hero-content ul li {
+body #content .hero .wrapper .hero-content ul li {
   margin: 3px 0;
   font-size: 1em;
 }
 
-#content .hero .wrapper .hero-content ul li.tall-margin {
+body #content .hero .wrapper .hero-content ul li.tall-margin {
   margin: 10px 0;
 }
 
-#content .hero .wrapper .hero-content ul li:first-child {
+body #content .hero .wrapper .hero-content ul li:first-child {
   margin-top: 0;
 }
 
-#content .hero .wrapper .hero-content ul li:last-child {
+body #content .hero .wrapper .hero-content ul li:last-child {
   margin-bottom: 0;
 }
 
-#content .hero .wrapper .hero-content ul.add-marginTop {
+body #content .hero .wrapper .hero-content ul.add-marginTop {
   margin-top: 30px;
 }
 
-#content .hero .wrapper .hero-content ul.add-marginBottom {
+body #content .hero .wrapper .hero-content ul.add-marginBottom {
   margin-bottom: 30px;
 }
 
-#content .hero .wrapper .hero-content a.hero-txt-btn {
+body #content .hero .wrapper .hero-content a.hero-txt-btn {
   display: inline-block;
   position: relative;
   margin: 0;
@@ -2277,52 +2546,52 @@ body.nav-open #header a#nav-toggle div:last-child {
   line-height: 1rem;
 }
 
-#content .hero .wrapper .hero-content a.hero-txt-btn span.icon {
+body #content .hero .wrapper .hero-content a.hero-txt-btn span.icon {
   position: absolute;
   top: 2px;
   right: 0;
 }
 
-#content .hero .wrapper .hero-content a.hero-txt-btn:active span.sprite-link-sm {
+body #content .hero .wrapper .hero-content a.hero-txt-btn:active span.sprite-link-sm {
   background-position: -40px -550px;
 }
 
-#content .hero .wrapper .hero-content a.hero-txt-btn:active span.sprite-link-ext-sm {
+body #content .hero .wrapper .hero-content a.hero-txt-btn:active span.sprite-link-ext-sm {
   background-position: -40px -530px;
 }
 
-#content .hero .wrapper .hero-content span.subhead {
+body #content .hero .wrapper .hero-content span.subhead {
   display: block;
-  font-size: 1.5rem;
+  font-size: 2rem;
   line-height: 1.5rem;
   font-weight: 700;
   margin: 1.25rem 0 1rem;
 }
 
-#content .hero .wrapper .hero-content .util-box {
-  margin-bottom: 0;
+body #content .hero .wrapper .hero-content .util-box {
+  margin: 0;
 }
 
-#content .hero .wrapper .hero-content-img {
+body #content .hero .wrapper .hero-content-img {
   display: inline-block;
   position: relative;
   width: 200px;
   margin: 20px auto 0;
 }
 
-#content .hero .wrapper .hero-content-img img {
+body #content .hero .wrapper .hero-content-img img {
   width: 100%;
   position: relative;
 }
 
-#content .hero .wrapper .hero-content-img.hor-column {
+body #content .hero .wrapper .hero-content-img.hor-column {
   width: 280px;
 }
 
 @media (min-width: 640px) {
-  #content .hero .wrapper .hero-content-img.hor-column {
-    margin-bottom: 30px;
-    width: 31.11111%;
+  body #content .hero .wrapper .hero-content-img.hor-column {
+    margin-bottom: 10px;
+    width: 42.22222%;
     float: left;
     margin-left: 1.11111%;
     margin-right: 1.11111%;
@@ -2330,7 +2599,7 @@ body.nav-open #header a#nav-toggle div:last-child {
 }
 
 @media (min-width: 920px) {
-  #content .hero .wrapper .hero-content-img.hor-column {
+  body #content .hero .wrapper .hero-content-img.hor-column {
     margin-bottom: 30px;
     width: 53.33333%;
     float: left;
@@ -2340,7 +2609,7 @@ body.nav-open #header a#nav-toggle div:last-child {
 }
 
 @media (min-width: 640px) {
-  #content .hero .wrapper .hero-content-img {
+  body #content .hero .wrapper .hero-content-img {
     width: 31.11111%;
     float: left;
     margin-left: 1.11111%;
@@ -2349,7 +2618,7 @@ body.nav-open #header a#nav-toggle div:last-child {
   }
 }
 
-#content .hero .wrapper .hero-content.ver-column {
+body #content .hero .wrapper .hero-content.ver-column {
   width: 97.77778%;
   float: left;
   margin-left: 1.11111%;
@@ -2357,7 +2626,7 @@ body.nav-open #header a#nav-toggle div:last-child {
 }
 
 @media (min-width: 640px) {
-  #content .hero .wrapper .hero-content.ver-column {
+  body #content .hero .wrapper .hero-content.ver-column {
     width: 64.44444%;
     float: left;
     margin-left: 1.11111%;
@@ -2365,7 +2634,7 @@ body.nav-open #header a#nav-toggle div:last-child {
   }
 }
 
-#content .hero .wrapper .hero-content.hor-column {
+body #content .hero .wrapper .hero-content.hor-column {
   width: 97.77778%;
   float: left;
   margin-left: 1.11111%;
@@ -2373,8 +2642,8 @@ body.nav-open #header a#nav-toggle div:last-child {
 }
 
 @media (min-width: 640px) {
-  #content .hero .wrapper .hero-content.hor-column {
-    width: 64.44444%;
+  body #content .hero .wrapper .hero-content.hor-column {
+    width: 53.33333%;
     float: left;
     margin-left: 1.11111%;
     margin-right: 1.11111%;
@@ -2382,7 +2651,7 @@ body.nav-open #header a#nav-toggle div:last-child {
 }
 
 @media (min-width: 920px) {
-  #content .hero .wrapper .hero-content.hor-column {
+  body #content .hero .wrapper .hero-content.hor-column {
     width: 42.22222%;
     float: left;
     margin-left: 1.11111%;
@@ -2390,7 +2659,7 @@ body.nav-open #header a#nav-toggle div:last-child {
   }
 }
 
-#content .hero .wrapper .util-box {
+body #content .hero .wrapper .util-box {
   width: 97.77778%;
   float: left;
   margin-left: 1.11111%;
@@ -2403,27 +2672,27 @@ body.nav-open #header a#nav-toggle div:last-child {
 }
 
 @media (min-width: 420px) {
-  #content .hero .wrapper .util-box {
+  body #content .hero .wrapper .util-box {
     display: block;
   }
 }
 
-#content .hero .wrapper .util-box .util-btn-divider {
+body #content .hero .wrapper .util-box .util-btn-divider {
   display: none;
   float: left;
-  margin: 24px 15px 0;
+  margin: 16px 15px 0;
   padding-left: 1px;
   padding-bottom: 70px;
   border-left: 1px solid #fff;
 }
 
 @media (min-width: 640px) {
-  #content .hero .wrapper .util-box .util-btn-divider {
+  body #content .hero .wrapper .util-box .util-btn-divider {
     display: block;
   }
 }
 
-#content .hero .wrapper a.util-box-btn {
+body #content .hero .wrapper a.util-box-btn {
   display: inline-block;
   position: relative;
   width: 100px;
@@ -2442,82 +2711,64 @@ body.nav-open #header a#nav-toggle div:last-child {
   float: none;
 }
 
-#content .hero .wrapper a.util-box-btn:before {
+body #content .hero .wrapper a.util-box-btn:before {
   content: '';
   display: inline-block;
   height: 56px;
   vertical-align: middle;
 }
 
-#content .hero .wrapper a.util-box-btn .txt {
+body #content .hero .wrapper a.util-box-btn .txt {
   display: inline-block;
   width: 86px;
   margin-right: 5px;
   vertical-align: middle;
 }
 
-#content .hero .wrapper a.util-box-btn .txt span.sm-txt {
+body #content .hero .wrapper a.util-box-btn .txt span.sm-txt {
   display: block;
   font-weight: 800;
   letter-spacing: .25pt;
 }
 
-#content .hero .wrapper a.util-box-btn .icon {
+body #content .hero .wrapper a.util-box-btn .icon {
   position: absolute;
   bottom: 14px;
   left: 50%;
   margin-left: -14px;
 }
 
-#content .hero .wrapper a.util-box-btn .sprite-download {
+body #content .hero .wrapper a.util-box-btn .sprite-download {
   bottom: 10px;
   margin-left: -8px;
 }
 
 @media (min-width: 640px) {
-  #content .hero .wrapper a.util-box-btn {
+  body #content .hero .wrapper a.util-box-btn {
     float: left;
     margin: 6px;
     border: 2px solid #fff;
   }
-  #content .hero .wrapper a.util-box-btn:first-child {
+  body #content .hero .wrapper a.util-box-btn:first-child {
     margin-left: 0;
   }
-  #content .hero .wrapper a.util-box-btn:last-child {
+  body #content .hero .wrapper a.util-box-btn:last-child {
     margin-right: 0;
   }
 }
 
-#content .hero .sub-nav-bg {
+body #content .hero .sub-nav {
   position: absolute;
   width: 100%;
   height: 6px;
   bottom: 0;
   left: 0;
-  background: #fff;
-}
-
-@media (min-width: 640px) {
-  #content .hero .sub-nav-bg {
-    height: 60px;
-  }
-}
-
-#content .hero .sub-nav {
-  position: absolute;
-  width: 100%;
-  height: 6px;
-  top: auto;
-  bottom: 0;
-  left: 0;
-  margin-top: 0;
   text-align: center;
-  border-bottom: none;
   overflow: hidden;
   z-index: 500;
 }
 
-#content .hero .sub-nav ul {
+body #content .hero .sub-nav ul {
   display: none;
   position: relative;
   height: 100%;
@@ -2525,251 +2776,675 @@ body.nav-open #header a#nav-toggle div:last-child {
   margin: 0 auto;
 }
 
-#content .hero .sub-nav ul li {
+body #content .hero .sub-nav ul li {
   float: left;
   font-size: 0;
 }
 
-#content .hero .sub-nav ul li a.sub-nav-btn {
-  padding: 7px 13px;
-  line-height: 60px;
-  margin: 0;
+body #content .hero .sub-nav ul li a.sub-nav-btn {
+  display: inline-block;
+  padding: 0 13px;
+  line-height: 40px;
+  margin: 10px 0;
   letter-spacing: 1pt;
   font-size: 1rem;
   font-weight: 400;
   opacity: 1;
-  -moz-transition: color 0.15s ease-out 0s;
-  transition: color 0.15s ease-out 0s;
+  -moz-transition: color .15s ease-out, margin .25s ease-out;
+  transition: color .15s ease-out, margin .25s ease-out;
 }
 
-#content .hero .sub-nav ul li a.sub-nav-btn:active {
+body #content .hero .sub-nav ul li a.sub-nav-btn:active {
   color: #202020;
 }
 
-#content .hero .sub-nav ul li a.sprite-top-btn, #content .hero .sub-nav ul li a.sprite-top-btn-black {
+body #content .hero .sub-nav ul li a.sub-nav-btn.on {
+  color: #fff;
+}
+
+body #content .hero .sub-nav ul li a.sprite-top-btn, body #content .hero .sub-nav ul li a.sprite-top-btn-black {
   padding: 0;
   margin: 15px 0;
   font: 0/0 a;
   opacity: .1;
   cursor: default;
-  -moz-transition: opacity 0.15s ease-out 0s;
-  transition: opacity 0.15s ease-out 0s;
+  -moz-transition: opacity .15s ease-out, margin .25s ease-out;
+  transition: opacity .15s ease-out, margin .25s ease-out;
 }
 
-#content .hero .sub-nav ul li .sub-nav-divider {
+body #content .hero .sub-nav ul li .sub-nav-divider {
   width: 1px;
   height: 12px;
   margin: 24px 0;
   background: #fff;
   opacity: .25;
+  -moz-transition: margin 0.25s ease-out 0s;
+  transition: margin 0.25s ease-out 0s;
 }
 
-#content .hero .sub-nav ul li:last-child {
+body #content .hero .sub-nav ul li:last-child {
   margin-right: 12px;
 }
 
 @media (min-width: 640px) {
-  #content .hero .sub-nav {
+  body #content .hero .sub-nav {
     height: 60px;
+    -moz-transition: height 0.25s ease-out 0s;
+    transition: height 0.25s ease-out 0s;
   }
-  #content .hero .sub-nav ul {
+  body #content .hero .sub-nav ul {
     display: inline-block;
   }
 }
 
-@media (min-width: 640px) {
-  #content.sticky-nav .hero .sub-nav-bg {
-    height: 40px;
-  }
+body #content.skinny-nav .hero .sub-nav a.sub-nav-btn {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
-#content.sticky-nav .hero .sub-nav {
-  position: fixed;
-  top: 50px;
-  bottom: auto;
-  border-bottom: 1px solid #4d4d4d;
-}
-
-#content.sticky-nav .hero .sub-nav a.sub-nav-btn {
-  line-height: 40px;
-}
-
-#content.sticky-nav .hero .sub-nav a.sprite-top-btn, #content.sticky-nav .hero .sub-nav a.sprite-top-btn-black {
-  opacity: .75;
+body #content.skinny-nav .hero .sub-nav a.sprite-top-btn, body #content.skinny-nav .hero .sub-nav a.sprite-top-btn-black {
+  opacity: .65;
   cursor: pointer;
   margin-top: 5px;
   margin-bottom: 5px;
 }
 
-#content.sticky-nav .hero .sub-nav a.sprite-top-btn:active, #content.sticky-nav .hero .sub-nav a.sprite-top-btn-black:active {
+body #content.skinny-nav .hero .sub-nav a.sprite-top-btn:active, body #content.skinny-nav .hero .sub-nav a.sprite-top-btn-black:active {
   background-position: -140px -187px;
   opacity: .5;
 }
 
-#content.sticky-nav .hero .sub-nav .sub-nav-divider {
+body #content.skinny-nav .hero .sub-nav .sub-nav-divider {
   margin: 14px 0;
 }
 
 @media (min-width: 640px) {
-  #content.sticky-nav .hero .sub-nav {
-    top: 70px;
+  body #content.skinny-nav .hero .sub-nav {
     height: 40px;
   }
 }
 
-.noTouch #content .hero .sub-nav a:hover {
+body.stpaul-stPaulHome #content .hero {
+  min-height: 480px;
+  max-height: 1024px;
+}
+
+body.stpaul-stPaulHome #content .hero .wrapper {
+  text-align: center;
+}
+
+body.stpaul-stPaulHome #content .hero .wrapper .hero-start-btns {
+  display: inline-block;
+  width: 302px;
+  margin: 30px auto;
+  padding: 0;
+  overflow: hidden;
+}
+
+body.stpaul-stPaulHome #content .hero .wrapper .hero-start-btns a {
+  display: inline-block;
+  position: relative;
+  width: 100px;
+  height: 80px;
+  text-align: center;
+  float: left;
+}
+
+body.stpaul-stPaulHome #content .hero .wrapper .hero-start-btns a:first-child, body.stpaul-stPaulHome #content .hero .wrapper .hero-start-btns a:nth-child(3), body.stpaul-stPaulHome #content .hero .wrapper .hero-start-btns a:nth-child(5) {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+body.stpaul-stPaulHome #content .hero .wrapper .hero-start-btns a .icon {
+  position: relative;
+  margin: 20px auto 0;
+  -webkit-transform: translateY(-10px);
+  -moz-transform: translateY(-10px);
+  -ms-transform: translateY(-10px);
+  transform: translateY(-10px);
+}
+
+body.stpaul-stPaulHome #content .hero .wrapper .hero-start-btns a span {
+  position: relative;
+  display: block;
+  font-size: .8rem;
+  line-height: 1rem;
   color: #fff;
-}
-
-.noTouch #content .hero a.util-box-btn:hover {
-  background: #fff;
-}
-
-.noTouch #content.sticky-nav .hero .sub-nav a.sprite-top-btn:hover, .noTouch #content.sticky-nav .hero .sub-nav a.sprite-top-btn-black:hover {
   opacity: 1;
+  -webkit-transform: translateY(-15px);
+  -moz-transform: translateY(-15px);
+  -ms-transform: translateY(-15px);
+  transform: translateY(-15px);
 }
 
-.noTouch #content.sticky-nav .hero .sub-nav a.sprite-top-btn:hover:active, .noTouch #content.sticky-nav .hero .sub-nav a.sprite-top-btn-black:hover:active {
-  opacity: .5;
+body.stpaul-stPaulHome #content .hero .wrapper .hero-start-btns a:active span {
+  -moz-transition: none;
+  transition: none;
+  color: #202020;
 }
 
-.noResize #content .hero a.util-box-btn {
-  -moz-transition: all 0.15s ease-out 0s;
-  transition: all 0.15s ease-out 0s;
-}
-
-.iOS-detect.noResize #content .hero {
+body.stpaul-stPaulHome #content .hero .wrapper .hero-start-btns a:active .icon {
   -moz-transition: none;
   transition: none;
 }
 
-.iOS-detect.noResize #content .hero .sub-nav {
-  -moz-transition: none;
-  transition: none;
-  -moz-transition: margin-top 0.25s ease-in-out 0s;
-  transition: margin-top 0.25s ease-in-out 0s;
+body.stpaul-stPaulHome #content .hero .wrapper .hero-start-btns a:active .sprite-bell {
+  background-position: 0 -90px;
 }
 
-.iOS-detect.noResize #content .hero .sub-nav a {
-  -moz-transition: none;
-  transition: none;
+body.stpaul-stPaulHome #content .hero .wrapper .hero-start-btns a:active .sprite-fish {
+  background-position: -50px -90px;
 }
 
-.iOS-detect.noResize #content.sticky-nav .hero .sub-nav {
-  margin-top: 40px;
-  top: 10px;
+body.stpaul-stPaulHome #content .hero .wrapper .hero-start-btns a:active .sprite-grape {
+  background-position: -100px -90px;
+}
+
+body.stpaul-stPaulHome #content .hero .wrapper .hero-start-btns a:active .sprite-cup {
+  background-position: -150px -90px;
+}
+
+body.stpaul-stPaulHome #content .hero .wrapper .hero-start-btns a:active .sprite-bread {
+  background-position: -200px -90px;
+}
+
+body.stpaul-stPaulHome #content .hero .wrapper .hero-start-btns a:active .sprite-album {
+  background-position: -250px -90px;
+}
+
+body.stpaul-stPaulHome #content .hero .wrapper .hero-start-btns .start-btn-divider {
+  display: block;
+  position: relative;
+  width: 1px;
+  height: 70px;
+  margin: 10px 0 0;
+  border-right: 1px solid rgba(255, 255, 255, 0.5);
+  float: left;
+}
+
+body.stpaul-stPaulHome #content .hero .wrapper .hero-start-btns .start-btn-divider:nth-child(8), body.stpaul-stPaulHome #content .hero .wrapper .hero-start-btns .start-btn-divider:nth-child(10) {
+  margin: 0 0 10px;
 }
 
 @media (min-width: 640px) {
-  .iOS-detect.noResize #content.sticky-nav .hero .sub-nav {
-    top: 30px;
+  body.stpaul-stPaulHome #content .hero {
+    min-height: 580px;
+    max-height: 1024px;
+  }
+  body.stpaul-stPaulHome #content .hero .wrapper {
+    height: 100%;
+  }
+  body.stpaul-stPaulHome #content .hero .wrapper:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+  }
+  body.stpaul-stPaulHome #content .hero .wrapper .hero-start-btns {
+    margin: 0;
+    vertical-align: middle;
+  }
+  body.stpaul-stPaulHome #content .hero .wrapper .hero-start-btns a span {
+    font-size: .9rem;
   }
 }
 
-#content .content-body {
+@media (min-width: 920px) {
+  body.stpaul-stPaulHome #content .hero .wrapper .hero-start-btns {
+    width: auto;
+  }
+  body.stpaul-stPaulHome #content .hero .wrapper .hero-start-btns a:first-child, body.stpaul-stPaulHome #content .hero .wrapper .hero-start-btns a:nth-child(3), body.stpaul-stPaulHome #content .hero .wrapper .hero-start-btns a:nth-child(5) {
+    border: none;
+  }
+  body.stpaul-stPaulHome #content .hero .wrapper .hero-start-btns a .icon {
+    -webkit-transform: translateY(-15px);
+    -moz-transform: translateY(-15px);
+    -ms-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+  body.stpaul-stPaulHome #content .hero .wrapper .hero-start-btns .start-btn-divider, body.stpaul-stPaulHome #content .hero .wrapper .hero-start-btns .start-btn-divider:nth-child(8), body.stpaul-stPaulHome #content .hero .wrapper .hero-start-btns .start-btn-divider:nth-child(10) {
+    height: 16px;
+    margin: 32px 0;
+    border-right: 1px solid rgba(255, 255, 255, 0.75);
+  }
+}
+
+body.stpaul-stPaulHome #content .hero .sub-nav {
+  height: 6px;
+  background: #202020;
+}
+
+body.stpaul-stPaulHome #content .hero .sub-nav ul {
+  display: none;
   position: relative;
+  height: 6px;
 }
 
-#content .content-body > div {
-  padding-top: 60px;
-  padding-bottom: 40px;
+body.stpaul-stPaulHome #content .hero .sub-nav ul li {
+  line-height: 0;
+  height: 0;
 }
 
-#content .content-body > div:first-child {
-  padding-top: 80px;
+@media (min-width: 640px) {
+  body.stpaul-stPaulHome #content .hero .sub-nav ul {
+    display: inline-block;
+  }
 }
 
-#content .content-body > div:last-child {
+.noTouch body #content .hero .sub-nav a:hover {
+  color: #fff;
+}
+
+.noTouch body #content .hero .sub-nav a:active {
+  color: #202020;
+}
+
+.noTouch body #content .hero a.util-box-btn:hover {
+  background: #fff;
+}
+
+.noTouch body #content.skinny-nav .hero .sub-nav a.sprite-top-btn:hover, .noTouch body #content.skinny-nav .hero .sub-nav a.sprite-top-btn-black:hover {
+  opacity: 1;
+}
+
+.noTouch body #content.skinny-nav .hero .sub-nav a.sprite-top-btn:hover:active, .noTouch body #content.skinny-nav .hero .sub-nav a.sprite-top-btn-black:hover:active {
+  opacity: .5;
+}
+
+.noTouch body.stpaul-stPaulHome #content .hero .hero-start-btns a .icon {
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+  transition: -webkit-transform 0.25s ease-in-out 0s;
+  -moz-transition: transform 0.25s ease-in-out 0s, -moz-transform 0.25s ease-in-out 0s;
+  transition: transform 0.25s ease-in-out 0s;
+  transition: transform 0.25s ease-in-out 0s, -webkit-transform 0.25s ease-in-out 0s, -moz-transform 0.25s ease-in-out 0s;
+}
+
+.noTouch body.stpaul-stPaulHome #content .hero .hero-start-btns a span {
+  opacity: 0;
+  -moz-transition: opacity 0.15s ease-out 0s;
+  transition: opacity 0.15s ease-out 0s;
+}
+
+.noTouch body.stpaul-stPaulHome #content .hero .hero-start-btns a:hover .icon {
+  -webkit-transform: translateY(-15px);
+  -moz-transform: translateY(-15px);
+  -ms-transform: translateY(-15px);
+  transform: translateY(-15px);
+}
+
+.noTouch body.stpaul-stPaulHome #content .hero .hero-start-btns a:hover span {
+  opacity: 1;
+  -moz-transition: opacity 0.25s ease-out 0.15s;
+  transition: opacity 0.25s ease-out 0.15s;
+}
+
+body.stpaul-stPaulHome #content .content-body a {
+  color: #68adcb;
+}
+
+body.stpaul-stPaulHome #content .content-body h3 a, body.stpaul-stPaulHome #content .content-body h3 a:hover, body.stpaul-stPaulHome #content .content-body h3 a:visited {
+  color: #357a98;
+}
+
+body.stpaul-stPaulHome #content .content-body h3 a:active {
+  color: #202020;
+}
+
+body.stpaul-stPaulHome #content .content-body .section.media {
+  background: #68adcb;
+}
+
+body.stpaul-stPaulHome #content .content-body .section.media a:hover {
+  color: #357a98;
+}
+
+body.stpaul-stPaulHome #content .content-body .section.media a:active {
+  color: #202020;
+}
+
+body.stpaul-stPaulHome #content .content-body .section.media h3 a, body.stpaul-stPaulHome #content .content-body .section.media h3 a:hover, body.stpaul-stPaulHome #content .content-body .section.media h3 a:visited {
+  color: #fff;
+}
+
+body.stpaul-stPaulHome #content .content-body .section.media h3 a:active {
+  color: #357a98;
+}
+
+.noTouch body.stpaul-stPaulHome #content .content-body a:hover {
+  color: #357a98;
+}
+
+.noTouch body.stpaul-stPaulHome #content .content-body a:active {
+  color: #202020;
+}
+
+body.stpaul-stPaulOffice #content .content-body a {
+  color: #78cac0;
+}
+
+body.stpaul-stPaulOffice #content .content-body h3 a, body.stpaul-stPaulOffice #content .content-body h3 a:hover, body.stpaul-stPaulOffice #content .content-body h3 a:visited {
+  color: #3e9e92;
+}
+
+body.stpaul-stPaulOffice #content .content-body h3 a:active {
+  color: #202020;
+}
+
+body.stpaul-stPaulOffice #content .content-body .section.media {
+  background: #78cac0;
+}
+
+body.stpaul-stPaulOffice #content .content-body .section.media a:hover {
+  color: #3e9e92;
+}
+
+body.stpaul-stPaulOffice #content .content-body .section.media a:active {
+  color: #202020;
+}
+
+body.stpaul-stPaulOffice #content .content-body .section.media h3 a, body.stpaul-stPaulOffice #content .content-body .section.media h3 a:hover, body.stpaul-stPaulOffice #content .content-body .section.media h3 a:visited {
+  color: #fff;
+}
+
+body.stpaul-stPaulOffice #content .content-body .section.media h3 a:active {
+  color: #3e9e92;
+}
+
+.noTouch body.stpaul-stPaulOffice #content .content-body a:hover {
+  color: #3e9e92;
+}
+
+.noTouch body.stpaul-stPaulOffice #content .content-body a:active {
+  color: #202020;
+}
+
+body.stpaul-spiritualLife #content .content-body a {
+  color: #97b76e;
+}
+
+body.stpaul-spiritualLife #content .content-body h3 a, body.stpaul-spiritualLife #content .content-body h3 a:hover, body.stpaul-spiritualLife #content .content-body h3 a:visited {
+  color: #63803f;
+}
+
+body.stpaul-spiritualLife #content .content-body h3 a:active {
+  color: #202020;
+}
+
+body.stpaul-spiritualLife #content .content-body .section.media {
+  background: #97b76e;
+}
+
+body.stpaul-spiritualLife #content .content-body .section.media a:hover {
+  color: #63803f;
+}
+
+body.stpaul-spiritualLife #content .content-body .section.media a:active {
+  color: #202020;
+}
+
+body.stpaul-spiritualLife #content .content-body .section.media h3 a, body.stpaul-spiritualLife #content .content-body .section.media h3 a:hover, body.stpaul-spiritualLife #content .content-body .section.media h3 a:visited {
+  color: #fff;
+}
+
+body.stpaul-spiritualLife #content .content-body .section.media h3 a:active {
+  color: #63803f;
+}
+
+.noTouch body.stpaul-spiritualLife #content .content-body a:hover {
+  color: #63803f;
+}
+
+.noTouch body.stpaul-spiritualLife #content .content-body a:active {
+  color: #202020;
+}
+
+body.stpaul-oneCommunity #content .content-body a {
+  color: #c0b563;
+}
+
+body.stpaul-oneCommunity #content .content-body h3 a, body.stpaul-oneCommunity #content .content-body h3 a:hover, body.stpaul-oneCommunity #content .content-body h3 a:visited {
+  color: #877d36;
+}
+
+body.stpaul-oneCommunity #content .content-body h3 a:active {
+  color: #202020;
+}
+
+body.stpaul-oneCommunity #content .content-body .section.media {
+  background: #c0b563;
+}
+
+body.stpaul-oneCommunity #content .content-body .section.media a:hover {
+  color: #877d36;
+}
+
+body.stpaul-oneCommunity #content .content-body .section.media a:active {
+  color: #202020;
+}
+
+body.stpaul-oneCommunity #content .content-body .section.media h3 a, body.stpaul-oneCommunity #content .content-body .section.media h3 a:hover, body.stpaul-oneCommunity #content .content-body .section.media h3 a:visited {
+  color: #fff;
+}
+
+body.stpaul-oneCommunity #content .content-body .section.media h3 a:active {
+  color: #877d36;
+}
+
+.noTouch body.stpaul-oneCommunity #content .content-body a:hover {
+  color: #877d36;
+}
+
+.noTouch body.stpaul-oneCommunity #content .content-body a:active {
+  color: #202020;
+}
+
+body.stpaul-ourParish #content .content-body a {
+  color: #8776b6;
+}
+
+body.stpaul-ourParish #content .content-body h3 a, body.stpaul-ourParish #content .content-body h3 a:hover, body.stpaul-ourParish #content .content-body h3 a:visited {
+  color: #554581;
+}
+
+body.stpaul-ourParish #content .content-body h3 a:active {
+  color: #202020;
+}
+
+body.stpaul-ourParish #content .content-body .section.media {
+  background: #8776b6;
+}
+
+body.stpaul-ourParish #content .content-body .section.media a:hover {
+  color: #554581;
+}
+
+body.stpaul-ourParish #content .content-body .section.media a:active {
+  color: #202020;
+}
+
+body.stpaul-ourParish #content .content-body .section.media h3 a, body.stpaul-ourParish #content .content-body .section.media h3 a:hover, body.stpaul-ourParish #content .content-body .section.media h3 a:visited {
+  color: #fff;
+}
+
+body.stpaul-ourParish #content .content-body .section.media h3 a:active {
+  color: #554581;
+}
+
+.noTouch body.stpaul-ourParish #content .content-body a:hover {
+  color: #554581;
+}
+
+.noTouch body.stpaul-ourParish #content .content-body a:active {
+  color: #202020;
+}
+
+body.stpaul-educationCenter #content .content-body a {
+  color: #5a748c;
+}
+
+body.stpaul-educationCenter #content .content-body h3 a, body.stpaul-educationCenter #content .content-body h3 a:hover, body.stpaul-educationCenter #content .content-body h3 a:visited {
+  color: #32414e;
+}
+
+body.stpaul-educationCenter #content .content-body h3 a:active {
+  color: #202020;
+}
+
+body.stpaul-educationCenter #content .content-body .section.media {
+  background: #5a748c;
+}
+
+body.stpaul-educationCenter #content .content-body .section.media a:hover {
+  color: #32414e;
+}
+
+body.stpaul-educationCenter #content .content-body .section.media a:active {
+  color: #202020;
+}
+
+body.stpaul-educationCenter #content .content-body .section.media h3 a, body.stpaul-educationCenter #content .content-body .section.media h3 a:hover, body.stpaul-educationCenter #content .content-body .section.media h3 a:visited {
+  color: #fff;
+}
+
+body.stpaul-educationCenter #content .content-body .section.media h3 a:active {
+  color: #32414e;
+}
+
+.noTouch body.stpaul-educationCenter #content .content-body a:hover {
+  color: #32414e;
+}
+
+.noTouch body.stpaul-educationCenter #content .content-body a:active {
+  color: #202020;
+}
+
+body.stpaul-mediaLibrary #content .content-body a {
+  color: #d08fae;
+}
+
+body.stpaul-mediaLibrary #content .content-body h3 a, body.stpaul-mediaLibrary #content .content-body h3 a:hover, body.stpaul-mediaLibrary #content .content-body h3 a:visited {
+  color: #af4a7a;
+}
+
+body.stpaul-mediaLibrary #content .content-body h3 a:active {
+  color: #202020;
+}
+
+body.stpaul-mediaLibrary #content .content-body .section.media {
+  background: #d08fae;
+}
+
+body.stpaul-mediaLibrary #content .content-body .section.media a:hover {
+  color: #af4a7a;
+}
+
+body.stpaul-mediaLibrary #content .content-body .section.media a:active {
+  color: #202020;
+}
+
+body.stpaul-mediaLibrary #content .content-body .section.media h3 a, body.stpaul-mediaLibrary #content .content-body .section.media h3 a:hover, body.stpaul-mediaLibrary #content .content-body .section.media h3 a:visited {
+  color: #fff;
+}
+
+body.stpaul-mediaLibrary #content .content-body .section.media h3 a:active {
+  color: #af4a7a;
+}
+
+.noTouch body.stpaul-mediaLibrary #content .content-body a:hover {
+  color: #af4a7a;
+}
+
+.noTouch body.stpaul-mediaLibrary #content .content-body a:active {
+  color: #202020;
+}
+
+body #content .content-body {
+  color: #4d4d4d;
+}
+
+body #content .content-body a {
+  color: #4d4d4d;
+}
+
+body #content .content-body a:hover {
+  text-decoration: none;
+}
+
+body #content .content-body a:visited {
+  color: #202020;
+}
+
+body #content .content-body .section {
+  padding-top: 70px;
+  padding-bottom: 50px;
+}
+
+@media (min-width: 640px) {
+  body #content .content-body .section:first-child {
+    padding-top: 90px;
+    border-bottom: 1px solid #f9f9f9;
+  }
+}
+
+body #content .content-body .section:last-child {
   padding-bottom: 80px;
 }
 
-#content .content-body .main-body {
+body #content .content-body .main-body {
   width: 97.77778%;
   float: left;
   margin-left: 1.11111%;
   margin-right: 1.11111%;
+  text-align: center;
 }
 
 @media (min-width: 640px) {
-  #content .content-body .main-body {
+  body #content .content-body .main-body {
     width: 64.44444%;
     float: left;
     margin-left: 1.11111%;
     margin-right: 1.11111%;
+    text-align: left;
   }
 }
 
-#content .content-body .side-body {
+body #content .content-body .side-body {
+  width: 97.77778%;
+  float: left;
+  margin-left: 1.11111%;
+  margin-right: 1.11111%;
+  text-align: center;
+}
+
+@media (min-width: 640px) {
+  body #content .content-body .side-body {
+    width: 31.11111%;
+    float: left;
+    margin-left: 1.11111%;
+    margin-right: 1.11111%;
+    text-align: left;
+  }
+}
+
+body #content .content-body h3 {
+  margin-bottom: 30px;
+}
+
+body #content .content-body .media {
+  color: #fff;
+}
+
+body #content .content-body .media .main-body {
   width: 97.77778%;
   float: left;
   margin-left: 1.11111%;
   margin-right: 1.11111%;
 }
 
-@media (min-width: 640px) {
-  #content .content-body .side-body {
-    width: 31.11111%;
-    float: left;
-    margin-left: 1.11111%;
-    margin-right: 1.11111%;
-  }
-}
-
-#content .content-body h3 {
-  margin-bottom: 30px;
-}
-
-#content .content-body .content-sect2 {
-  background: #c6c6c6;
-}
-
-.noTouch #content .hero .sub-nav a:hover {
+body #content .content-body .media a, body #content .content-body .media a:visited {
   color: #fff;
-}
-
-.noTouch #content .hero a.util-box-btn:hover {
-  background: #fff;
-}
-
-.noTouch #content.sticky-nav .hero .sub-nav a.sprite-top-btn:hover, .noTouch #content.sticky-nav .hero .sub-nav a.sprite-top-btn-black:hover {
-  opacity: 1;
-}
-
-.noTouch #content.sticky-nav .hero .sub-nav a.sprite-top-btn:hover:active, .noTouch #content.sticky-nav .hero .sub-nav a.sprite-top-btn-black:hover:active {
-  opacity: .5;
-}
-
-.noResize #content .hero a.util-box-btn {
-  -moz-transition: all 0.15s ease-out 0s;
-  transition: all 0.15s ease-out 0s;
-}
-
-.iOS-detect.noResize #content .hero {
-  -moz-transition: none;
-  transition: none;
-}
-
-.iOS-detect.noResize #content .hero .sub-nav {
-  -moz-transition: none;
-  transition: none;
-  -moz-transition: margin-top 0.25s ease-in-out 0s;
-  transition: margin-top 0.25s ease-in-out 0s;
-}
-
-.iOS-detect.noResize #content .hero .sub-nav a {
-  -moz-transition: none;
-  transition: none;
-}
-
-.iOS-detect.noResize #content.sticky-nav .hero .sub-nav {
-  margin-top: 40px;
-  top: 10px;
-}
-
-@media (min-width: 640px) {
-  .iOS-detect.noResize #content.sticky-nav .hero .sub-nav {
-    top: 30px;
-  }
 }
 
 /*# sourceMappingURL=../maps/styles.css.map */

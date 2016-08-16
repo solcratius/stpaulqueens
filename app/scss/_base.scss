@@ -31,6 +31,8 @@ body {
 	}
 
 	overflow-x: hidden;
+	// overflow-y: scroll;
+	// -webkit-overflow-scrolling: none;
 }
 
 #content {
@@ -107,22 +109,22 @@ span.sm-txt {
 }
 
 .show-mobileOnly {
-	display: block;
+	display: block !important;
 	@include breakpoint($mobile-width) {
-		display: none;
+		display: none !important;
 	}
 }
 
 .show-tablet {
-	display: none;
+	display: none !important;
 	@include breakpoint($tablet-width) {
-		display: block;
+		display: block !important;
 	}
 }
 
 .show-desktop {
-	display: none;
+	display: none !important;
 	@include breakpoint($laptop-width) {
-		display: block;
+		display: block !important;
 	}
 }
