@@ -1,0 +1,471 @@
+// ***********************************
+// HERO - HOME
+// ***********************************
+
+body.stpaul-stPaulHome #content {
+	.hero {
+		min-height: 480px;
+		max-height: 1024px;
+
+		.day-info {
+			position: relative;
+			width: 100%;
+			padding-top: 70px;
+			text-align: center;
+
+			.date {
+				display: block;
+				font-size: 1rem;
+				letter-spacing: .5pt;
+				padding-bottom: 18px;
+			}
+
+			.name {
+				padding: 12px 6px 0;
+				border-top: 1px solid $col-white;
+				font-size: 1rem;
+				font-weight: 700;
+				letter-spacing: 1pt;
+			}
+		}
+
+		.wrapper {
+			text-align: center;
+
+			.hero-start-btns {
+				display: inline-block;
+				width: 302px;
+				margin: 0 auto;
+				padding: 0;
+				overflow: hidden;
+				// border-radius: 20px;
+				// padding: 20px;
+				// background: rgba($col-white, .15);
+				// transform: scale(.9);
+				// @include trans(.25, transform);
+
+				// &:hover {
+				// 	transform: scale(1);
+				// }
+
+				a {
+					display: inline-block;
+					position: relative;
+					width: 100px;
+					height: 80px;
+					text-align: center;
+					float: left;
+
+					&:first-child, &:nth-child(3), &:nth-child(5) {
+						border-bottom: 1px solid rgba($col-white, .5);
+					}
+
+					.icon {
+						position: relative;
+						margin: 20px auto 0;
+						transform: translateY(-10px);
+					}
+
+					span {
+						position: relative;
+						display: block;
+						font-size: .8rem;
+						line-height: 1rem;
+						color: $col-white;
+						opacity: 1;
+						transform: translateY(-15px);
+					}
+
+					&:active {
+						span {
+							transition: none;
+							color: $col-black;
+						}
+						.icon {
+							transition: none;
+						}
+						.sprite-bell {
+							background-position: 0 -90px;
+						}
+						.sprite-fish {
+							background-position: -50px -90px;
+						}
+						.sprite-grape {
+							background-position: -100px -90px;
+						}
+						.sprite-cup {
+							background-position: -150px -90px;
+						}
+						.sprite-bread {
+							background-position: -200px -90px;
+						}
+						.sprite-album {
+							background-position: -250px -90px;
+						}
+					}
+				}
+
+				.start-btn-divider {
+					display: block;
+					position: relative;
+					width: 1px;
+					// height: 26px;
+					height: 70px;
+					margin: 10px 0 0;
+					border-right: 1px solid rgba($col-white, .5);
+					float: left;
+
+					&:nth-child(8), &:nth-child(10) {
+						margin: 0 0 10px;
+					}
+				}
+			}
+
+			.hero-content {
+				@include span(90%);
+				margin: 80px 5% 10px;
+			}
+
+			.home-start-btn {
+				display: none;
+			}
+		}
+
+		@include breakpoint($tablet-width) {
+			.day-info {
+				position: absolute;
+				width: 100%;
+				top: 100px;
+				padding: 0;
+			}
+
+			.wrapper {
+				height: 100%;
+
+				&:before {
+					content: '';
+					display: inline-block;
+					height: 100%;
+					vertical-align: middle;
+				}
+
+				.hero-start-btns {
+					margin: 0;
+					vertical-align: middle;
+
+					a span {
+						font-size: .9rem;
+					}
+				}
+
+				.hero-content {
+					position: absolute;
+					width: calc( 80% - 40px );
+					bottom: 70px;
+					left: auto;
+					right: auto;
+					margin: 0 10%;
+
+					&.left {
+						@include span(60%);
+						text-align: left;
+						bottom: 40px;
+						left: 40px;
+						right: auto;
+						margin: 0;
+					}
+
+					&.right {
+						@include span(60%);
+						text-align: right;
+						bottom: 40px;
+						left: auto;
+						right: 40px;
+						margin: 0;
+					}
+				}
+
+				.home-start-btn {
+					display: block;
+					position: absolute;
+					width: 60px;
+					height: 50px;
+					bottom: 0;
+					left: 50%;
+					margin-left: -30px;
+					overflow: hidden;
+					text-align: center;
+
+					.icon {
+						transform: translateY(0);
+						@include trans(.25s, transform, ease-out);
+					}
+
+					&:active {
+						.icon {
+							background-position: -250px -190px;
+						}
+					}
+
+					&.black:active {
+						.icon {
+							background-position: -200px -190px;
+						}
+					}
+				}
+			}
+
+			min-height: 580px;
+			max-height: 1024px;
+		}
+
+		@include breakpoint($laptop-width) {
+			.wrapper {
+				.hero-start-btns {
+					width: auto;
+
+					a:first-child, a:nth-child(3), a:nth-child(5) {
+						border: none;
+					}
+
+					a .icon {
+						transform: translateY(-15px);
+					}
+
+					.start-btn-divider, .start-btn-divider:nth-child(8), .start-btn-divider:nth-child(10) {
+						height: 16px;
+						margin: 32px 0;
+						border-right: 1px solid rgba($col-white, .75);
+					}
+
+					&.black {
+						a:first-child, a:nth-child(3), a:nth-child(5) {
+							border: none;
+						}
+
+						.start-btn-divider, .start-btn-divider:nth-child(8), .start-btn-divider:nth-child(10) {
+							border-right: 1px solid rgba($col-black, .75);
+						}
+					}
+				}
+
+				.hero-content {
+					&.left, &.right {
+						@include span(40%);
+						bottom: 10px;
+					}
+				}
+			}
+		}
+
+		.sub-nav {
+			height: 6px;
+			background: $col-black;
+			// height: 8px;
+			// border-bottom: 2px solid $col-stPaulHome;
+
+			ul {
+				@extend %no-style-ul;
+
+				display: none;
+				position: relative;
+				height: 6px;
+
+				li {
+					line-height: 0;
+					height: 0;
+				}
+
+				@include breakpoint($tablet-width) {
+					display: inline-block;
+				}
+			}
+		}
+
+		&.black {
+			.hero-start-btns {
+				a {
+					&:first-child, &:nth-child(3), &:nth-child(5) {
+						border-bottom: 1px solid rgba($col-black, .5);
+					}
+
+					span {
+						color: $col-black;
+					}
+
+					.sprite-bell {
+						background-position: 0 -90px;
+					}
+					.sprite-fish {
+						background-position: -50px -90px;
+					}
+					.sprite-grape {
+						background-position: -100px -90px;
+					}
+					.sprite-cup {
+						background-position: -150px -90px;
+					}
+					.sprite-bread {
+						background-position: -200px -90px;
+					}
+					.sprite-album {
+						background-position: -250px -90px;
+					}
+
+					&:active {
+						span {
+							transition: none;
+							color: $col-white;
+						}
+						.icon {
+							transition: none;
+						}
+						.sprite-bell {
+							background-position: 0 -50px;
+						}
+						.sprite-fish {
+							background-position: -50px -50px;
+						}
+						.sprite-grape {
+							background-position: -100px -50px;
+						}
+						.sprite-cup {
+							background-position: -150px -50px;
+						}
+						.sprite-bread {
+							background-position: -200px -50px;
+						}
+						.sprite-album {
+							background-position: -250px -50px;
+						}
+					}
+				}
+
+				.start-btn-divider {
+					border-right: 1px solid rgba($col-black, .5);
+				}
+			}
+
+			.home-start-btn {
+				&:active {
+					.icon {
+						background-position: -200px -190px;
+					}
+				}
+			}
+
+			@include breakpoint($laptop-width) {
+				.hero-start-btns {
+					a:first-child, a:nth-child(3), a:nth-child(5) {
+						border: none;
+					}
+
+					.start-btn-divider, .start-btn-divider:nth-child(8), .start-btn-divider:nth-child(10) {
+						border-right: 1px solid rgba($col-black, .75);
+					}
+				}
+			}
+		}
+
+		&.black-txt {
+			.day-info {
+				color: $col-black;
+
+				.name {
+					border-top: 1px solid $col-black;
+				}
+			}
+
+			.wrapper .hero-content {
+				color: $col-black;
+
+				a {
+					color: $col-black;
+
+					.sprite-download-sm {
+						background-position: -40px -570px;
+					}
+
+					.sprite-link-sm {
+						background-position: -40px -550px;
+					}
+
+					.sprite-link-ext-sm {
+						background-position: -40px -530px;
+					}
+
+					&:active {
+						color: $col-white;
+
+						.sprite-download-sm {
+							background-position: 0 -570px;
+						}
+
+						.sprite-link-sm {
+							background-position: 0 -550px;
+						}
+
+						.sprite-link-ext-sm {
+							background-position: 0 -530px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.noTouch {
+	body.stpaul-stPaulHome #content {
+		.hero {
+			.hero-start-btns {
+				a {
+					.icon {
+						transform: translateY(0);
+						@include trans(.25s, transform);
+					}
+
+					span {
+						opacity: 0;
+						@include trans(.15s, opacity, ease-out, 0s);
+					}
+
+					&:hover {
+						.icon {
+							transform: translateY(-15px);
+						}
+
+						span {
+							opacity: 1;
+							@include trans(.25s, opacity, ease-out, .15s);
+						}
+					}
+				}
+			}
+
+			.home-start-btn {
+				&:hover {
+					.icon {
+						transform: translateY(8px);
+					}
+				}
+			}
+
+			&.black-txt {
+				.wrapper .hero-content {
+					a:hover {
+						color: $col-white;
+
+						span.sprite-link-sm {
+							background-position: 0 -550px;
+						}
+						
+						span.sprite-link-ext-sm {
+							background-position: 0 -530px;
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -151,9 +151,9 @@ STPAULQUEENS.main = (function($) {
 		    }
 		    else
 		    {
-		    	if ((this.st <= (p_sect.heroH - 108) && !w_resize.m_view && $HEADER.hasClass('sticky-nav') && p_main.id < 100) 
-		    		|| (this.st <= (p_sect.heroH - 76) && !w_resize.m_view && $HEADER.hasClass('sticky-nav') && p_main.id >= 100)
-		    		|| (this.st <= (p_sect.heroH - 56) && w_resize.m_view && $HEADER.hasClass('sticky-nav'))) $HEADER.removeClass('sticky-nav');
+		    	if ((this.st <= (p_sect.heroH - 109) && !w_resize.m_view && $HEADER.hasClass('sticky-nav') && p_main.id < 100) 
+		    		|| (this.st <= (p_sect.heroH - 77) && !w_resize.m_view && $HEADER.hasClass('sticky-nav') && p_main.id >= 100)
+		    		|| (this.st <= (p_sect.heroH - 57) && w_resize.m_view && $HEADER.hasClass('sticky-nav'))) $HEADER.removeClass('sticky-nav');
 		    	p_sect.setPosId(this.st, 'up');
 		    }
 			
@@ -176,10 +176,14 @@ STPAULQUEENS.main = (function($) {
 			this.p_feature();
 		},
 		p_feature: function() {
-			if (p_main.id >= 100)
+			if (p_main.id >= 100 && !w_resize.m_view)
 			{
 				if (!w_resize.m_view) $HERO.css('height', w_resize.height+'px');
-				
+
+			}
+			else
+			{
+				$HERO.removeAttr('style');
 			}
 		}
 	}
@@ -201,10 +205,13 @@ STPAULQUEENS.main = (function($) {
 			$CONTENT_SECT.each(function(i) {
 				var stickyNavDiff, yPos;
 				stickyNavDiff = (!w_resize.m_view) ? 108 : 54;
-				yPos = $(this).position().top - stickyNavDiff;
+				if (p_main.id >= 100) stickyNavDiff = 54;
 
+				yPos = $(this).position().top - stickyNavDiff;
 				p_sect.posTop.push(Math.floor(yPos));
 			});
+			
+			// console.log(p_sect.posTop);
 		},
 		setPosId: function(y, dir) {
 			if (dir == "down")

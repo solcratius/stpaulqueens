@@ -1,0 +1,177 @@
+// ***********************************
+// CONTENT POSTING
+// ***********************************
+
+@each $theme, $color in $themes {
+	@include stylize-posting($theme, $color);
+}
+
+body #content .content-body .section {
+	.wrapper {
+		.posting {
+			ul {
+				@extend %no-style-ul;
+
+				li {
+					display: inline-block;
+					position: relative;
+					width: 100%;
+					padding: 30px 0;
+					font-size: 1rem;
+					font-weight: 400;
+
+					border-bottom: 1px solid $col-grey;
+
+					&:first-child {
+						padding-top: 20px;
+					}
+
+					// &:last-child {
+					// 	border: none;
+					// }
+				}
+			}
+
+			.thumbnail {
+				width: span(6);
+				margin: 20px auto 0;
+				background: $col-grey;
+				font-size: 0;
+				overflow: hidden;
+
+				@include breakpoint($tablet-width) {
+					@include span(4);
+					margin: 0;
+				}
+
+				@include breakpoint($laptop-width) {
+					@include span(3);
+					margin: 0;
+				}
+
+				img {
+					width: 100%;
+				}
+			}
+
+			.txt {
+				width: span(8);
+				margin: 20px auto 15px;
+				text-align: center;
+
+				a.title {
+					display: block;
+					font-size: 1.4em;
+					font-weight: 400;
+					line-height: 1.25em;
+					margin-bottom: 5px;
+				}
+
+				.date {
+					font-size: .8em;
+					color: $col-grey;
+				}
+
+				p {
+					margin-top: 5px;
+					margin-bottom: 0;
+				}
+
+				@include breakpoint($tablet-width) {
+					@include span(5);
+					margin: 0;
+					margin-left: 15px;
+					text-align: left;
+
+					&.full {
+						@include span(9);
+						margin: 0;
+						text-align: left;
+					}
+				}
+
+				@include breakpoint($laptop-width) {
+					@include span(6);
+					margin: 0;
+					margin-left: 15px;
+					text-align: left;
+				}
+			}
+
+			&.no-sidebar {
+				.thumbnail {
+					@include breakpoint($tablet-width) {
+						@include span(4 of 13.75);
+						margin: 0;
+					}
+
+					@include breakpoint($laptop-width) {
+						@include span(3 of 13.75);
+						margin: 0;
+					}
+				}
+
+				.txt {
+
+					@include breakpoint($tablet-width) {
+						@include span(9.75 of 13.75);
+						margin: 0;
+					margin-left: 15px;
+
+						&.full {
+							@include span(full);
+							margin: 0;
+						}
+					}
+
+					@include breakpoint($laptop-width) {
+						@include span(10.75 of 13.75);
+						margin: 0;
+						margin-left: 15px;
+					}
+				}
+			}
+
+			.bottom-nav {
+				display: block;
+				padding: 20px 0;
+				margin-top: 1px;
+				text-align: center;
+
+        		.post-nav {
+        			display: inline-block;
+        			margin: 0 auto;
+
+        			a {
+        				position: relative;
+	        			padding: 0 8px;
+	        			margin: 0 2px;
+	        			font-weight: 400;
+
+	        			&.selected {
+	        				font-weight: 800;
+	        				margin: 0 5px;
+	        			}
+	        		}
+
+	        		a.p-left, a.p-right {
+	        			float: left;
+	        			margin: 4px 10px;
+	        		}
+
+	        		ul {
+	        			float: left;
+	        		}
+
+	        		li {
+	        			width: auto;
+	        			margin: 0;
+	        			padding: 0;
+	        			float: left;
+	        			border: none;
+	        		}
+        		}
+			}
+		}
+	}
+}

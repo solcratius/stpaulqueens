@@ -66,6 +66,10 @@ $width:auto;
           color: $col-black;
         }
 
+        .hero-content a.black:active {
+          color: $col-white;
+        }
+
         a.util-box-btn {
           background: $secondary;
           .sprite-download {
@@ -105,11 +109,17 @@ $width:auto;
       .wrapper {
         .hero-content a {
           &:hover {
-            // color: darken($secondary, 10%);
-            color: $secondary;
+            // color: $primary;
+            color: $col-black;
           }
           &:active {
-            color: $col-black;
+            opacity: .5;
+          }
+        }
+
+        .hero-content a.black {
+          &:hover {
+            color: $col-white;
           }
         }
 
@@ -147,17 +157,23 @@ $width:auto;
 
   body.#{$theme} #content {
     .content-body {
-      a {
+      a.text-btn, a.text-btn:visited {
         color: $primary;
+      }
+
+      a.black, a.black:visited {
+        color: $col-black;
       }
 
       h3 {
         a, a:hover, a:visited {
-          color: $secondary;
+          color: $primary;
         }
         a:active {
           color: $col-black;
         }
+
+        border-bottom: 4px solid $primary;
       }
 
       .section.media {
@@ -187,8 +203,60 @@ $width:auto;
     .content-body {
       a {
         &:hover {
+          color: $col-black;
+        }
+      }
+
+      a.black {
+        &:hover {
+          color: $primary;
+        }
+      }
+
+      .media {
+        a {
+          &:hover {
+            color: $col-black;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@mixin stylize-posting($theme, $color) {
+  $primary: $color;
+  $secondary: darken($color, 20%);
+
+  body.#{$theme} #content {
+    .posting {
+      a.title {
+        color: $primary;
+
+        &:visited {
+          color: $primary;
+        }
+
+        &:active {
+          color: $col-black;
+        }
+      }
+
+      .bottom-nav {
+        border-top: 4px solid $primary;
+        color: $primary;
+      }
+    }
+  }
+
+  .noTouch body.#{$theme} #content {
+    .posting {
+      a.title {
+        &:hover {
           color: $secondary;
         }
+
         &:active {
           color: $col-black;
         }
