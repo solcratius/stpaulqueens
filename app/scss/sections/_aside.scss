@@ -1,0 +1,205 @@
+// ***********************************
+// CONTENT-ASIDE
+// ***********************************
+
+@each $theme, $color in $themes {
+	@include stylize-aside($theme, $color);
+}
+
+body #content .content-body {
+	.side-body {
+		margin-top: 10px;
+		margin-bottom: 20px;
+
+		@include breakpoint($tablet-width) {
+			margin-top: 20px;
+			margin-bottom: 30px;
+		}
+
+		@include breakpoint($tablet-wide-width) {
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+
+		.boxed {
+			margin-bottom: 10px;
+			// border: 1px solid $col-grey-d;
+			border: 1px solid $col-grey;
+			font-size: .86rem;
+			line-height: 1.5rem;
+
+			@include breakpoint($tablet-width) {
+				margin-bottom: 10px;
+			}
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			.padder {
+				padding: 35px 20px 15px;
+
+				@include breakpoint($tablet-wide-width) {
+					padding: 30px 25px 10px;
+				}
+			}
+
+			h4 {
+				position: relative;
+				display: inline-block;
+				color: $col-black;
+				margin-bottom: 20px;
+				padding-left: 30px;
+				padding-right: 40px;
+
+				a.more-link.sprite-link {
+					position: absolute;
+					background-position: -40px -500px;
+					top: 2px;
+					right: 2px;
+					opacity: .15;
+
+					&:active {
+						opacity: 1;
+					}
+				}
+
+				@include breakpoint($tablet-wide-width) {
+					display: block;
+					padding: 0;
+					margin-bottom: 25px;
+				}
+			}
+
+			ul {
+				@extend %no-style-ul;
+				font-size: 1em;
+				@include container(100%);
+
+				li {
+					@include span(full inside no-gutters);
+					border-top: 1px solid $col-grey-l;
+
+					&:first-child {
+						border: none;
+					}
+				}
+
+				a.list-item {
+					@include span(full inside no-gutters);
+					padding: 15px 0;
+					line-height: 1.5em;
+					font-weight: 400;
+
+					.date {
+						@include span(6 of 18 inside no-gutters);
+						font-weight: 700;
+
+						@include breakpoint($tablet-wide-width) {
+							@include span(7 of 18 inside no-gutters);
+						}
+
+						@include breakpoint($laptop-width) {
+							@include span(6 of 18 inside no-gutters);
+						}
+					}
+
+					.txt {
+						@include span(12 of 18 inside no-gutters);
+						color: $col-grey-d3;
+						text-align: left;
+
+						@include breakpoint($tablet-wide-width) {
+							@include span(11 of 18 inside no-gutters);
+						}
+
+						@include breakpoint($laptop-width) {
+							@include span(12 of 18 inside no-gutters);
+						}
+					}
+				}
+			}
+
+			.bottom-btn {
+				display: block;
+				padding: 15px;
+				// background: $col-grey-d;
+				// border-top: 1px solid $col-grey-d;
+				background: $col-grey;
+				border-top: 1px solid $col-grey;
+				text-align: center;
+				
+				.label {
+					position: relative;
+					display: inline-block;
+					color: $col-white;
+					padding-right: 26px;
+					margin: 0 auto;
+
+					.icon {
+						position: absolute;
+						background-position: 0 -550px;
+						top: 3px;
+						right: 0;
+					}
+				}
+
+				&:active {
+					background: $col-black;
+					opacity: 1;
+				}
+			}
+
+			&.calendar {
+				h4 {
+					color: $col-white;
+					text-align: center;
+					margin: 20px auto;
+				}
+			}
+		}
+
+		h3 {
+			margin-bottom: 10px;
+
+			@include breakpoint($tablet-wide-width) {
+				margin-bottom: 30px;
+			}
+		}
+	}
+}
+
+.noTouch body #content .content-body {
+	.side-body {
+		.boxed {
+			h4 {
+				a.more-link {
+					&:hover {
+						opacity: 1;
+					}
+
+					&:active {
+						opacity: .5;
+					}
+				}
+			}
+
+			a.list-item {
+				&:hover .txt {
+					color: $col-black;
+				}
+			}
+
+			.bottom-btn {
+				&:hover {
+					background: $col-black;
+				}
+
+				&:active {
+					background: $col-grey-d2;
+					opacity: 1;
+				}
+			}
+		}
+	}
+}

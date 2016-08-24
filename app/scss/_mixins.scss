@@ -109,7 +109,6 @@ $width:auto;
       .wrapper {
         .hero-content a {
           &:hover {
-            // color: $primary;
             color: $col-black;
           }
           &:active {
@@ -133,6 +132,7 @@ $width:auto;
             color: $col-white;
             border-color: $col-white;
             background: darken($secondary, 15%);
+            opacity: 1;
 
             .sprite-download {
               background-position: 0 -440px;
@@ -157,20 +157,33 @@ $width:auto;
 
   body.#{$theme} #content {
     .content-body {
-      a.text-btn, a.text-btn:visited {
+      a, a:visited {
         color: $primary;
+      }
+
+      a:active {
+        color: $col-black;
       }
 
       a.black, a.black:visited {
         color: $col-black;
       }
 
+      a.black:active {
+        color: $primary;
+      }
+
       h3 {
+        font-weight: 700;
+        color: $primary;
+
         a, a:hover, a:visited {
           color: $primary;
         }
+
         a:active {
           color: $col-black;
+          opacity: 1;
         }
 
         border-bottom: 4px solid $primary;
@@ -179,20 +192,12 @@ $width:auto;
       .section.media {
         background: $primary;
 
-        a:hover {
-          color: $secondary;
-        }
-
-        a:active {
-          color: $col-black;
-        }
-
         h3 {
           a, a:hover, a:visited {
             color: $col-white;
           }
           a:active {
-            color: $secondary;
+            color: $col-black;
           }
         }
       }
@@ -210,6 +215,17 @@ $width:auto;
       a.black {
         &:hover {
           color: $primary;
+        }
+      }
+
+      h3 {
+        a, a:hover, a:visited {
+          color: $primary;
+        }
+
+        a:active {
+          color: $col-black;
+          opacity: 1;
         }
       }
 
@@ -240,6 +256,7 @@ $width:auto;
 
         &:active {
           color: $col-black;
+          opacity: 1;
         }
       }
 
@@ -259,6 +276,39 @@ $width:auto;
 
         &:active {
           color: $col-black;
+        }
+      }
+    }
+  }
+}
+
+
+@mixin stylize-aside($theme, $color) {
+  $primary: $color;
+  $secondary: darken($color, 20%);
+
+  body.#{$theme} #content .side-body {
+    .boxed {
+      .bottom-btn {
+        &.color {
+          background: $primary;
+        }
+      }
+
+      &.calendar {
+        background: $primary;
+      }
+    }
+  }
+
+  .noTouch body.#{$theme} #content .side-body {
+    .boxed {
+      .bottom-btn {
+        &.color {
+          &:active {
+            background: $secondary;
+            opacity: 1;
+          }
         }
       }
     }

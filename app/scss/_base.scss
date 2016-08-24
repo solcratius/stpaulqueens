@@ -101,6 +101,22 @@ span.sm-txt {
 	}
 }
 
+.add-paddingTop {
+	padding-top: 50px;
+
+	@include breakpoint($tablet-wide-width) {
+		padding-top: 40px;
+	}
+}
+
+.add-paddingBottom {
+	padding-bottom: 50px;
+
+	@include breakpoint($tablet-wide-width) {
+		padding-bottom: 40px;
+	}
+}
+
 .noWrap {
 	white-space: nowrap;
 }

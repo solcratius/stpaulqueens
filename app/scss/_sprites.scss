@@ -341,13 +341,13 @@ body.stpaul-mediaLibrary #content .content-body .sprite-link-ext {
 
 
 .sprite-link-sm,
-.noTouch body.stpaul-stPaulHome #content .hero a.black:hover .sprite-link-sm,
-.noTouch body.stpaul-stPaulOffice #content .hero a.black:hover .sprite-link-sm,
-.noTouch body.stpaul-spiritualLife #content .hero a.black:hover .sprite-link-sm,
-.noTouch body.stpaul-oneCommunity #content .hero a.black:hover .sprite-link-sm,
-.noTouch body.stpaul-ourParish #content .hero a.black:hover .sprite-link-sm,
-.noTouch body.stpaul-educationCenter #content .hero a.black:hover .sprite-link-sm,
-.noTouch body.stpaul-mediaLibrary #content .hero a.black:hover .sprite-link-sm {
+body #content .hero a .sprite-link-sm,
+body #content .media a .sprite-link-sm,
+body #content .media a.text-btn.black:active .sprite-link-sm,
+.noTouch body #content .hero a .sprite-link-sm,
+.noTouch body #content .hero a.black:hover .sprite-link-sm,
+.noTouch body #content .media a .sprite-link-sm,
+.noTouch body #content .content-body .media a.text-btn.black:hover .sprite-link-sm {
 	@extend %sprite-div;
 	position: relative;
 	background-position: 0 -550px;
@@ -355,56 +355,52 @@ body.stpaul-mediaLibrary #content .content-body .sprite-link-ext {
 	height: 14px;
 }
 
-// .black .sprite-link-sm,
-.noTouch body.stpaul-stPaulHome #content a:hover .sprite-link-sm,
-.noTouch body.stpaul-stPaulOffice #content a:hover .sprite-link-sm,
-.noTouch body.stpaul-spiritualLife #content a:hover .sprite-link-sm,
-.noTouch body.stpaul-oneCommunity #content a:hover .sprite-link-sm,
-.noTouch body.stpaul-ourParish #content a:hover .sprite-link-sm,
-.noTouch body.stpaul-educationCenter #content a:hover .sprite-link-sm,
-.noTouch body.stpaul-mediaLibrary #content a:hover .sprite-link-sm,
-body.stpaul-stPaulHome #content a.black .sprite-link-sm,
-body.stpaul-stPaulOffice #content a.black .sprite-link-sm,
-body.stpaul-spiritualLife #content a.black .sprite-link-sm,
-body.stpaul-oneCommunity #content a.black .sprite-link-sm,
-body.stpaul-ourParish #content a.black .sprite-link-sm,
-body.stpaul-educationCenter #content a.black .sprite-link-sm,
-body.stpaul-mediaLibrary #content a.black .sprite-link-sm {
+.noTouch body #content a:hover .sprite-link-sm,
+.noTouch body #content a.black .sprite-link-sm,
+body #content a.black .sprite-link-sm,
+body #content .content-body a:active .sprite-link-sm {
 	background-position: -40px -550px;
 }
 
-.noTouch body.stpaul-stPaulHome #content a.black:hover .sprite-link-sm,
-body.stpaul-stPaulHome #content .content-body .sprite-link-sm {
+.noTouch body.stpaul-stPaulHome #content .content-body a.black:hover .sprite-link-sm,
+body.stpaul-stPaulHome #content a.black:active .sprite-link-sm,
+body.stpaul-stPaulHome #content .sprite-link-sm {
 	background-position: -80px -550px;
 }
 
-.noTouch body.stpaul-stPaulOffice #content a.black:hover .sprite-link-sm,
-body.stpaul-stPaulOffice #content .content-body .sprite-link-sm {
+.noTouch body.stpaul-stPaulOffice #content .content-body a.black:hover .sprite-link-sm,
+body.stpaul-stPaulOffice #content a.black:active .sprite-link-sm,
+body.stpaul-stPaulOffice #content .sprite-link-sm {
 	background-position: -120px -550px;
 }
 
-.noTouch body.stpaul-spiritualLife #content a.black:hover .sprite-link-sm,
-body.stpaul-spiritualLife #content .content-body .sprite-link-sm {
+.noTouch body.stpaul-spiritualLife #content .content-body a.black:hover .sprite-link-sm,
+body.stpaul-spiritualLife #content a.black:active .sprite-link-sm,
+body.stpaul-spiritualLife #content .sprite-link-sm {
 	background-position: -160px -550px;
 }
 
-.noTouch body.stpaul-oneCommunity #content a.black:hover .sprite-link-sm,
-body.stpaul-oneCommunity #content .content-body .sprite-link-sm {
+.noTouch body.stpaul-oneCommunity #content .content-body a.black:hover .sprite-link-sm,
+body.stpaul-oneCommunity #content a.black:active .sprite-link-sm,
+body.stpaul-oneCommunity #content .sprite-link-sm {
 	background-position: -200px -550px;
 }
 
-.noTouch body.stpaul-ourParish #content a.black:hover .sprite-link-sm,
-body.stpaul-ourParish #content .content-body .sprite-link-sm {
+.noTouch body.stpaul-ourParish #content .content-body a.black:hover .sprite-link-sm,
+body.stpaul-ourParish #content a.black:active .sprite-link-sm,
+body.stpaul-ourParish #content .sprite-link-sm {
 	background-position: -240px -550px;
 }
 
-.noTouch body.stpaul-educationCenter #content a.black:hover .sprite-link-sm,
-body.stpaul-educationCenter #content .content-body .sprite-link-sm {
+.noTouch body.stpaul-educationCenter #content .content-body a.black:hover .sprite-link-sm,
+body.stpaul-educationCenter #content a.black:active .sprite-link-sm,
+body.stpaul-educationCenter #content .sprite-link-sm {
 	background-position: -280px -550px;
 }
 
-.noTouch body.stpaul-mediaLibrary #content a.black:hover .sprite-link-sm,
-body.stpaul-mediaLibrary #content .content-body .sprite-link-sm {
+.noTouch body.stpaul-mediaLibrary #content .content-body a.black:hover .sprite-link-sm,
+body.stpaul-mediaLibrary #content a.black:active .sprite-link-sm,
+body.stpaul-mediaLibrary #content .sprite-link-sm {
 	background-position: -320px -550px;
 }
 
@@ -412,13 +408,13 @@ body.stpaul-mediaLibrary #content .content-body .sprite-link-sm {
 
 
 .sprite-link-ext-sm,
-.noTouch body.stpaul-stPaulHome #content .hero a.black:hover .sprite-link-ext-sm,
-.noTouch body.stpaul-stPaulOffice #content .hero a.black:hover .sprite-link-ext-sm,
-.noTouch body.stpaul-spiritualLife #content .hero a.black:hover .sprite-link-ext-sm,
-.noTouch body.stpaul-oneCommunity #content .hero a.black:hover .sprite-link-ext-sm,
-.noTouch body.stpaul-ourParish #content .hero a.black:hover .sprite-link-ext-sm,
-.noTouch body.stpaul-educationCenter #content .hero a.black:hover .sprite-link-ext-sm,
-.noTouch body.stpaul-mediaLibrary #content .hero a.black:hover .sprite-link-ext-sm {
+body #content .hero a .sprite-link-ext-sm,
+body #content .media a .sprite-link-ext-sm,
+body #content .media a.text-btn.black:active .sprite-link-ext-sm,
+.noTouch body #content .hero a .sprite-link-ext-sm,
+.noTouch body #content .hero a.black:hover .sprite-link-ext-sm,
+.noTouch body #content .media a .sprite-link-ext-sm,
+.noTouch body #content .content-body .media a.text-btn.black:hover .sprite-link-ext-sm {
 	@extend %sprite-div;
 	position: relative;
 	background-position: 0 -530px;
@@ -426,55 +422,51 @@ body.stpaul-mediaLibrary #content .content-body .sprite-link-sm {
 	height: 14px;
 }
 
-// .black .sprite-link-ext-sm,
-.noTouch body.stpaul-stPaulHome #content .content-body a:hover .sprite-link-ext-sm,
-.noTouch body.stpaul-stPaulOffice #content .content-body a:hover .sprite-link-ext-sm,
-.noTouch body.stpaul-spiritualLife #content .content-body a:hover .sprite-link-ext-sm,
-.noTouch body.stpaul-oneCommunity #content .content-body a:hover .sprite-link-ext-sm,
-.noTouch body.stpaul-ourParish #content .content-body a:hover .sprite-link-ext-sm,
-.noTouch body.stpaul-educationCenter #content .content-body a:hover .sprite-link-ext-sm,
-.noTouch body.stpaul-mediaLibrary #content .content-body a:hover .sprite-link-ext-sm,
-body.stpaul-stPaulHome #content a.black .sprite-link-ext-sm,
-body.stpaul-stPaulOffice #content a.black .sprite-link-ext-sm,
-body.stpaul-spiritualLife #content a.black .sprite-link-ext-sm,
-body.stpaul-oneCommunity #content a.black .sprite-link-ext-sm,
-body.stpaul-ourParish #content a.black .sprite-link-ext-sm,
-body.stpaul-educationCenter #content a.black .sprite-link-ext-sm,
-body.stpaul-mediaLibrary #content a.black .sprite-link-ext-sm {
+.noTouch body #content a:hover .sprite-link-ext-sm,
+.noTouch body #content a.black .sprite-link-ext-sm,
+body #content a.black .sprite-link-ext-sm,
+body #content .content-body a:active .sprite-link-ext-sm {
 	background-position: -40px -530px;
 }
 
-.noTouch body.stpaul-stPaulHome #content a.black:hover .sprite-link-ext-sm,
-body.stpaul-stPaulHome #content .content-body .sprite-link-ext-sm {
+.noTouch body.stpaul-stPaulHome #content .content-body a.black:hover .sprite-link-ext-sm,
+body.stpaul-stPaulHome #content a.black:active .sprite-link-ext-sm,
+body.stpaul-stPaulHome #content .sprite-link-ext-sm {
 	background-position: -80px -530px;
 }
 
-.noTouch body.stpaul-stPaulOffice #content a.black:hover .sprite-link-ext-sm,
-body.stpaul-stPaulOffice #content .content-body .sprite-link-ext-sm {
+.noTouch body.stpaul-stPaulOffice #content .content-body a.black:hover .sprite-link-ext-sm,
+body.stpaul-stPaulOffice #content a.black:active .sprite-link-ext-sm,
+body.stpaul-stPaulOffice #content .sprite-link-ext-sm {
 	background-position: -120px -530px;
 }
 
-.noTouch body.stpaul-spiritualLife #content a.black:hover .sprite-link-ext-sm,
-body.stpaul-spiritualLife #content .content-body .sprite-link-ext-sm {
+.noTouch body.stpaul-spiritualLife #content .content-body a.black:hover .sprite-link-ext-sm,
+body.stpaul-spiritualLife #content a.black:active .sprite-link-ext-sm,
+body.stpaul-spiritualLife #content .sprite-link-ext-sm {
 	background-position: -160px -530px;
 }
 
-.noTouch body.stpaul-oneCommunity #content a.black:hover .sprite-link-ext-sm,
-body.stpaul-oneCommunity #content .content-body .sprite-link-ext-sm {
+.noTouch body.stpaul-oneCommunity #content .content-body a.black:hover .sprite-link-ext-sm,
+body.stpaul-oneCommunity #content a.black:active .sprite-link-ext-sm,
+body.stpaul-oneCommunity #content .sprite-link-ext-sm {
 	background-position: -200px -530px;
 }
 
-.noTouch body.stpaul-ourParish #content a.black:hover .sprite-link-ext-sm,
-body.stpaul-ourParish #content .content-body .sprite-link-ext-sm {
+.noTouch body.stpaul-ourParish #content .content-body a.black:hover .sprite-link-ext-sm,
+body.stpaul-ourParish #content a.black:active .sprite-link-ext-sm,
+body.stpaul-ourParish #content .sprite-link-ext-sm {
 	background-position: -240px -530px;
 }
 
-.noTouch body.stpaul-educationCenter #content a.black:hover .sprite-link-ext-sm,
-body.stpaul-educationCenter #content .content-body .sprite-link-ext-sm {
+.noTouch body.stpaul-educationCenter #content .content-body a.black:hover .sprite-link-ext-sm,
+body.stpaul-educationCenter #content a.black:active .sprite-link-ext-sm,
+body.stpaul-educationCenter #content .sprite-link-ext-sm {
 	background-position: -280px -530px;
 }
 
-.noTouch body.stpaul-mediaLibrary #content a.black:hover .sprite-link-ext-sm,
-body.stpaul-mediaLibrary #content .content-body .sprite-link-ext-sm {
+.noTouch body.stpaul-mediaLibrary #content .content-body a.black:hover .sprite-link-ext-sm,
+body.stpaul-mediaLibrary #content a.black:active .sprite-link-ext-sm,
+body.stpaul-mediaLibrary #content .sprite-link-ext-sm {
 	background-position: -320px -530px;
 }

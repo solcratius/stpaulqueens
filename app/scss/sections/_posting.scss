@@ -16,19 +16,23 @@ body #content .content-body .section {
 					display: inline-block;
 					position: relative;
 					width: 100%;
-					padding: 30px 0;
+					padding: 10px 0 5px;
 					font-size: 1rem;
 					font-weight: 400;
 
 					border-bottom: 1px solid $col-grey;
 
 					&:first-child {
-						padding-top: 20px;
+						padding-top: 0;
 					}
 
-					// &:last-child {
-					// 	border: none;
-					// }
+					@include breakpoint($tablet-width) {
+						padding: 20px 0 15px;
+					}
+
+					@include breakpoint($tablet-wide-width) {
+						padding: 30px 0;
+					}
 				}
 			}
 
@@ -39,7 +43,7 @@ body #content .content-body .section {
 				font-size: 0;
 				overflow: hidden;
 
-				@include breakpoint($tablet-width) {
+				@include breakpoint($tablet-wide-width) {
 					@include span(4);
 					margin: 0;
 				}
@@ -56,7 +60,7 @@ body #content .content-body .section {
 
 			.txt {
 				width: span(8);
-				margin: 20px auto 15px;
+				margin: 20px auto;
 				text-align: center;
 
 				a.title {
@@ -77,7 +81,7 @@ body #content .content-body .section {
 					margin-bottom: 0;
 				}
 
-				@include breakpoint($tablet-width) {
+				@include breakpoint($tablet-wide-width) {
 					@include span(5);
 					margin: 0;
 					margin-left: 15px;
@@ -98,9 +102,69 @@ body #content .content-body .section {
 				}
 			}
 
+			.bottom-nav {
+				display: block;
+				padding: 15px 0 5px;
+				margin-top: 1px;
+				margin-bottom: 50px;
+				text-align: center;
+
+        		.post-nav {
+        			display: inline-block;
+        			margin: 0 auto;
+
+        			a {
+        				position: relative;
+	        			padding: 0 5px;
+	        			margin: 0 4px;
+	        			font-weight: 400;
+
+	        			&.selected {
+	        				font-weight: 800;
+	        				margin: 0 6px;
+	        			}
+	        		}
+
+	        		a.pp-left, a.p-left, a.pp-right, a.p-right {
+	        			font-family: FontAwesome;
+	        			float: left;
+	        			margin: 4px 2px;
+	        		}
+
+	        		a.pp-left, a.pp-right {
+	        			display: none;
+
+	        			@include breakpoint($tablet-wide-width) {
+	        				display: inline-block;
+	        			}
+	        		}
+
+	        		ul {
+	        			float: left;
+	        			margin: 0 20px;
+	        		}
+
+	        		li {
+	        			width: auto;
+	        			margin: 0;
+	        			padding: 0;
+	        			float: left;
+	        			border: none;
+	        		}
+        		}
+
+        		@include breakpoint($tablet-width) {
+					margin-bottom: 60px;
+				}
+
+        		@include breakpoint($tablet-wide-width) {
+					margin-bottom: 0;
+				}
+			}
+
 			&.no-sidebar {
 				.thumbnail {
-					@include breakpoint($tablet-width) {
+					@include breakpoint($tablet-wide-width) {
 						@include span(4 of 13.75);
 						margin: 0;
 					}
@@ -112,11 +176,10 @@ body #content .content-body .section {
 				}
 
 				.txt {
-
-					@include breakpoint($tablet-width) {
+					@include breakpoint($tablet-wide-width) {
 						@include span(9.75 of 13.75);
 						margin: 0;
-					margin-left: 15px;
+						margin-left: 15px;
 
 						&.full {
 							@include span(full);
@@ -130,48 +193,14 @@ body #content .content-body .section {
 						margin-left: 15px;
 					}
 				}
+
+				.bottom-nav {
+					// margin-bottom: 0;
+					margin-bottom: 15px;
+				}
 			}
 
-			.bottom-nav {
-				display: block;
-				padding: 20px 0;
-				margin-top: 1px;
-				text-align: center;
-
-        		.post-nav {
-        			display: inline-block;
-        			margin: 0 auto;
-
-        			a {
-        				position: relative;
-	        			padding: 0 8px;
-	        			margin: 0 2px;
-	        			font-weight: 400;
-
-	        			&.selected {
-	        				font-weight: 800;
-	        				margin: 0 5px;
-	        			}
-	        		}
-
-	        		a.p-left, a.p-right {
-	        			float: left;
-	        			margin: 4px 10px;
-	        		}
-
-	        		ul {
-	        			float: left;
-	        		}
-
-	        		li {
-	        			width: auto;
-	        			margin: 0;
-	        			padding: 0;
-	        			float: left;
-	        			border: none;
-	        		}
-        		}
-			}
+			
 		}
 	}
 }

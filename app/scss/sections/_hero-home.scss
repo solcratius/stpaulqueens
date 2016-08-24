@@ -198,7 +198,7 @@ body.stpaul-stPaulHome #content {
 
 					.icon {
 						transform: translateY(0);
-						@include trans(.25s, transform, ease-out);
+						@include trans(.15s, transform, ease-out);
 					}
 
 					&:active {
