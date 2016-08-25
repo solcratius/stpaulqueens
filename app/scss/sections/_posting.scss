@@ -106,7 +106,7 @@ body #content .content-body .section {
 				display: block;
 				padding: 15px 0 5px;
 				margin-top: 1px;
-				margin-bottom: 50px;
+				margin-bottom: 30px;
 				text-align: center;
 
         		.post-nav {
@@ -126,7 +126,6 @@ body #content .content-body .section {
 	        		}
 
 	        		a.pp-left, a.p-left, a.pp-right, a.p-right {
-	        			font-family: FontAwesome;
 	        			float: left;
 	        			margin: 4px 2px;
 	        		}
@@ -154,7 +153,7 @@ body #content .content-body .section {
         		}
 
         		@include breakpoint($tablet-width) {
-					margin-bottom: 60px;
+					margin-bottom: 50px;
 				}
 
         		@include breakpoint($tablet-wide-width) {
@@ -195,12 +194,13 @@ body #content .content-body .section {
 				}
 
 				.bottom-nav {
-					// margin-bottom: 0;
 					margin-bottom: 15px;
+
+					@include breakpoint($tablet-wide-width) {
+						margin-bottom: 50px;
+					}
 				}
 			}
-
-			
 		}
 	}
 }

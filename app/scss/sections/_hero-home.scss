@@ -11,6 +11,7 @@ body.stpaul-stPaulHome #content {
 			position: relative;
 			width: 100%;
 			padding-top: 70px;
+			// padding-top: 25%;
 			text-align: center;
 
 			.date {
@@ -123,11 +124,41 @@ body.stpaul-stPaulHome #content {
 
 			.hero-content {
 				@include span(90%);
-				margin: 80px 5% 10px;
+				margin: 0 5% 40px;
 			}
 
 			.home-start-btn {
-				display: none;
+				display: block;
+				position: relative;
+				width: 60px;
+				height: 50px;
+				margin: 0 auto 20px;
+				text-align: center;
+				overflow: hidden;
+
+				.icon {
+					top: 14px;
+					transform: translateY(0);
+					@include trans(.15s, transform, ease-out);
+				}
+
+				&:active {
+					.icon {
+						// background-position: -250px -190px;
+						background-position: -300px -190px;
+						transform: translateY(10px);
+					}
+				}
+
+				&.black {
+					&:active {
+						.icon {
+							// background-position: -200px -190px;
+							background-position: -300px -190px;
+							transform: translateY(10px);
+						}
+					}
+				}
 			}
 		}
 
@@ -135,7 +166,8 @@ body.stpaul-stPaulHome #content {
 			.day-info {
 				position: absolute;
 				width: 100%;
-				top: 100px;
+				// top: 100px;
+				top: 20%;
 				padding: 0;
 			}
 
@@ -161,7 +193,7 @@ body.stpaul-stPaulHome #content {
 				.hero-content {
 					position: absolute;
 					width: calc( 80% - 40px );
-					bottom: 70px;
+					bottom: 120px;
 					left: auto;
 					right: auto;
 					margin: 0 10%;
@@ -169,7 +201,7 @@ body.stpaul-stPaulHome #content {
 					&.left {
 						@include span(60%);
 						text-align: left;
-						bottom: 40px;
+						bottom: 70px;
 						left: 40px;
 						right: auto;
 						margin: 0;
@@ -178,7 +210,7 @@ body.stpaul-stPaulHome #content {
 					&.right {
 						@include span(60%);
 						text-align: right;
-						bottom: 40px;
+						bottom: 70px;
 						left: auto;
 						right: 40px;
 						margin: 0;
@@ -186,30 +218,34 @@ body.stpaul-stPaulHome #content {
 				}
 
 				.home-start-btn {
-					display: block;
 					position: absolute;
-					width: 60px;
-					height: 50px;
-					bottom: 0;
+					bottom: 29px;
 					left: 50%;
+					margin: 0;
 					margin-left: -30px;
-					overflow: hidden;
-					text-align: center;
-
-					.icon {
-						transform: translateY(0);
-						@include trans(.15s, transform, ease-out);
-					}
+					background: rgba($col-black, .95);
 
 					&:active {
+						background: rgba($col-black, 1);
+
 						.icon {
-							background-position: -250px -190px;
+							// background-position: -250px -190px;
+							background-position: -300px -190px;
+							transform: translateY(5px);
 						}
 					}
 
-					&.black:active {
-						.icon {
-							background-position: -200px -190px;
+					&.black {
+						background: rgba($col-white, .9);
+
+						&:active {
+							background: rgba($col-white, 1);
+
+							.icon {
+								// background-position: -200px -190px;
+								background-position: -300px -190px;
+								transform: translateY(5px);
+							}
 						}
 					}
 				}
@@ -252,8 +288,13 @@ body.stpaul-stPaulHome #content {
 				.hero-content {
 					&.left, &.right {
 						@include span(40%);
-						bottom: 10px;
+						bottom: 40px;//10px;
 					}
+
+					// p {
+					// 	text-shadow: 1px 1px 12px $col-black;
+					// 	letter-spacing: .5pt;
+					// }
 				}
 			}
 		}
@@ -445,8 +486,16 @@ body.stpaul-stPaulHome #content {
 
 			.home-start-btn {
 				&:hover {
+					@include breakpoint($tablet-width) {
+						background: rgba($col-black, 1);
+
+						&.black {
+							background: rgba($col-white, 1);
+						}
+					}
+
 					.icon {
-						transform: translateY(8px);
+						background-position: -300px -190px;
 					}
 				}
 			}

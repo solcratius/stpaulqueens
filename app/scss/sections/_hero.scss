@@ -6,7 +6,7 @@
 	@include stylize-hero($theme, $color);
 }
 
-@include breakpoint($tablet-width) {
+// @include breakpoint($tablet-width) {
 	body.stpaul-stPaulHome #content .hero {
 		background: $col-stPaulHome url("../images/stpaulHome-bg.jpg") no-repeat bottom right;
 		background-size: cover;
@@ -41,7 +41,7 @@
 		background: $col-mediaLibrary url("../images/mediaLibrary-bg.jpg") no-repeat top right;
 		background-size: cover;
 	}
-}
+// }
 
 body #content {
 	.hero {
@@ -54,9 +54,25 @@ body #content {
 	    margin: 0;
 	    padding: 0;
 	    // overflow: hidden;
-
+	    
 	    @include breakpoint($tablet-width) {
 			min-height: 550px;
+		}
+
+	    .mobile-fader {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			z-index: 0;
+			opacity: .75;
+
+			@include breakpoint($tablet-width) {
+				opacity: .5;
+			}
+
+			@include breakpoint($laptop-width) {
+				display: none;
+			}
 		}
 
 		a {
@@ -153,7 +169,7 @@ body #content {
 					display: inline-block;
 					position: relative;
 					margin: 0;
-					margin-bottom: 30px;
+					// margin-bottom: 30px; //FIX
 					padding: 2px;
 					padding-right: 26px;
 					line-height: 1rem;

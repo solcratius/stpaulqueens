@@ -382,9 +382,13 @@ body #header {
 		}
 
 		input[name="search-text"] {
-			width: 270px;
+			width: 220px;
 
 			@include breakpoint($mobile-width) {
+				width: 300px;
+			}
+
+			@include breakpoint($tablet-width) {
 				width: 340px;
 			}
 
@@ -398,22 +402,27 @@ body #header {
 			}
 		}
 
-		input[type="submit"] {
-			display: none;
-			margin-left: 8px;
+		button[type="submit"] {
+			width: 40px;
+			height: 40px;
+			margin-left: 12px;
 			padding: 0;
 			color: $col-white;
-			font: 0/0 a;
+			background: $col-black;
+			box-shadow: none;
+			border-radius: none;
+			border-radius: 0;
+			border: none;
 		    overflow: hidden;
 		    opacity: .75;
-
 		    appearance: none;
 		    -webkit-appearance: none;
 
 		    @include trans(.15s, opacity, ease-out);
 			
 			&:active {
-				background-position: -40px -180px;
+				// background-position: -40px -180px;
+				color: $col-stPaulHome;
 			}
 
 			&:focus {
@@ -631,30 +640,11 @@ body.nav-open, body.stpaul-stPaulHome.nav-open {
 		}
 
 		.search {
-			// .icon {
-			// 	display: none;
-			// }
-
-			// input[name="search-text"] {
-			// 	width: 230px;
-			// 	margin-left: 0;
-
-			// 	@include breakpoint($mobile-width) {
-			// 		width: 300px;
-			// 	}
-
-			// 	@include breakpoint($tablet-width) {
-			// 		margin-left: 50px;
-			// 	}
-			// }
-
-			// input[type="submit"] {
-			// 	display: block;
-
-			// 	&:hover {
-			// 		opacity: 1;
-			// 	}
-			// }
+			button[type="submit"] {
+				&:hover {
+					opacity: 1;
+				}
+			}
 		}
 	}
 }

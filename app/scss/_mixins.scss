@@ -55,6 +55,10 @@ $width:auto;
     .hero {
       background: $primary;
 
+      .mobile-fader {
+        background: $primary;
+      }
+
       a {
         &:active {
           color: $secondary;
@@ -189,6 +193,24 @@ $width:auto;
         border-bottom: 4px solid $primary;
       }
 
+      .main-body {
+        .thumbnail {
+          background: $col-black;
+        }
+
+        a .thumbnail, a:visited .thumbnail {
+          opacity: 1;
+        }
+
+        a:active .thumbnail {
+          background: $primary;
+
+          img {
+            opacity: .25;
+          }
+        }
+      }
+
       .section.media {
         background: $primary;
 
@@ -226,6 +248,12 @@ $width:auto;
         a:active {
           color: $col-black;
           opacity: 1;
+        }
+      }
+
+      .main-body {
+        a:hover .thumbnail img {
+          opacity: .25;
         }
       }
 
@@ -296,9 +324,43 @@ $width:auto;
       }
 
       &.calendar {
+        tr.week td a, tr.week td a:visited {
+          color: $col-white;
+          background: $primary;
+        }
+
+        tr.week td a:hover {
+          background: $col-black;
+        }
+      }
+
+      &.grey-bg {
+        background: $col-grey-l;
+      }
+
+      &.color-bg {
         background: $primary;
       }
     }
+
+    .sidebar-gallery a {
+        .thumbnail {
+          background: $col-black;
+          opacity: 1;
+        }
+
+        &:visited .thumbnail {
+          opacity: 1;
+        }
+
+        &:active .thumbnail {
+          background: $primary;
+
+          img {
+            opacity: .25;
+          }
+        }
+      }
   }
 
   .noTouch body.#{$theme} #content .side-body {
@@ -311,6 +373,10 @@ $width:auto;
           }
         }
       }
+    }
+
+    .sidebar-gallery a:hover .thumbnail img {
+        opacity: .25;
     }
   }
 }

@@ -122,7 +122,8 @@ STPAULQUEENS.main = (function($) {
 				w_resize.height = $WIN.height();
 
 		        p_sect.init();
-		        p_sect.anchorAnim();
+		        if (p_main.id < 100) p_sect.anchorAnim();
+
 		        p_main.p_feature();
 		    }
 		}
@@ -142,11 +143,26 @@ STPAULQUEENS.main = (function($) {
 		 	if (this.st > 5) $CONTENT.addClass('skinny-nav');
 		 	else $CONTENT.removeClass('skinny-nav');
 
+		 // 	if (this.st > this.lastScrollTop)
+			// {				
+			// 	if ((this.st > (p_sect.heroH - 109) && !w_resize.m_view && !$HEADER.hasClass('sticky-nav') && p_main.id < 100) 
+			// 		|| (this.st > (p_sect.heroH - 77) && !w_resize.m_view && !$HEADER.hasClass('sticky-nav') && p_main.id >= 100)
+			// 		|| (this.st > (p_sect.heroH - 57) && w_resize.m_view && !$HEADER.hasClass('sticky-nav'))) $HEADER.addClass('sticky-nav');
+			// 	p_sect.setPosId(this.st, 'down');
+		 //    }
+		 //    else
+		 //    {
+		 //    	if ((this.st <= (p_sect.heroH - 109) && !w_resize.m_view && $HEADER.hasClass('sticky-nav') && p_main.id < 100) 
+		 //    		|| (this.st <= (p_sect.heroH - 77) && !w_resize.m_view && $HEADER.hasClass('sticky-nav') && p_main.id >= 100)
+		 //    		|| (this.st <= (p_sect.heroH - 57) && w_resize.m_view && $HEADER.hasClass('sticky-nav'))) $HEADER.removeClass('sticky-nav');
+		 //    	p_sect.setPosId(this.st, 'up');
+		 //    }
+		 	
 		 	if (this.st > this.lastScrollTop)
 			{				
-				if ((this.st > (p_sect.heroH - 109) && !w_resize.m_view && !$HEADER.hasClass('sticky-nav') && p_main.id < 100) 
-					|| (this.st > (p_sect.heroH - 77) && !w_resize.m_view && !$HEADER.hasClass('sticky-nav') && p_main.id >= 100)
-					|| (this.st > (p_sect.heroH - 57) && w_resize.m_view && !$HEADER.hasClass('sticky-nav'))) $HEADER.addClass('sticky-nav');
+				if ((this.st > (p_sect.heroH - 113) && !w_resize.m_view && !$HEADER.hasClass('sticky-nav') && p_main.id < 100) 
+					|| (this.st > (p_sect.heroH - 81) && !w_resize.m_view && !$HEADER.hasClass('sticky-nav') && p_main.id >= 100)
+					|| (this.st > (p_sect.heroH - 61) && w_resize.m_view && !$HEADER.hasClass('sticky-nav'))) $HEADER.addClass('sticky-nav');
 				p_sect.setPosId(this.st, 'down');
 		    }
 		    else
@@ -179,7 +195,6 @@ STPAULQUEENS.main = (function($) {
 			if (p_main.id >= 100 && !w_resize.m_view)
 			{
 				if (!w_resize.m_view) $HERO.css('height', w_resize.height+'px');
-
 			}
 			else
 			{
