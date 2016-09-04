@@ -39,6 +39,7 @@ STPAULQUEENS.controller = (function() {
     		STPAULQUEENS.main.init();
 	    	// STPAULQUEENS.main.nav.init();
 	    	// STPAULQUEENS.main.landing.init();
+	    	// STPAULQUEENS.main.landing.rdata.get();
 	    }
 	};
 

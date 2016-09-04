@@ -1,0 +1,1386 @@
+// ***********************************
+// CONTENT-FEATURES
+// ***********************************
+
+body.stpaul-stPaulHome #content .content-body {
+	.section {
+		@include breakpoint($tablet-wide-width) {
+			// border: none;
+			padding-top: 30px;
+			padding-bottom: 0;
+
+			&:first-child {
+				padding-top: 90px;
+			}
+		}
+
+		&.media {
+			background: $col-stPaulHome url("../images/stpaulHome-bottom-mobile-bg.jpg") no-repeat bottom center;
+			background-size: cover;
+			padding-bottom: 20px;
+
+			@include breakpoint($tablet-wide-width) {
+				max-height: 490px;
+				padding-top: 70px;
+				padding-bottom: 60px;
+
+				background: $col-stPaulHome url("../images/stpaulHome-bottom-bg.jpg") no-repeat bottom center;
+				background-size: cover;
+			}
+
+			@include breakpoint(1800px) {
+				background-position: center center;
+			}
+		}
+
+		&.grey {
+			padding-top: 20px;
+
+			@include breakpoint($tablet-width) {
+				padding-top: 30px;
+			}
+
+			.main-body {
+				.thumbnail {
+					border: 1px solid $col-grey;
+				}
+
+				@include breakpoint($tablet-wide-width) {
+					padding-bottom: 30px;
+				}
+			}
+		}
+
+		&.pushed {
+			padding-top: 70px;
+
+			@include breakpoint($tablet-wide-width) {
+				padding-top: 40px;
+			}
+
+			.main-body {
+				padding-bottom: 10px;
+
+				@include breakpoint($tablet-wide-width) {
+					padding-top: 20px;
+					padding-bottom: 0;
+				}
+			}
+
+			.side-body .opened {
+				@include breakpoint($tablet-wide-width) {
+					padding-bottom: 20px;
+				}
+			}
+		}
+	}
+}
+
+body.stpaul-stPaulOffice #content .content-body {
+	.section {
+		.main-body {
+			&.schedule {
+				.row {
+					display: block;
+					width: 100%;
+					margin: 0;
+					margin-bottom: 10px;
+				}
+
+				.column {
+					padding: 30px 0 0;
+
+					&.full {
+						@include full;
+						// width: 100%;
+						// margin: 0;
+					}
+
+					ul {
+						@extend %no-style-ul;
+						font-size: 1rem;
+					}
+
+					li {
+						font-size: .86em;
+						margin: 3px 0;
+
+						&.sub-title {
+							color: $col-stPaulOffice;
+							font-weight: 700;
+							margin: 18px 0 3px;
+						}
+					}
+
+					@include breakpoint($tablet-wide-width) {
+						@include span(9);
+						
+						&:first-child {
+							padding: 30px 0 10px;
+						}
+						
+						&.full {
+							padding: 30px 0 0;
+						}
+					}
+
+					@include breakpoint($laptop-width) {
+						@include span(9 of 18);
+					}
+
+					.sub-column {
+						@include breakpoint($tablet-width) {
+							@include span(9 of 18);
+							margin-left: 0;
+							margin-right: .55556%;
+							width: 49.44443%;
+
+							&:last-child {
+								margin-left: .55556%;
+								margin-right: 0;
+							}
+						}
+
+						@include breakpoint($tablet-wide-width) {
+							@include span(9);
+							margin: 0;
+
+							&:last-child {
+								margin: 0;
+							}
+						}
+
+						@include breakpoint($laptop-width) {
+							@include span(9 of 18);
+							margin-left: 0;
+							margin-right: .55556%;
+							width: 49.44443%;
+
+							&:last-child {
+								margin-left: .55556%;
+								margin-right: 0;
+							}
+						}
+
+						ul {
+							margin-top: 18px;
+						}
+
+						&:last-child {
+							ul {
+								margin-top: 0;
+
+								@include breakpoint($tablet-width) {
+									margin-top: 18px;
+								}
+
+								@include breakpoint($tablet-wide-width) {
+									li:first-child {
+										margin-top: 0;
+									}
+
+									margin-top: 0;
+								}
+
+								@include breakpoint($laptop-width) {
+									margin-top: 18px;
+								}
+							}
+						}
+
+						li {
+							margin: 14px 0;
+						}
+
+						span.group {
+							color: $col-stPaulOffice;
+							font-weight: 700;
+						}
+					}
+				}
+			}
+
+			&.calendar {
+				position: relative;
+
+				h3 {
+					display: block;
+
+					@include breakpoint($tablet-wide-width) {
+						display: inline-block;
+						margin-bottom: 0;
+						padding-bottom: 0;
+					}
+				}
+
+				.text-btn {
+					@include breakpoint($tablet-wide-width) {
+						position: absolute;
+						right: 5px;
+						top: 7px;
+
+						.icon {
+							top: 4px;
+						}
+					}
+				}
+
+				.container {
+					margin-top: 10px;
+
+					@include breakpoint($tablet-wide-width) {
+						margin-top: -31px;
+					}
+
+					h4 {
+						display: block;
+						text-align: center;
+						padding: 20px 0;
+
+						@include breakpoint($tablet-wide-width) {
+							padding: 0 0 30px;
+						}
+
+						.m-left {
+							margin: 0;
+							margin-right: 30px;
+						}
+
+						.m-right {
+							margin: 0;
+							margin-left: 30px;
+						}
+
+						a {
+							display: inline-block;
+							padding: 0 5px;
+						}
+					}
+
+					table {
+						width: 100%;
+						border: none;
+						padding: 0;
+
+						tr.label, tr.week {
+							td {
+								border: 1px solid $col-stPaulOffice;
+								@include span(1 of 7 inside no-gutters);
+							}
+						}
+
+						tr.label {
+							background: $col-stPaulOffice-sub;//$col-white;
+
+							td {
+								color: $col-white;//$col-grey-d3;
+								padding: 4px 0;
+								font-size: .86em;
+								font-weight: 700;
+								text-align: center;
+
+								@include breakpoint($tablet-width) {
+									padding: 12px 0;
+								}
+
+								@include breakpoint($tablet-wide-width) {
+									padding: 6px 0;
+								}
+							}
+						}
+						tr.week {
+							background: lighten($col-stPaulOffice, 15%);
+
+							td {
+								position: relative;
+								color: $col-white;
+								font-weight: 700;
+								text-align: center;
+
+								@include breakpoint($tablet-wide-width) {
+									// min-height: 120px;
+									height: 120px;
+									text-align: left;
+								}
+
+								span.d {
+									display: block;
+									position: relative;
+									padding: 10px;
+
+									@include breakpoint($tablet-width) {
+										padding: 30px 10px;
+									}
+
+									@include breakpoint($tablet-wide-width) {
+										position: absolute;
+										padding: 0;
+										top: 5px;
+										left: 8px;
+									}
+								}
+
+								a.d {
+									display: block;
+									position: relative;
+									width: 100%;
+									height: 100%;
+									overflow: hidden;
+
+									.events {
+										display: none;
+										font-size: .75em;
+										line-height: 1.2em;
+										margin: 35px 0 5px 10px;
+
+										@include breakpoint($tablet-wide-width) {
+											display: block;
+										}
+									}
+								}
+							}
+						}
+
+				        tr.week td a.d, tr.week td a.d:visited {
+				          	color: $col-stPaulOffice-sub;
+				          	background: $col-white;//lighten($col-stPaulOffice, 30%);
+				        }
+
+				        tr.week td a.d:active {
+				        	color: $col-white;
+				          	background: $col-black;
+				          	opacity: 1;
+				        }
+					}
+				}
+			}
+		}
+	}
+}
+
+body.stpaul-spiritualLife #content .content-body {
+	.section {
+		.main-body {
+			&.four-column {
+				.row {
+					width: 100%;
+					margin-bottom: 0;
+
+					@include breakpoint($tablet-wide-width) {
+						margin-bottom: 25px;
+					}
+				}
+
+				.column {
+					background: $col-white;
+
+					@include breakpoint($tablet-width) {
+						width: 24.36667%;
+
+						&:first-child {
+							margin-left: 0;
+						}
+
+						&:last-child {
+							margin-right: 0;
+						}
+					}
+
+					.thumbnail {
+						border: 1px solid $col-grey;
+					}
+
+					.title {
+						display: inline;
+						position: relative;
+						padding-right: 26px;
+
+						.icon {
+							position: absolute;
+							top: 1px;
+							right: 0;
+						}
+
+						@include breakpoint($tablet-width) {
+							display: none;
+						}
+
+						@include breakpoint($tablet-wide-width) {
+							display: inline;
+						}
+					}
+				}
+			}
+
+			&.homily.posting > ul > li {
+				padding: 20px 0;
+
+				&:first-child {
+					border-top: 1px solid $col-grey;
+				}
+
+				.txt.full {
+					margin: 0 auto;
+
+					.date {
+						margin-left: 8px;
+					}
+				}
+			}
+		}
+
+		&.media .main-body {
+			padding-bottom: 0;
+
+			@include breakpoint($tablet-width) {
+				padding-bottom: 20px;
+			}
+
+			h3 {
+				display: block;
+			}
+
+			.prayer-list {
+				position: relative;
+
+				.arrow {
+					display: none;
+				}
+
+				@include breakpoint($tablet-width) {
+					@include span(9 of 18 inside no-gutters);
+					margin: 0;
+					padding-right: 10px;
+
+					.arrow {
+						display: block;
+						position: absolute;
+						top: 50%;
+						margin-top: -10px;
+						right: -13px;
+						background-color: $col-spiritualLife;
+					}
+				}				
+
+				ul{
+					@extend %no-style-ul;
+					font-size: 1em;
+
+					@include breakpoint($tablet-width) {
+						width: 100%;
+						padding-top: 20px;
+						float: left;
+					}
+				}
+
+				li {
+					text-align: center;
+					padding: 8px 20px;
+
+					.content {
+						display: none;
+					}
+
+					line-height: 1.4rem;
+
+					@include breakpoint($tablet-width) {
+						width: 110px;
+						padding-left: 0;
+						text-align: left;
+						float: left;
+					}
+
+					&.selected {
+						a {
+							display: none;
+						}
+
+						.content {
+							display: block;
+							color: $col-spiritualLife-sub;
+							// color: darken($col-spiritualLife-sub, 5%);
+							padding: 30px 10px 20px;
+
+							h4 {
+								font-weight: 700;
+								padding-top: 0 !important;
+								padding-bottom: 10px;
+								margin-bottom: 20px;
+								border-bottom: 3px solid $col-spiritualLife-sub;
+								// border-bottom: 3px solid darken($col-spiritualLife-sub, 5%);
+							}
+
+							p {
+								color: darken($col-spiritualLife-sub, 5%);
+							}
+						}
+
+						@include breakpoint($tablet-width) {
+							a {
+								display: inline;
+								color: $col-spiritualLife-sub;
+							}
+
+							.content {
+								display: none;
+							}
+						}
+					}
+				}
+			}
+			.content-container {
+				display: none;
+
+				@include breakpoint($tablet-width) {
+					@include span(9 of 18 inside no-gutters);
+					display: block;
+					min-height: 420px;
+					margin: 0;
+					padding: 10px 10px 30px 50px;
+					border-left: 3px solid $col-spiritualLife-sub;
+					color: $col-spiritualLife-sub;
+					// color: darken($col-spiritualLife-sub, 5%);
+					text-align: left;
+
+					h4 {
+						font-weight: 700;
+						border: none;
+						margin-top: 0;
+						margin-bottom: 30px;
+					}
+
+					p {
+						color: darken($col-spiritualLife-sub, 5%);
+					}
+				}
+
+				@include breakpoint($tablet-wide-width) {
+					min-height: 300px;
+					padding: 20px 10px 30px 80px;
+				}
+			}
+		}
+	}
+}
+
+body.stpaul-oneCommunity #content .content-body {
+	.section {
+		.main-body {
+			&.group-finder {
+				.container {
+					@include full;
+					width: 100%;
+					margin: 0;
+					text-align: center;
+
+					.finder-nav {
+						padding-bottom: 15px;
+						margin: 15px 0 10px;
+						text-align: center;
+						border-bottom: 1px solid $col-grey;
+
+						a {
+							padding: 5px 15px;
+							color: $col-grey-d;
+							display: inline-block;
+							cursor: pointer;
+
+							&:active {
+								opacity: 1;
+								color: $col-black;
+							}
+
+							&.selected {
+								color: $col-oneCommunity;
+								cursor: default;
+							}
+						}
+
+						.divider {
+							margin: 0;
+							border-right: 1px solid $col-grey;
+						}
+					}
+
+					ul {
+						@extend %no-style-ul;
+						// font-size: 1rem;
+
+						li {
+							display: none;
+							position: relative;
+							width: 86px;
+							height: 86px;
+							margin: 2px;
+							text-align: center;
+							float: none;
+
+							@include breakpoint($tablet-width) {
+								width: 124px;
+								height: 124px;
+							}
+
+							@include breakpoint($desktop-width) {
+								width: 132px;
+								height: 132px;
+								float: left;
+							}
+						}
+
+						&.all {
+							li.serve, li.spirit, li.youth, li.teach {
+								display: inline-block;
+							}
+						}
+
+						&.serve {
+							li.serve {
+								display: inline-block;
+							}
+						}
+
+						&.spirit {
+							li.spirit {
+								display: inline-block;
+							}
+						}
+
+						&.youth {
+							li.youth {
+								display: inline-block;
+							}
+						}
+
+						&.teach {
+							li.teach {
+								display: inline-block;
+							}
+						}
+
+						a {
+							display: inline-block;
+							position: relative;
+							width: 100%;
+							height: 100%;
+							font-size: .82rem;
+							font-weight: 700;
+							line-height: 1.2rem;
+							letter-spacing: .1pt;
+							border: 2px solid $col-grey;
+							color: $col-white;
+							overflow: hidden;
+							border-radius: 5px;
+							background: $col-oneCommunity;
+							text-align: center;
+							@include trans(.25s);
+
+							&:before {
+								content: '';
+								display: inline-block;
+								height: 100%;
+								vertical-align: middle;
+							}
+
+							.txt {
+								display: inline-block;
+								width: 69px;
+								margin-right: 1px;
+								vertical-align: middle;
+
+								@include breakpoint($tablet-width) {
+									width: 89px;
+								}
+
+								span.sm-txt {
+									display: block;
+									font-size: .86rem;
+									letter-spacing: .25pt;
+								}
+							}
+
+							@include breakpoint($tablet-width) {
+								font-size: .96rem;
+								line-height: 1.4rem;
+							}
+
+							&:active {
+					            background: $col-oneCommunity-sub;
+					            color: $col-white;
+					            border-color: $col-grey;
+					            opacity: 1;
+					        }
+						}
+					}
+				}
+			}
+
+			&.parish-council {
+				.container {
+					.row {
+						display: block;
+						border-top: 1px solid $col-grey;
+						margin-top: 10px;
+						padding-top: 5px;
+						min-height: 200px;
+
+						&:first-child {
+							border: none;
+						}
+
+						ul {
+							@extend %no-style-ul;
+							font-size: 1rem;
+							width: 100%;
+							text-align: center;
+
+							li {
+								display: inline-block;
+								width: 100px;
+								margin: 25px 5px 15px;
+								color: $col-oneCommunity;
+								font-size: .92em;
+								line-height: 1.3em;
+								font-weight: 700;
+								vertical-align: top;
+
+								@include breakpoint($tablet-width) {
+									width: 140px;
+								}
+
+								.thumbnail {
+									width: 100%;
+									height: 122px;
+									margin: 0;
+									margin-bottom: 10px;
+									border: 1px solid $col-grey-d;
+									background: $col-grey-l;
+									overflow: hidden;
+									text-align: center;
+
+									@include breakpoint($tablet-width) {
+										height: 170px;
+									}
+
+									img {
+										width: auto;
+										height: 100%;
+										margin: 0 -50%;
+									}
+								}
+
+								.title {
+									display: block;
+									font-size: .65em;
+									line-height: 2.2em;
+									font-weight: 400;
+									color: $col-grey-d2;
+
+									@include breakpoint($tablet-width) {
+										font-size: .82em;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+
+			&.regional {
+				position: relative;
+
+				.fullscreen-btn {
+					display: none;
+
+					@include breakpoint($tablet-wide-width) {
+						display: block;
+						position: absolute;
+						right: 15px;
+						top: 40px;
+						padding-right: 0;
+
+						span.fa {
+							margin: 0 5px;
+						}
+					}
+
+					@include breakpoint($laptop-width) {
+						right: 5px;
+					}
+				}
+
+				.container {
+					.regional-list {
+						@include span(9);
+
+						ul {
+							@extend %no-style-ul;
+							font-size: 1rem;
+
+							li {
+								margin: 30px 0;
+
+								.map-btn {
+									display: block;
+									padding: 8px 0;
+								}
+
+								.info {
+									display: inline-block;
+									font-weight: 700;
+									border-top: 1px solid darken($col-oneCommunity, 10%);
+									padding-top: 7px;
+									margin-bottom: 5px;
+									color: $col-oneCommunity-sub;
+								}
+
+								.contact {
+									display: block;
+									font-size: .86em;
+									font-size: 400;
+									color: $col-oneCommunity-sub;
+
+									&:first-child {
+										margin-top: 2px;
+									}
+
+									&:active {
+										color: $col-black;
+										opacity: 1;
+									}
+								}
+							}
+						}
+
+						@include breakpoint($tablet-wide-width) {
+							@include span(3 of 9);
+							margin-left: 0;
+
+							ul {
+								li {
+									margin: 0;
+
+									.map-btn {
+										&:active {
+											color: $col-black;
+										}
+									}
+
+									.info {
+										display: none;
+									}
+
+									&.on {
+										margin: 30px 0;
+
+										&:first-child {
+											margin-top: 0;
+										}
+
+										.map-btn {
+											color: $col-oneCommunity-sub;
+
+											&:active {
+												color: $col-white;
+											}
+										}
+
+										.info {
+											display: inline-block;
+										}
+									}
+								}
+							}
+						}
+
+						@include breakpoint($laptop-width) {
+							@include span(5 of 18);
+						}
+					}
+
+					.regional-map {
+						display: none;
+
+						@include breakpoint($tablet-wide-width) {
+							@include span(6 of 9);
+							display: block;
+							height: 400px;
+							border: 2px solid $col-oneCommunity-sub;
+						}
+
+						@include breakpoint($laptop-width) {
+							@include span(13 of 18);
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+body.stpaul-oneCommunity {
+	.r_map_full_modal {
+		display: none;
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		z-index: 400000;
+
+		.bg-fade {
+			position: inherit;
+			width: 100%;
+			height: 100%;
+			background: $col-black;
+		}
+
+		#r_map_full {
+			position: relative;
+			display: block;
+			width: 100%;
+			height: 100%;
+			color: $col-white;
+			text-align: center;
+			top: 0;
+		}
+
+		a.close-btn {
+			position: inherit;
+			top: 0;
+			right: 0;
+			font: 0/0 a;
+			background-color: $col-black;
+			@include trans(.15, opacity, ease-out);
+
+			&:active {
+				background-position: -620px -240px;
+			}
+
+			@include breakpoint($tablet-width) {
+				top: 30px;
+				right: 30px;
+			}
+		}
+	}
+}
+
+.noTouch body.stpaul-oneCommunity .r_map_full_modal a.close-btn {
+	background-position: -570px -190px;
+
+	&:hover {
+		background-position: -520px -190px;
+	}
+
+	&:active {
+		background-position: -620px -240px;
+	}
+}
+
+.noTouch body.stpaul-oneCommunity #content .content-body {
+	.section .main-body {
+		&.group-finder .container {
+			.finder-nav {
+				a {
+					&:hover {
+						color: $col-black;
+					}
+
+					&:active {
+						opacity: 1;
+						color: $col-oneCommunity-sub;
+					}
+
+					&.selected {
+						color: $col-oneCommunity;
+					}
+				}
+			}
+
+			ul li {
+				a {
+					&:hover {
+						border-color: $col-oneCommunity-sub;
+						color: $col-oneCommunity-sub;
+						background: $col-white;
+					}
+
+					&:active {
+			            background: $col-black;
+			            color: $col-white;
+			            border-color: $col-grey;
+			            opacity: 1;
+			        }
+				}
+			}
+		}
+
+		&.regional .container {
+			.regional-list ul li {
+				.contact {
+					&:hover {
+						color: $col-black;
+					}
+
+					&:active {
+						opacity: .5;
+					}
+				}
+
+				@include breakpoint($tablet-wide-width) {
+					&.on {
+						.map-btn {
+							&:hover {
+								color: $col-black;
+							}
+
+							&:active {
+								opacity: .5;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+body.stpaul-ourParish #content .content-body {
+	.section {
+		.main-body {
+			&.priests {
+				h3 {
+					@include breakpoint($tablet-wide-width) {
+						margin-bottom: 0;
+					}
+				}
+
+				.container {
+					.grid-nav {
+						margin: 10px 0;
+						text-align: center;
+
+						a {
+							padding: 5px 15px;
+							color: $col-grey-d;
+							display: inline-block;
+							cursor: pointer;
+
+							&:active {
+								opacity: 1;
+								color: $col-black;
+							}
+
+							&.selected {
+								color: $col-ourParish;
+								cursor: default;
+
+								&:active {
+									color: $col-ourParish !important;
+								}
+							}
+						}
+
+						.divider {
+							margin: 0;
+							border-right: 1px solid $col-grey;
+						}
+					}
+
+					.row {
+						display: block;
+						border-top: 1px solid $col-grey;
+						margin-top: 20px;
+
+						&:nth-child(2) {
+							margin-top: 0;
+						}
+
+						.label {
+							display: block;
+							font-size: .86em;
+							color: $col-grey-d;
+							margin-top: 10px;
+							margin-left: 2px;
+						}
+
+						min-height: 200px;
+
+						ul {
+							@extend %no-style-ul;
+							font-size: 1rem;
+							width: 100%;
+							text-align: center;
+							overflow: hidden;
+
+							li {
+								display: inline-block;
+								width: 100px;
+								margin: 25px 5px 15px;
+								color: $col-ourParish;
+								font-size: .92em;
+								line-height: 1.3em;
+								font-weight: 700;
+								vertical-align: top;
+								opacity: 0;
+
+								&.show {
+									@include trans(.25s, opacity);
+									opacity: 1;
+								}
+
+								@include breakpoint($tablet-width) {
+									width: 140px;
+								}
+
+								.thumbnail {
+									width: 100%;
+									height: 122px;
+									margin: 0;
+									margin-bottom: 10px;
+									border: 1px solid $col-grey-d;
+									background: $col-grey-l;
+									overflow: hidden;
+									text-align: center;
+
+									@include breakpoint($tablet-width) {
+										height: 170px;
+									}
+
+									img {
+										width: auto;
+										height: 100%;
+										margin: 0 -50%;
+									}
+								}
+
+								.date {
+									display: block;
+									font-size: .65em;
+									line-height: 2.2em;
+									font-weight: 400;
+									color: $col-grey-d2;
+
+									@include breakpoint($tablet-width) {
+										font-size: .82em;
+									}
+								}
+
+								&.cur-only {
+									display: none;
+								}
+							}
+
+							&.current {
+								li {
+									display: none;
+
+									&.cur, &.cur-only {
+										display: inline-block;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+
+			&.history-list {
+				.container {
+					@include full;
+					position: relative;
+					margin: 40px 0 130px;
+
+					@include breakpoint($tablet-width) {
+						margin: 40px 0 100px;
+					}
+
+					&.done {
+						margin: 40px 0 30px;
+					}
+
+					ul {
+						@extend %no-style-ul;
+						font-size: 1rem;
+						@include full;
+
+						li {
+							display: none;
+							@include full;
+							margin: 0 0 30px;
+
+							&.on {
+								display: block;
+
+								.label {
+									display: block;
+								}
+
+								.contents {
+									display: block;
+								}
+
+								&.show {
+									.label {
+										opacity: 1;
+
+										.item-dot {
+											opacity: 1;
+											transform: scale(1);
+										}
+									}
+
+									.contents {
+										opacity: 1;
+									}
+								}
+							}
+						}
+
+						.label {
+							display: none;
+
+							@include span(3 inside no-gutters);
+							font-weight: 700;
+							color: $col-ourParish;
+							text-align: right;
+							vertical-align: top;
+
+							.item-dot {
+								display: inline-block;
+								background: $col-ourParish;
+								width: 10px;
+								height: 10px;
+								border-radius: 5px;
+								margin-left: 10px;
+								transform: scale(2.5);
+								@include trans(.5s, transform, ease-in-out, .25s);
+							}
+
+							@include breakpoint($mobile-width) {
+								@include span(2 inside no-gutters);
+							}
+
+							@include trans(.25s, opacity, ease-out);
+							opacity: 0;
+						}
+
+						.contents {
+							display: none;
+
+							@include span(6 inside no-gutters);
+							font-size: .86em;
+							padding-left: 14px;
+							text-align: left;
+
+							p {
+								margin: 6px 0;
+							}
+
+							p:first-child {
+								margin-top: 2px;
+							}
+
+							span.date {
+								color: $col-ourParish;
+								font-weight: 700;
+								margin-right: 2px;
+							}
+
+							@include breakpoint($mobile-width) {
+								@include span(7 inside no-gutters);
+							}
+
+							@include trans(.25s, opacity, ease-out);
+							opacity: 0;
+						}
+					}
+
+					.timeline {
+						position: absolute;
+						width: 10px;
+						height: 100%;
+						// height: 2100px;
+						top: 7px;
+						left: span(3 inside no-gutters);
+						margin-left: -15px;
+						border-right: 2px solid $col-ourParish;
+						z-index: 200;
+
+						@include trans(.5s, height);
+
+						span {
+							position: inherit;
+							bottom: -4px;
+							left: -5px;
+						}
+
+						@include breakpoint($mobile-width) {
+							left: span(2 inside no-gutters);
+							margin-left: -13px;
+						}
+					}
+
+					.show-more {
+						position: absolute;
+						width: 50px;
+						height: 50px;
+						left: span(3 inside no-gutters);
+						bottom: -100px;
+						margin-left: -32px;
+						border-radius: 25px;
+						background: $col-ourParish;
+						color: $col-white;
+						text-align: center;
+						@include trans(.15s, background, ease-out);
+
+						span {
+							margin-left: 1px;
+							margin-top: 1px;
+							line-height: 50px;
+						}
+						
+						@include breakpoint($mobile-width) {
+							left: span(2 inside no-gutters);
+							margin-left: -30px;
+						}
+
+						&:active {
+							background: $col-black;
+						}
+
+						&.hide {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.noTouch body.stpaul-ourParish #content .content-body {
+	.section .main-body {
+		&.priests {
+			.container {
+				.grid-nav {
+					a:hover, a.selected:hover, a.selected:active {
+						color: $col-ourParish;
+					}
+
+					a:active {
+						opacity: 1;
+						color: $col-black;
+					}
+				}
+			}
+		}
+
+		&.history-list {
+			.container {
+				.show-more:hover {
+					background: $col-ourParish-sub;
+				}
+			}
+		}
+	}
+}

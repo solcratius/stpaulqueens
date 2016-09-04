@@ -33,6 +33,10 @@ body {
 	overflow-x: hidden;
 	// overflow-y: scroll;
 	// -webkit-overflow-scrolling: none;
+	
+	&.lock-scroll {
+		overflow: hidden;
+	}
 }
 
 #content {
@@ -106,18 +110,18 @@ span.sm-txt {
 }
 
 .add-paddingTop {
-	padding-top: 50px;
+	padding-top: 50px !important;
 
 	@include breakpoint($tablet-wide-width) {
-		padding-top: 40px;
+		padding-top: 40px !important;
 	}
 }
 
 .add-paddingBottom {
-	padding-bottom: 50px;
+	padding-bottom: 50px !important;
 
 	@include breakpoint($tablet-wide-width) {
-		padding-bottom: 40px;
+		padding-bottom: 40px !important;
 	}
 }
 

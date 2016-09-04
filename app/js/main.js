@@ -27,6 +27,8 @@ STPAULQUEENS.main = (function($) {
 		$HTML.addClass('noTouch');
 		var subHash = window.location.hash.slice(1);
 
+		OBJ_SECT.init();
+
 		user_agent.init();
 		w_resize.init();
 		w_scroll.init();
@@ -121,10 +123,9 @@ STPAULQUEENS.main = (function($) {
 		    	w_resize.width = $WIN.width();
 				w_resize.height = $WIN.height();
 
+				p_main.p_feature();
 		        p_sect.init();
 		        if (p_main.id < 100) p_sect.anchorAnim();
-
-		        p_main.p_feature();
 		    }
 		}
 	};
@@ -150,19 +151,12 @@ STPAULQUEENS.main = (function($) {
 			// 		|| (this.st > (p_sect.heroH - 57) && w_resize.m_view && !$HEADER.hasClass('sticky-nav'))) $HEADER.addClass('sticky-nav');
 			// 	p_sect.setPosId(this.st, 'down');
 		 //    }
-		 //    else
-		 //    {
-		 //    	if ((this.st <= (p_sect.heroH - 109) && !w_resize.m_view && $HEADER.hasClass('sticky-nav') && p_main.id < 100) 
-		 //    		|| (this.st <= (p_sect.heroH - 77) && !w_resize.m_view && $HEADER.hasClass('sticky-nav') && p_main.id >= 100)
-		 //    		|| (this.st <= (p_sect.heroH - 57) && w_resize.m_view && $HEADER.hasClass('sticky-nav'))) $HEADER.removeClass('sticky-nav');
-		 //    	p_sect.setPosId(this.st, 'up');
-		 //    }
 		 	
 		 	if (this.st > this.lastScrollTop)
 			{				
-				if ((this.st > (p_sect.heroH - 113) && !w_resize.m_view && !$HEADER.hasClass('sticky-nav') && p_main.id < 100) 
-					|| (this.st > (p_sect.heroH - 81) && !w_resize.m_view && !$HEADER.hasClass('sticky-nav') && p_main.id >= 100)
-					|| (this.st > (p_sect.heroH - 61) && w_resize.m_view && !$HEADER.hasClass('sticky-nav'))) $HEADER.addClass('sticky-nav');
+				if ((this.st > (p_sect.heroH - 112) && !w_resize.m_view && !$HEADER.hasClass('sticky-nav') && p_main.id < 100) 
+					|| (this.st > (p_sect.heroH - 80) && !w_resize.m_view && !$HEADER.hasClass('sticky-nav') && p_main.id >= 100)
+					|| (this.st > (p_sect.heroH - 60) && w_resize.m_view && !$HEADER.hasClass('sticky-nav'))) $HEADER.addClass('sticky-nav');
 				p_sect.setPosId(this.st, 'down');
 		    }
 		    else
@@ -189,6 +183,7 @@ STPAULQUEENS.main = (function($) {
 				if (navClass == curPageClass) p_main.id = i;
 			});
 
+			OBJ_SECT.handler(p_main.id);
 			this.p_feature();
 		},
 		p_feature: function() {
@@ -269,6 +264,8 @@ STPAULQUEENS.main = (function($) {
 	return {
 		init: init,
 		getSectID: function() { return p_sect.id; },
+		getM_view: function() { return w_resize.m_view; },
+		pSectUpdate: function() { p_sect.init() },
 		anchorAnim: function(i, h) { p_sect.anchorAnim(i, h); }
 	};
 })(jQuery);

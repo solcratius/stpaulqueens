@@ -38,23 +38,42 @@ body #content .content-body .section {
 
 			.thumbnail {
 				width: span(6);
+				max-width: 160px;
 				margin: 20px auto 0;
 				background: $col-grey;
 				font-size: 0;
+				text-align: center;
 				overflow: hidden;
 
+				@include breakpoint($mobile-width) {
+					max-width: 280px;
+				}
+
+				@include breakpoint($tablet-width) {
+					max-width: none;
+				}
+
 				@include breakpoint($tablet-wide-width) {
-					@include span(4);
+					@include span(3);
 					margin: 0;
+
+					&.lg-news {
+						@include span(4);
+					}
 				}
 
 				@include breakpoint($laptop-width) {
-					@include span(3);
+					@include span(2);
 					margin: 0;
+
+					&.lg-news {
+						@include span(3);
+					}
 				}
 
 				img {
 					width: 100%;
+					height: auto;
 				}
 			}
 
@@ -63,7 +82,7 @@ body #content .content-body .section {
 				margin: 20px auto;
 				text-align: center;
 
-				a.title {
+				.title {
 					display: block;
 					font-size: 1.4em;
 					font-weight: 400;
@@ -77,15 +96,21 @@ body #content .content-body .section {
 				}
 
 				p {
+					color: $col-black;
 					margin-top: 5px;
 					margin-bottom: 0;
+					font-weight: 400;
 				}
 
 				@include breakpoint($tablet-wide-width) {
-					@include span(5);
+					@include span(6);
 					margin: 0;
 					margin-left: 15px;
 					text-align: left;
+
+					&.lg-news {
+						@include span(5);
+					}
 
 					&.full {
 						@include span(9);
@@ -95,10 +120,14 @@ body #content .content-body .section {
 				}
 
 				@include breakpoint($laptop-width) {
-					@include span(6);
+					@include span(7);
 					margin: 0;
 					margin-left: 15px;
 					text-align: left;
+
+					&.lg-news {
+						@include span(6);
+					}
 				}
 			}
 
@@ -194,10 +223,209 @@ body #content .content-body .section {
 				}
 
 				.bottom-nav {
-					margin-bottom: 15px;
+					// margin-bottom: 15px;
 
 					@include breakpoint($tablet-wide-width) {
-						margin-bottom: 50px;
+						// margin-bottom: 50px;
+						margin-bottom: 0;
+					}
+				}
+			}
+			
+			@include breakpoint($tablet-wide-width) {
+				padding-bottom: 50px;
+			}
+
+			&.weekly-bulletins {
+				h3 {
+					margin-bottom: 50px;
+
+					@include breakpoint($tablet-wide-width) {
+						margin-bottom: 22px;
+					}
+				}
+
+				li {
+					padding: 25px 0;
+
+					@include breakpoint($tablet-width) {
+						padding: 20px 0;
+					}
+				}
+
+				.txt {
+					@include span(9);
+					margin-top: 0;
+					margin-bottom: 0;
+					text-align: left;
+
+					.title {
+						font-size: 1em;
+						line-height: 1.6em;
+						margin-bottom: 0;
+
+						span {
+							white-space: normal;
+							float: left;
+						}
+
+						.p_date {
+							color: $col-black;
+							padding-right: 15px;
+
+							@include breakpoint($tablet-width) {
+								padding: 0;
+							}
+						}
+
+						.issue {
+							display: none;
+							font-size: .8em;
+							color: $col-grey;
+							margin: 2px 15px 0 5px;
+
+							@include breakpoint($tablet-width) {
+								display: inline;
+							}
+						}
+
+						.icon {
+							margin-top: 4px;
+							float: right;
+						}
+					}
+				}
+			}
+
+			&.gallery {
+				h3 {
+					margin-bottom: 30px;
+
+					@include breakpoint($tablet-wide-width) {
+						margin-bottom: 20px;
+					}
+				}
+
+				ul {
+					margin-bottom: 20px;
+				}
+
+				ul li {
+					width: 49%;
+					margin: 0 .5%;
+					border: none;
+					padding: 20px 0;
+					vertical-align: top;
+
+					@include breakpoint($tablet-width) {
+						width: 24%;
+						margin: 0 .5%;
+						padding: 15px 0;
+					}
+				}
+
+				.thumbnail {
+					display: block;
+					width: 100%;
+					height: 120px;
+					margin: 0;
+					overflow: hidden;
+					border: 1px solid $col-grey;
+
+					@include breakpoint($mobile-width) {
+						height: 190px;
+					}
+
+					@include breakpoint($tablet-width) {
+						height: 120px;
+					}
+
+					@include breakpoint($tablet-wide-width) {
+						height: 160px;
+					}
+
+					@include breakpoint($laptop-width) {
+						height: 200px;
+					}
+
+					img {
+						@include trans(.25s, opacity);
+						width: auto;
+						height: 100%;
+						margin: 0 -50%;
+					}
+				}
+
+				.txt {
+					display: block;
+					width: 90%;
+					margin: 10px 0 20px;
+					text-align: left;
+
+					.title {
+						font-size: 1em;
+						line-height: 1.4em;
+						margin-bottom: 10px;
+						@include trans(.25s, color);
+					}
+
+					.date {
+						float: left;
+					}
+
+					p {
+						float: left;
+						margin: 0;
+						margin-left: 10px;
+						font-size: .8em;
+						font-weight: 700;
+						color: $col-grey;
+
+						span {
+							color: $col-grey-d1;
+						}
+
+						span.divider {
+							font-size: .8em;
+							margin-right: 10px;
+							border-left: 1px solid $col-grey;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&.media {
+		.wrapper {
+			.posting {
+				ul {
+					li {
+						&:last-child {
+							border: none;
+						}
+					}
+				}
+
+				.thumbnail {
+					@include breakpoint($tablet-wide-width) {
+						max-width: none;
+
+						@include span(5);
+					}
+
+					@include breakpoint($laptop-width) {
+						@include span(4);
+					}
+				}
+
+				.txt {
+					@include breakpoint($tablet-wide-width) {
+						@include span(4);
+					}
+
+					@include breakpoint($laptop-width) {
+						@include span(5);
 					}
 				}
 			}

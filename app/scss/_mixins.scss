@@ -66,6 +66,10 @@ $width:auto;
       }
 
       .wrapper {
+        .hero-content-img img {
+          border: 1px solid $secondary;
+        }
+
         .hero-content a:active {
           color: $col-black;
         }
@@ -222,6 +226,48 @@ $width:auto;
             color: $col-black;
           }
         }
+
+        .grid {
+          a {
+            &:active {
+              .thumbnail {
+                background: $col-black;
+              } 
+            }
+          }
+        }
+
+        .side-body.gallery {
+          .txt {
+            .date, p {
+              color: $secondary;
+            }
+
+            p span.divider {
+              border-left: 1px solid $secondary;
+            }
+          }
+
+          a, a:visited {
+            .txt .title {
+              color: $col-white;
+            }
+          }
+
+          a:active {
+            .thumbnail {
+              background: $col-black;
+
+              img {
+                opacity: .25;
+              }
+            }
+
+            .txt .title {
+              color: $col-black !important;
+            }
+          }
+        }
       }
     }
   }
@@ -263,6 +309,18 @@ $width:auto;
             color: $col-black;
           }
         }
+
+        .side-body.gallery {
+          a:hover {
+            .thumbnail img {
+              opacity: .35;
+            }
+
+            .txt .title {
+              color: $col-black;
+            }
+          }
+        }
       }
     }
   }
@@ -273,7 +331,7 @@ $width:auto;
   $primary: $color;
   $secondary: darken($color, 20%);
 
-  body.#{$theme} #content {
+  body.#{$theme} #content .content-body {
     .posting {
       a.title {
         color: $primary;
@@ -292,10 +350,64 @@ $width:auto;
         border-top: 4px solid $primary;
         color: $primary;
       }
+
+      &.gallery {
+        a {
+          .thumbnail {
+            background: $col-black;
+          }
+
+          &:active {
+            .thumbnail {
+              background: $secondary;
+            }
+          }
+        }
+      }
+    }
+
+    .media .wrapper .posting {
+      ul {
+        li {
+          // border-bottom: 1px solid darken($primary, 10%);
+          border-bottom: 1px solid lighten($primary, 10%);
+        }
+      }
+
+      .txt {
+        p {
+          color: $secondary;
+        }
+
+        a.title, a.title:visited {
+          color: $col-white;
+        }
+
+        a.title:active {
+          color: $col-black !important;
+        }
+
+        .date {
+          color: $secondary;
+        }
+      }
+
+      .bottom-nav {
+        border-top: 4px solid $secondary;
+            
+        a.text-btn, a.text-btn:visited {
+          padding: 0;
+          color: $secondary;
+        }
+
+        a.text-btn:active {
+          color: $col-black;
+        }
+      }
     }
   }
 
-  .noTouch body.#{$theme} #content {
+  .noTouch body.#{$theme} #content .content-body {
     .posting {
       a.title {
         &:hover {
@@ -304,6 +416,20 @@ $width:auto;
 
         &:active {
           color: $col-black;
+        }
+      }
+    }
+
+    .media .wrapper .posting {
+      .txt {
+        a.title:hover {
+          color: $secondary;
+        }
+      }
+
+      .bottom-nav { 
+        a.text-btn:hover {
+          color: $col-white;
         }
       }
     }
@@ -317,12 +443,6 @@ $width:auto;
 
   body.#{$theme} #content .side-body {
     .boxed {
-      .bottom-btn {
-        &.color {
-          background: $primary;
-        }
-      }
-
       &.calendar {
         tr.week td a, tr.week td a:visited {
           color: $col-white;
@@ -334,6 +454,16 @@ $width:auto;
         }
       }
 
+      &.form {
+        input, textarea {
+          color: $secondary;// $primary;
+        }
+      }
+
+      &.white-bg {
+        background: $col-white;
+      }
+
       &.grey-bg {
         background: $col-grey-l;
       }
@@ -341,6 +471,21 @@ $width:auto;
       &.color-bg {
         background: $primary;
       }
+    }
+
+    .bottom-btn {
+      &.color {
+        color: $col-white;
+        background: $primary;
+      }
+    }
+
+    .color-bar {
+      background: $primary;
+    }
+
+    .contact-name {
+      color: $primary;
     }
 
     .sidebar-gallery a {
@@ -364,13 +509,14 @@ $width:auto;
   }
 
   .noTouch body.#{$theme} #content .side-body {
-    .boxed {
-      .bottom-btn {
-        &.color {
-          &:active {
-            background: $secondary;
-            opacity: 1;
-          }
+    .bottom-btn {
+      &.color {
+        color: $col-white;
+        
+        &:active {
+          color: $col-white;
+          background: $secondary;
+          opacity: 1;
         }
       }
     }

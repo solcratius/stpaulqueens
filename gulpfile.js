@@ -8,7 +8,8 @@ var config = {
 		'./app/js/controller.js',
 		'./app/js/main.js',
 		'./app/js/nav.js',
-		'./app/js/landing.js'
+		'./app/js/landing.js',
+		'./app/js/rdata.js'
 
 	], 
 	buildFilesFoldersRemove:[

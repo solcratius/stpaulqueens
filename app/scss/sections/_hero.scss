@@ -6,42 +6,39 @@
 	@include stylize-hero($theme, $color);
 }
 
-// @include breakpoint($tablet-width) {
-	body.stpaul-stPaulHome #content .hero {
-		background: $col-stPaulHome url("../images/stpaulHome-bg.jpg") no-repeat bottom right;
-		background-size: cover;
-	}
+body.stpaul-stPaulOffice #content .hero {
+	background: $col-stPaulOffice url("../images/stpaulOffice-bg.jpg") no-repeat top right;
+	background-size: cover;
+}
 
-	body.stpaul-stPaulOffice #content .hero {
-		background: $col-stPaulOffice url("../images/stpaulOffice-bg.jpg") no-repeat top right;
-		background-size: cover;
-	}
+body.stpaul-spiritualLife #content .hero {
+	background: $col-spiritualLife url("../images/spiritualLife-bg.jpg") no-repeat top right;
+	background-size: cover;
 
-	body.stpaul-spiritualLife #content .hero {
-		background: $col-spiritualLife url("../images/spiritualLife-bg.jpg") no-repeat top right;
-		background-size: cover;
+	@include breakpoint($tablet-width) {
+		background-position: top right;
 	}
+}
 
-	body.stpaul-oneCommunity #content .hero {
-		background: $col-oneCommunity url("../images/oneCommunity-bg.jpg") no-repeat top right;
-		background-size: cover;
-	}
+body.stpaul-oneCommunity #content .hero {
+	background: $col-oneCommunity url("../images/oneCommunity-bg.jpg") no-repeat top right;
+	background-size: cover;
+}
 
-	body.stpaul-ourParish #content .hero {
-		background: $col-ourParish url("../images/ourParish-bg.jpg") no-repeat top right;
-		background-size: cover;
-	}
+body.stpaul-ourParish #content .hero {
+	background: $col-ourParish url("../images/ourParish-bg.jpg") no-repeat top right;
+	background-size: cover;
+}
 
-	body.stpaul-educationCenter #content .hero {
-		background: $col-educationCenter url("../images/educationCenter-bg.jpg") no-repeat top right;
-		background-size: cover;
-	}
+body.stpaul-educationCenter #content .hero {
+	background: $col-educationCenter url("../images/educationCenter-bg.jpg") no-repeat top right;
+	background-size: cover;
+}
 
-	body.stpaul-mediaLibrary #content .hero {
-		background: $col-mediaLibrary url("../images/mediaLibrary-bg.jpg") no-repeat top right;
-		background-size: cover;
-	}
-// }
+body.stpaul-mediaLibrary #content .hero {
+	background: $col-mediaLibrary url("../images/mediaLibrary-bg.jpg") no-repeat top right;
+	background-size: cover;
+}
 
 body #content {
 	.hero {
@@ -63,6 +60,7 @@ body #content {
 			position: absolute;
 			width: 100%;
 			height: 100%;
+			bottom: 0;
 			z-index: 0;
 			opacity: .75;
 
@@ -132,6 +130,11 @@ body #content {
 
 				margin-top: 4px;
 				margin-bottom: 35px;
+
+				p {
+					font-size: .86em;
+					line-height: 2em;
+				}
 
 				ul {
 					@extend %no-style-ul;
@@ -205,10 +208,13 @@ body #content {
 
 				span.subhead {
 					display: block;
-					font-size: 2rem;
+					// font-size: 2rem;
+					font-size: 1.3rem;
 					line-height: 1.5rem;
 					font-weight: 700;
-					margin: 1.25rem 0 1rem;;
+					// margin: 1.25rem 0 1rem;
+					margin: 1rem 0;
+					letter-spacing: .5pt;
 				}
 
 				.util-box {
@@ -272,6 +278,7 @@ body #content {
 				@include span(9);
 				position: relative;
 				display: inline-block;
+				width: 100%;
 				// margin: 0;
 				margin-bottom: 35px;
 				padding-top: 30px;

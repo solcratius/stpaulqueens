@@ -190,6 +190,43 @@ $spritePNG: url("../images/sprite.png");
 
 
 
+
+.sprite-right-arrow {
+	@extend %sprite-div;
+	position: relative;
+	background-position: -450px -193px;
+	width: 13px;
+	height: 20px;
+}
+
+
+
+
+
+.sprite-timeline-arrow {
+	@extend %sprite-div;
+	position: relative;
+	background-position: -480px -190px;
+	width: 28px;
+	height: 18px;
+}
+
+
+
+
+
+.sprite-close-btn {
+	@extend %sprite-div;
+	position: relative;
+	background-position: -520px -190px;
+	width: 52px;
+	height: 52px;
+}
+
+
+
+
+
 .sprite-download {
 	@extend %sprite-div;
 	position: relative;
@@ -469,4 +506,71 @@ body.stpaul-educationCenter #content .sprite-link-ext-sm {
 body.stpaul-mediaLibrary #content a.black:active .sprite-link-ext-sm,
 body.stpaul-mediaLibrary #content .sprite-link-ext-sm {
 	background-position: -320px -530px;
+}
+
+
+
+
+.sprite-download-sm,
+body #content .hero a .sprite-download-sm,
+body #content .media a .sprite-download-sm,
+body #content .media a.text-btn.black:active .sprite-download-sm,
+.noTouch body #content .hero a .sprite-download-sm,
+.noTouch body #content .hero a.black:hover .sprite-download-sm,
+.noTouch body #content .media a .sprite-download-sm,
+.noTouch body #content .content-body .media a.text-btn.black:hover .sprite-download-sm {
+	@extend %sprite-div;
+	position: relative;
+	background-position: 0 -570px;
+	width: 12px;
+	height: 14px;
+}
+
+.noTouch body #content a:hover .sprite-download-sm,
+.noTouch body #content a.black .sprite-download-sm,
+body #content a.black .sprite-download-sm,
+body #content .content-body a:active .sprite-download-sm {
+	background-position: -40px -570px;
+}
+
+.noTouch body.stpaul-stPaulHome #content .content-body a.black:hover .sprite-download-sm,
+body.stpaul-stPaulHome #content a.black:active .sprite-download-sm,
+body.stpaul-stPaulHome #content .sprite-download-sm {
+	background-position: -80px -570px;
+}
+
+.noTouch body.stpaul-stPaulOffice #content .content-body a.black:hover .sprite-download-sm,
+body.stpaul-stPaulOffice #content a.black:active .sprite-download-sm,
+body.stpaul-stPaulOffice #content .sprite-download-sm {
+	background-position: -120px -570px;
+}
+
+.noTouch body.stpaul-spiritualLife #content .content-body a.black:hover .sprite-download-sm,
+body.stpaul-spiritualLife #content a.black:active .sprite-download-sm,
+body.stpaul-spiritualLife #content .sprite-download-sm {
+	background-position: -160px -570px;
+}
+
+.noTouch body.stpaul-oneCommunity #content .content-body a.black:hover .sprite-download-sm,
+body.stpaul-oneCommunity #content a.black:active .sprite-download-sm,
+body.stpaul-oneCommunity #content .sprite-download-sm {
+	background-position: -200px -570px;
+}
+
+.noTouch body.stpaul-ourParish #content .content-body a.black:hover .sprite-download-sm,
+body.stpaul-ourParish #content a.black:active .sprite-download-sm,
+body.stpaul-ourParish #content .sprite-download-sm {
+	background-position: -240px -570px;
+}
+
+.noTouch body.stpaul-educationCenter #content .content-body a.black:hover .sprite-download-sm,
+body.stpaul-educationCenter #content a.black:active .sprite-download-sm,
+body.stpaul-educationCenter #content .sprite-download-sm {
+	background-position: -280px -570px;
+}
+
+.noTouch body.stpaul-mediaLibrary #content .content-body a.black:hover .sprite-download-sm,
+body.stpaul-mediaLibrary #content a.black:active .sprite-download-sm,
+body.stpaul-mediaLibrary #content .sprite-download-sm {
+	background-position: -320px -570px;
 }
