@@ -261,11 +261,46 @@ STPAULQUEENS.main = (function($) {
 		}	
 	};
 
+	var url_obj = {
+		// vars: [],
+		// hash: [],
+		// hashs: [],
+
+		getUrlParam: function(u) {
+			var vars = [],
+				hash = [],
+				hashes = [];
+
+			hashes = u.slice(u.indexOf('?') + 1).split('&');
+
+			for(var i = 0; i < hashes.length; i ++)
+		    {
+		        hash = hashes[i].split('=');
+		        vars.push(hash[0]);
+		        vars[hash[0]] = hash[1];
+		    }
+
+		    return vars;
+		}
+	// 	
+		// getUrlParam: function(name, url) {
+		//     if (!url) url = window.location.href;
+		//     name = name.replace(/[\[\]]/g, "\\$&");
+		//     var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+		//         results = regex.exec(url);
+		//         console.log('name:'+name+', '+results);
+		//     if (!results) return null;
+		//     if (!results[2]) return '';
+		//     return decodeURIComponent(results[2].replace(/\+/g, " "));
+		// }
+	};
+
 	return {
 		init: init,
 		getSectID: function() { return p_sect.id; },
 		getM_view: function() { return w_resize.m_view; },
 		pSectUpdate: function() { p_sect.init() },
-		anchorAnim: function(i, h) { p_sect.anchorAnim(i, h); }
+		anchorAnim: function(i, h) { p_sect.anchorAnim(i, h); },
+		getUrl_Param: function(u) { return url_obj.getUrlParam(u); }
 	};
 })(jQuery);

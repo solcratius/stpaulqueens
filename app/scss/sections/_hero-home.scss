@@ -30,11 +30,13 @@ body.stpaul-stPaulHome #content {
 				display: block;
 				font-size: 1rem;
 				letter-spacing: .5pt;
-				padding-bottom: 18px;
+				// padding-bottom: 18px;
+				padding-bottom: 16px;
 			}
 
 			.name {
-				padding: 12px 6px 0;
+				// padding: 12px 6px 0;
+				padding: 10px 6px 0;
 				border-top: 1px solid $col-white;
 				font-size: 1rem;
 				font-weight: 700;
@@ -182,7 +184,9 @@ body.stpaul-stPaulHome #content {
 			.day-info {
 				position: absolute;
 				width: 100%;
-				top: 16%; //20%
+				// top: 16%; //20%
+				bottom: 50%;
+				margin-bottom: 100px;
 				padding: 0;
 			}
 
@@ -275,6 +279,10 @@ body.stpaul-stPaulHome #content {
 		}
 
 		@include breakpoint($laptop-width) {
+			.day-info {
+				margin-bottom: 50px;
+			}
+
 			.wrapper {
 				.hero-start-btns {
 					width: auto;

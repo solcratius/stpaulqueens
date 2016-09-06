@@ -2,6 +2,10 @@
 // FOOTER
 // ***********************************
 
+@each $theme, $color in $themes {
+	@include stylize-footer($theme, $color);
+}
+
 #footer {
 	width: 100%;
 	background: $col-black;
@@ -257,37 +261,141 @@
 #modal-layer {
 	display: none;
 	position: fixed;
+	// position: absolute;
 	width: 100%;
 	height: 100%;
 	top: 0;
 	left: 0;
 	z-index: 500000;
+	background: rgba($col-black, .98);
+	overflow: auto;
 
-	.bg-fade {
-		position: inherit;
+	#container {
+		position: relative;
 		width: 100%;
 		height: 100%;
-		background: $col-black;
-		opacity: .98;
-	}
-
-	.container {
-		position: relative;
-		display: inline-block;
-		width: 100%;
+		margin: 0;
 		color: $col-white;
 		text-align: center;
-		top: 50%;
-		transform: translateY(-50%);
 		
-		&.full-content {
-			height: 100%;
-			top: 0;
-			vertical-align: top;
+		a.grid-btn, a.slide-btn {
+			display: none;
+			position: fixed;
+			z-index: 1000;
+		}
 
-			div {
-				width: 100%;
-				height: 100%;
+		a.grid-btn {
+			left: 30px;
+			top: 30px;
+		}
+
+		a.slide-btn {
+			top: 50%;
+			margin-top: -8px;
+
+			&.left {
+				left: 30px;
+			}
+
+			&.right {
+				right: 30px;
+			}
+		}
+
+		&.gallery-module {
+			a.grid-btn, a.slide-btn {
+				display: block;
+			}
+		}
+		
+		.title {
+			position: absolute;
+			display: block;
+			width: 100%;
+			top: 70px;
+			color: $col-white;
+			font-size: 1.15em;
+			z-index: 500;
+
+			span {
+				border-left: 1px solid $col-grey-d;
+				padding-left: 15px;
+				margin-left: 15px;
+			}
+
+			@include breakpoint($tablet-width) {
+				top: 45px;
+			}
+		}
+
+		ul {
+			@extend %no-style-ul;
+			display: none;
+			margin: 20px 0;
+			margin-top: 20px;
+			text-align: center;
+
+			li {
+				display: inline-block;
+				width: 102px;
+				margin: 2px;
+			}
+
+			a {
+				display: block;
+
+				img {
+					@include trans(.25s, opacity);
+				}
+			}
+
+			@include breakpoint($mobile-width) {
+				li {
+					width: 130px;
+					margin: 2px;
+				}
+			}
+			
+			@include breakpoint($tablet-width) {
+				margin: 20px 80px;
+				margin-top: 45px;
+
+				li {
+					width: 220px;
+					margin: 4px;
+				}
+			}
+		}
+
+		.photo-container {
+			position: relative;
+			display: block;
+			width: 100%;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+
+		&.grid-view {
+			.title {
+				position: relative;
+				top: auto;
+				padding-top: 70px;
+
+				@include breakpoint($tablet-width) {
+					padding-top: 45px;
+				}
+			}
+
+			ul {
+				display: block;
+			}
+
+			.photo-container {
+				display: none;
+			}
+
+			a.grid-btn, a.slide-btn {
+				display: none;
 			}
 		}
 
@@ -300,9 +408,10 @@
 
 	a.close-btn {
 		position: inherit;
-		top: 0;
-		right: 0;
+		top: 10px;
+		right: 10px;
 		font: 0/0 a;
+		z-index: 5000;
 		// background-color: $col-black;
 
 		&:active {
@@ -310,8 +419,9 @@
 		}
 
 		@include breakpoint($tablet-width) {
+			// background-color: transparent;
 			top: 30px;
-			right: 30px;
+			right: 45px;
 		}
 	}
 }

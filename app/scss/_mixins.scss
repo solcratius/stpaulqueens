@@ -47,6 +47,54 @@ $width:auto;
 }
 
 
+@mixin stylize-footer($theme, $color) {
+  $primary: $color;
+  $secondary: darken($color, 20%);
+
+  body.#{$theme} #modal-layer #container {
+    ul {
+      li {
+        a {
+          background: $col-black;
+
+          &:active {
+            background: $primary;
+
+            img {
+              opacity: .25;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .noTouch body.#{$theme} #modal-layer #container {
+    ul {
+      li {
+        a {
+          &:hover {
+            background: $col-black;
+
+            img {
+              opacity: .25;
+            }
+          }
+
+          &:active {
+            background: $primary;
+
+            img {
+              opacity: .25;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
 @mixin stylize-hero($theme, $color) {
   $primary: $color;
   $secondary: darken($color, 20%);

@@ -96,7 +96,7 @@ body #content .content-body .section {
 				}
 
 				p {
-					color: $col-black;
+					color: $col-grey-d3;//$col-black;
 					margin-top: 5px;
 					margin-bottom: 0;
 					font-weight: 400;
@@ -324,6 +324,12 @@ body #content .content-body .section {
 					}
 				}
 
+				a.photo-btn {
+					@include full;
+					width: 100%;
+					margin: 0;
+				}
+
 				.thumbnail {
 					display: block;
 					width: 100%;
@@ -370,6 +376,7 @@ body #content .content-body .section {
 					}
 
 					.date {
+						color: $col-grey-d;
 						float: left;
 					}
 
@@ -379,12 +386,8 @@ body #content .content-body .section {
 						margin-left: 10px;
 						font-size: .8em;
 						font-weight: 700;
-						color: $col-grey;
-
-						span {
-							color: $col-grey-d1;
-						}
-
+						color: $col-grey-d;
+						
 						span.divider {
 							font-size: .8em;
 							margin-right: 10px;

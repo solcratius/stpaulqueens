@@ -475,9 +475,10 @@ STPAULQUEENS.main.landing = (function($) {
 			e.stopPropagation();
 		    e.preventDefault();
 
-		    var $THIS = $(e.target).parent().parent().find('.thumbnail').html();
+		    var $THIS = $(e.currentTarget),
+		    	postParam = OBJ_MAIN.getUrl_Param($THIS.attr('href'));
 
-		    modal_layer.show('<div class="full-content">' + $THIS + '</div>', ourParish_handler.photo_callback);
+		    modal_layer.show($THIS.find('.thumbnail').html(), ourParish_handler.photo_callback);
 		},
 
 		photo_callback: function() {
@@ -498,9 +499,10 @@ STPAULQUEENS.main.landing = (function($) {
 			e.stopPropagation();
 		    e.preventDefault();
 
-		    var $THIS = $(e.target).parent().parent().find('.thumbnail').html();
+		    var $THIS = $(e.currentTarget),
+		    	postParam = OBJ_MAIN.getUrl_Param($THIS.attr('href'));
 
-		    modal_layer.show('<div class="full-content">' + $THIS + '</div>', educationCenter_handler.photo_callback);
+		    modal_layer.show($THIS.find('.thumbnail').html(), educationCenter_handler.photo_callback);
 		},
 
 		photo_callback: function() {
@@ -513,7 +515,6 @@ STPAULQUEENS.main.landing = (function($) {
 
 		init: function() {
 			this.$PHOTO_BTN = $CONTENT_SECT.find('a.photo-btn');
-
 			this.$PHOTO_BTN.on('click', this.photo_btn_on.bind(this));
 		},
 
@@ -521,33 +522,66 @@ STPAULQUEENS.main.landing = (function($) {
 			e.stopPropagation();
 		    e.preventDefault();
 
-		    var $THIS = $(e.target).parent().parent().find('.thumbnail').html();
+		    var $THIS = $(e.currentTarget),
+		    	postParam,
+		    	_gallery = false;
 
-		    modal_layer.show('<div class="full-content">' + $THIS + '</div>', mediaLibrary_handler.photo_callback);
+		    postParam = OBJ_MAIN.getUrl_Param($THIS.attr('href'));
+
+		    if (postParam['post-type'] == "gallery" && postParam['amount'] > 1) _gallery = true;
+		    modal_layer.show(postParam, mediaLibrary_handler.photo_callback, _gallery);
 		},
 
 		photo_callback: function() {
 			console.log("cb - mediaLibrary");
 		}
-	}
+	};
 
 	var modal_layer = {
 		$MODAL: null,
 		$MODAL_CLOSE_BTN: null,
-		$MODAL_CONTENT: null,
-		cbHolder: null,
+		$MODAL_GRID_BTN: null,
+		$MODAL_SLIDE_BTN: null,
+		$MODAL_P_ITEM_BTN: null,
+		$MODAL_PHOTO: null,
+		$MODAL_CONTAINER: null,
+		$MODAL_UL: null,
+		$MODAL_TITLE: null,
 
-		init: function () {
+		cbHolder: null,
+		totalP: null,
+
+		init: function (_gallery) {
 			this.$MODAL = $('#modal-layer');
 			this.$MODAL_CLOSE_BTN = this.$MODAL.find('.close-btn');
-			this.$MODAL_CONTENT = this.$MODAL.find('.container');
+			this.$MODAL_CONTAINER = this.$MODAL.find('#container');
+			this.$MODAL_PHOTO = this.$MODAL_CONTAINER.find('.photo-container');
+			this.$MODAL_TITLE = this.$MODAL_CONTAINER.find('.title');
+
+			if (_gallery) {
+				this.$MODAL_GRID_BTN = this.$MODAL_CONTAINER.find('.grid-btn');
+				this.$MODAL_SLIDE_BTN = this.$MODAL_CONTAINER.find('.slide-btn');
+				this.$MODAL_UL = this.$MODAL_CONTAINER.find('ul');
+
+				this.$MODAL_GRID_BTN.on('click', this.grid_view_on.bind(this));
+				this.$MODAL_SLIDE_BTN.on('click', this.hide.bind(this));
+			}
+
 			this.$MODAL_CLOSE_BTN.on('click', this.hide.bind(this));
 		},
 
-		show: function(content, cb) {
-			this.init();
+		show: function(data, cb, _gallery) {
+			this.init(_gallery);
 			if (cb) this.cbHolder = cb;
-			this.$MODAL_CONTENT.html(content);
+
+			if (_gallery) this.$MODAL_CONTAINER.addClass('gallery-module');
+			else this.$MODAL_CONTAINER.removeClass('gallery-module');
+			console.log("data: "+data['title']);
+			if (data['title']) this.set_title(data);
+
+			if (data['post-type'] == "gallery") this.set_gallery(data);
+			else  this.set_photo(data);
+
 			this.$MODAL.fadeIn(250, 'easeInOutCubic');
 			$BODY.addClass('lock-scroll');
 		},
@@ -558,12 +592,61 @@ STPAULQUEENS.main.landing = (function($) {
 
 		    if (modal_layer.cbHolder != null) modal_layer.cbHolder();
 		    $BODY.removeClass('lock-scroll');
+		    modal_layer.$MODAL_CONTAINER.removeClass();
+		    modal_layer.$MODAL_TITLE.html('');
+
 			modal_layer.$MODAL.fadeOut(250, 'easeInOutCubic', function() {
 				// modal_layer.$MODAL_CLOSE_BTN.off();
 				modal_layer.$MODAL = null;
 				modal_layer.$MODAL_CLOSE_BTN = null;
-				modal_layer.$MODAL_CONTENT = null;
+				modal_layer.$MODAL_GRID_BTN = null,
+				modal_layer.$MODAL_SLIDE_BTN = null,
+				modal_layer.$MODAL_CONTAINER = null,
+				modal_layer.$MODAL_TITLE = null,
+				modal_layer.cbHolder = null,
+				modal_layer.totalP = null
 			});
+		},
+
+		set_title: function(data) {
+			this.$MODAL_TITLE.html(data['title']);
+			if (data['date']) this.$MODAL_TITLE.append('<span>' + data['date'] + '</span>');
+		},
+
+		set_gallery: function(data) {
+			var temp_Content = "";
+			this.totalP = data['amount'];
+
+			for (var i = 0; i < this.totalP; i ++)
+			{
+				temp_Content += '<li><a class="p_item_btn" href="images/pics/pic30.jpg"><div class="thumbnail"><img src="images/pics/pic30.jpg" /></div></a></li>';
+			}
+
+			this.$MODAL_UL.html(temp_Content);
+			this.$MODAL_CONTAINER.addClass('grid-view');
+
+			this.$MODAL_P_ITEM_BTN = this.$MODAL_UL.find('a.p_item_btn');
+			this.$MODAL_P_ITEM_BTN.on('click', this.photo_item_on.bind(this));
+		},
+
+		set_photo: function(data) {
+			this.$MODAL_PHOTO.html('<div class="thumbnail"><img src="images/pics/pic30.jpg" /></div>');
+		},
+
+		photo_item_on: function(e) {
+			e.stopPropagation();
+		    e.preventDefault();
+
+		    var $THIS = $(e.currentTarget);
+		    console.log($THIS.parent().index());
+
+		    this.$MODAL_CONTAINER.removeClass('grid-view');
+		    this.$MODAL_PHOTO.html('<div class="thumbnail"><img src="images/pics/pic30.jpg" /></div>');
+		},
+
+		grid_view_on: function(e) {
+			this.$MODAL_CONTAINER.addClass('grid-view');
+		    this.$MODAL_PHOTO.html('');
 		}
 	};
 

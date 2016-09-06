@@ -357,14 +357,14 @@ span.sm-txt {
   font-size: .7em;
 }
 
-body #header .sub-nav ul, body #header .navigation, body #header .navigation li.section ul, #footer ul, body #content .hero .wrapper .hero-content ul, body #content .hero .sub-nav ul, body.stpaul-stPaulHome #content .hero .sub-nav ul, body.stpaul-stPaulOffice #content .content-body .section .main-body.schedule .column ul, body.stpaul-spiritualLife #content .content-body .section.media .main-body .prayer-list ul, body.stpaul-oneCommunity #content .content-body .section .main-body.group-finder .container ul, body.stpaul-oneCommunity #content .content-body .section .main-body.parish-council .container .row ul, body.stpaul-oneCommunity #content .content-body .section .main-body.regional .container .regional-list ul, body.stpaul-ourParish #content .content-body .section .main-body.priests .container .row ul, body.stpaul-ourParish #content .content-body .section .main-body.history-list .container ul, body #content .content-body .side-body .boxed ul, body #content .content-body .section .wrapper .posting ul {
+body #header .sub-nav ul, body #header .navigation, body #header .navigation li.section ul, #footer ul, #modal-layer #container ul, body #content .hero .wrapper .hero-content ul, body #content .hero .sub-nav ul, body.stpaul-stPaulHome #content .hero .sub-nav ul, body.stpaul-stPaulOffice #content .content-body .section .main-body.schedule .column ul, body.stpaul-spiritualLife #content .content-body .section.media .main-body .prayer-list ul, body.stpaul-oneCommunity #content .content-body .section .main-body.group-finder .container ul, body.stpaul-oneCommunity #content .content-body .section .main-body.parish-council .container .row ul, body.stpaul-oneCommunity #content .content-body .section .main-body.regional .container .regional-list ul, body.stpaul-ourParish #content .content-body .section .main-body.priests .container .row ul, body.stpaul-ourParish #content .content-body .section .main-body.history-list .container ul, body #content .content-body .side-body .boxed ul, body #content .content-body .section .wrapper .posting ul {
   list-style: none;
   margin: 0;
   padding: 0;
   font-size: 0;
 }
 
-body #header .sub-nav ul li, body #header .navigation li, body #header .navigation li.section ul li, #footer ul li, body #content .hero .wrapper .hero-content ul li, body #content .hero .sub-nav ul li, body.stpaul-stPaulHome #content .hero .sub-nav ul li, body.stpaul-stPaulOffice #content .content-body .section .main-body.schedule .column ul li, body.stpaul-spiritualLife #content .content-body .section.media .main-body .prayer-list ul li, body.stpaul-oneCommunity #content .content-body .section .main-body.group-finder .container ul li, body.stpaul-oneCommunity #content .content-body .section .main-body.parish-council .container .row ul li, body.stpaul-oneCommunity #content .content-body .section .main-body.regional .container .regional-list ul li, body.stpaul-ourParish #content .content-body .section .main-body.priests .container .row ul li, body.stpaul-ourParish #content .content-body .section .main-body.history-list .container ul li, body #content .content-body .side-body .boxed ul li, body #content .content-body .section .wrapper .posting ul li {
+body #header .sub-nav ul li, body #header .navigation li, body #header .navigation li.section ul li, #footer ul li, #modal-layer #container ul li, body #content .hero .wrapper .hero-content ul li, body #content .hero .sub-nav ul li, body.stpaul-stPaulHome #content .hero .sub-nav ul li, body.stpaul-stPaulOffice #content .content-body .section .main-body.schedule .column ul li, body.stpaul-spiritualLife #content .content-body .section.media .main-body .prayer-list ul li, body.stpaul-oneCommunity #content .content-body .section .main-body.group-finder .container ul li, body.stpaul-oneCommunity #content .content-body .section .main-body.parish-council .container .row ul li, body.stpaul-oneCommunity #content .content-body .section .main-body.regional .container .regional-list ul li, body.stpaul-ourParish #content .content-body .section .main-body.priests .container .row ul li, body.stpaul-ourParish #content .content-body .section .main-body.history-list .container ul li, body #content .content-body .side-body .boxed ul li, body #content .content-body .section .wrapper .posting ul li {
   list-style: none;
 }
 
@@ -1750,6 +1750,202 @@ body.nav-open #header a#nav-toggle div:last-child, body.stpaul-stPaulHome.nav-op
   transition: padding .5s ease-in-out, border .15s ease-in-out .5s;
 }
 
+body.stpaul-stPaulHome #modal-layer #container ul li a {
+  background: #202020;
+}
+
+body.stpaul-stPaulHome #modal-layer #container ul li a:active {
+  background: #68adcb;
+}
+
+body.stpaul-stPaulHome #modal-layer #container ul li a:active img {
+  opacity: .25;
+}
+
+.noTouch body.stpaul-stPaulHome #modal-layer #container ul li a:hover {
+  background: #202020;
+}
+
+.noTouch body.stpaul-stPaulHome #modal-layer #container ul li a:hover img {
+  opacity: .25;
+}
+
+.noTouch body.stpaul-stPaulHome #modal-layer #container ul li a:active {
+  background: #68adcb;
+}
+
+.noTouch body.stpaul-stPaulHome #modal-layer #container ul li a:active img {
+  opacity: .25;
+}
+
+body.stpaul-stPaulOffice #modal-layer #container ul li a {
+  background: #202020;
+}
+
+body.stpaul-stPaulOffice #modal-layer #container ul li a:active {
+  background: #78cac0;
+}
+
+body.stpaul-stPaulOffice #modal-layer #container ul li a:active img {
+  opacity: .25;
+}
+
+.noTouch body.stpaul-stPaulOffice #modal-layer #container ul li a:hover {
+  background: #202020;
+}
+
+.noTouch body.stpaul-stPaulOffice #modal-layer #container ul li a:hover img {
+  opacity: .25;
+}
+
+.noTouch body.stpaul-stPaulOffice #modal-layer #container ul li a:active {
+  background: #78cac0;
+}
+
+.noTouch body.stpaul-stPaulOffice #modal-layer #container ul li a:active img {
+  opacity: .25;
+}
+
+body.stpaul-spiritualLife #modal-layer #container ul li a {
+  background: #202020;
+}
+
+body.stpaul-spiritualLife #modal-layer #container ul li a:active {
+  background: #97b76e;
+}
+
+body.stpaul-spiritualLife #modal-layer #container ul li a:active img {
+  opacity: .25;
+}
+
+.noTouch body.stpaul-spiritualLife #modal-layer #container ul li a:hover {
+  background: #202020;
+}
+
+.noTouch body.stpaul-spiritualLife #modal-layer #container ul li a:hover img {
+  opacity: .25;
+}
+
+.noTouch body.stpaul-spiritualLife #modal-layer #container ul li a:active {
+  background: #97b76e;
+}
+
+.noTouch body.stpaul-spiritualLife #modal-layer #container ul li a:active img {
+  opacity: .25;
+}
+
+body.stpaul-oneCommunity #modal-layer #container ul li a {
+  background: #202020;
+}
+
+body.stpaul-oneCommunity #modal-layer #container ul li a:active {
+  background: #c0b563;
+}
+
+body.stpaul-oneCommunity #modal-layer #container ul li a:active img {
+  opacity: .25;
+}
+
+.noTouch body.stpaul-oneCommunity #modal-layer #container ul li a:hover {
+  background: #202020;
+}
+
+.noTouch body.stpaul-oneCommunity #modal-layer #container ul li a:hover img {
+  opacity: .25;
+}
+
+.noTouch body.stpaul-oneCommunity #modal-layer #container ul li a:active {
+  background: #c0b563;
+}
+
+.noTouch body.stpaul-oneCommunity #modal-layer #container ul li a:active img {
+  opacity: .25;
+}
+
+body.stpaul-ourParish #modal-layer #container ul li a {
+  background: #202020;
+}
+
+body.stpaul-ourParish #modal-layer #container ul li a:active {
+  background: #8776b6;
+}
+
+body.stpaul-ourParish #modal-layer #container ul li a:active img {
+  opacity: .25;
+}
+
+.noTouch body.stpaul-ourParish #modal-layer #container ul li a:hover {
+  background: #202020;
+}
+
+.noTouch body.stpaul-ourParish #modal-layer #container ul li a:hover img {
+  opacity: .25;
+}
+
+.noTouch body.stpaul-ourParish #modal-layer #container ul li a:active {
+  background: #8776b6;
+}
+
+.noTouch body.stpaul-ourParish #modal-layer #container ul li a:active img {
+  opacity: .25;
+}
+
+body.stpaul-educationCenter #modal-layer #container ul li a {
+  background: #202020;
+}
+
+body.stpaul-educationCenter #modal-layer #container ul li a:active {
+  background: #5a748c;
+}
+
+body.stpaul-educationCenter #modal-layer #container ul li a:active img {
+  opacity: .25;
+}
+
+.noTouch body.stpaul-educationCenter #modal-layer #container ul li a:hover {
+  background: #202020;
+}
+
+.noTouch body.stpaul-educationCenter #modal-layer #container ul li a:hover img {
+  opacity: .25;
+}
+
+.noTouch body.stpaul-educationCenter #modal-layer #container ul li a:active {
+  background: #5a748c;
+}
+
+.noTouch body.stpaul-educationCenter #modal-layer #container ul li a:active img {
+  opacity: .25;
+}
+
+body.stpaul-mediaLibrary #modal-layer #container ul li a {
+  background: #202020;
+}
+
+body.stpaul-mediaLibrary #modal-layer #container ul li a:active {
+  background: #d08fae;
+}
+
+body.stpaul-mediaLibrary #modal-layer #container ul li a:active img {
+  opacity: .25;
+}
+
+.noTouch body.stpaul-mediaLibrary #modal-layer #container ul li a:hover {
+  background: #202020;
+}
+
+.noTouch body.stpaul-mediaLibrary #modal-layer #container ul li a:hover img {
+  opacity: .25;
+}
+
+.noTouch body.stpaul-mediaLibrary #modal-layer #container ul li a:active {
+  background: #d08fae;
+}
+
+.noTouch body.stpaul-mediaLibrary #modal-layer #container ul li a:active img {
+  opacity: .25;
+}
+
 #footer {
   width: 100%;
   background: #202020;
@@ -2060,22 +2256,113 @@ body.nav-open #header a#nav-toggle div:last-child, body.stpaul-stPaulHome.nav-op
   top: 0;
   left: 0;
   z-index: 500000;
+  background: rgba(32, 32, 32, 0.98);
+  overflow: auto;
 }
 
-#modal-layer .bg-fade {
-  position: inherit;
+#modal-layer #container {
+  position: relative;
   width: 100%;
   height: 100%;
-  background: #202020;
-  opacity: .98;
-}
-
-#modal-layer .container {
-  position: relative;
-  display: inline-block;
-  width: 100%;
+  margin: 0;
   color: #fff;
   text-align: center;
+}
+
+#modal-layer #container a.grid-btn, #modal-layer #container a.slide-btn {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+}
+
+#modal-layer #container a.grid-btn {
+  left: 30px;
+  top: 30px;
+}
+
+#modal-layer #container a.slide-btn {
+  top: 50%;
+  margin-top: -8px;
+}
+
+#modal-layer #container a.slide-btn.left {
+  left: 30px;
+}
+
+#modal-layer #container a.slide-btn.right {
+  right: 30px;
+}
+
+#modal-layer #container.gallery-module a.grid-btn, #modal-layer #container.gallery-module a.slide-btn {
+  display: block;
+}
+
+#modal-layer #container .title {
+  position: absolute;
+  display: block;
+  width: 100%;
+  top: 70px;
+  color: #fff;
+  font-size: 1.15em;
+  z-index: 500;
+}
+
+#modal-layer #container .title span {
+  border-left: 1px solid #c6c6c6;
+  padding-left: 15px;
+  margin-left: 15px;
+}
+
+@media (min-width: 640px) {
+  #modal-layer #container .title {
+    top: 45px;
+  }
+}
+
+#modal-layer #container ul {
+  display: none;
+  margin: 20px 0;
+  margin-top: 20px;
+  text-align: center;
+}
+
+#modal-layer #container ul li {
+  display: inline-block;
+  width: 102px;
+  margin: 2px;
+}
+
+#modal-layer #container ul a {
+  display: block;
+}
+
+#modal-layer #container ul a img {
+  -moz-transition: opacity 0.25s ease-in-out 0s;
+  transition: opacity 0.25s ease-in-out 0s;
+}
+
+@media (min-width: 420px) {
+  #modal-layer #container ul li {
+    width: 130px;
+    margin: 2px;
+  }
+}
+
+@media (min-width: 640px) {
+  #modal-layer #container ul {
+    margin: 20px 80px;
+    margin-top: 45px;
+  }
+  #modal-layer #container ul li {
+    width: 220px;
+    margin: 4px;
+  }
+}
+
+#modal-layer #container .photo-container {
+  position: relative;
+  display: block;
+  width: 100%;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
@@ -2083,18 +2370,31 @@ body.nav-open #header a#nav-toggle div:last-child, body.stpaul-stPaulHome.nav-op
   transform: translateY(-50%);
 }
 
-#modal-layer .container.full-content {
-  height: 100%;
-  top: 0;
-  vertical-align: top;
+#modal-layer #container.grid-view .title {
+  position: relative;
+  top: auto;
+  padding-top: 70px;
 }
 
-#modal-layer .container.full-content div {
-  width: 100%;
-  height: 100%;
+@media (min-width: 640px) {
+  #modal-layer #container.grid-view .title {
+    padding-top: 45px;
+  }
 }
 
-#modal-layer .container img {
+#modal-layer #container.grid-view ul {
+  display: block;
+}
+
+#modal-layer #container.grid-view .photo-container {
+  display: none;
+}
+
+#modal-layer #container.grid-view a.grid-btn, #modal-layer #container.grid-view a.slide-btn {
+  display: none;
+}
+
+#modal-layer #container img {
   width: 100%;
   max-width: 720px;
   margin: 0 auto;
@@ -2102,9 +2402,10 @@ body.nav-open #header a#nav-toggle div:last-child, body.stpaul-stPaulHome.nav-op
 
 #modal-layer a.close-btn {
   position: inherit;
-  top: 0;
-  right: 0;
+  top: 10px;
+  right: 10px;
   font: 0/0 a;
+  z-index: 5000;
 }
 
 #modal-layer a.close-btn:active {
@@ -2114,7 +2415,7 @@ body.nav-open #header a#nav-toggle div:last-child, body.stpaul-stPaulHome.nav-op
 @media (min-width: 640px) {
   #modal-layer a.close-btn {
     top: 30px;
-    right: 30px;
+    right: 45px;
   }
 }
 
@@ -3366,11 +3667,11 @@ body.stpaul-stPaulHome #content .hero .day-info .date {
   display: block;
   font-size: 1rem;
   letter-spacing: .5pt;
-  padding-bottom: 18px;
+  padding-bottom: 16px;
 }
 
 body.stpaul-stPaulHome #content .hero .day-info .name {
-  padding: 12px 6px 0;
+  padding: 10px 6px 0;
   border-top: 1px solid #fff;
   font-size: 1rem;
   font-weight: 700;
@@ -3528,7 +3829,8 @@ body.stpaul-stPaulHome #content .hero .wrapper .home-start-btn.black:active .ico
   body.stpaul-stPaulHome #content .hero .day-info {
     position: absolute;
     width: 100%;
-    top: 16%;
+    bottom: 50%;
+    margin-bottom: 100px;
     padding: 0;
   }
   body.stpaul-stPaulHome #content .hero .wrapper {
@@ -3596,6 +3898,9 @@ body.stpaul-stPaulHome #content .hero .wrapper .home-start-btn.black:active .ico
 }
 
 @media (min-width: 920px) {
+  body.stpaul-stPaulHome #content .hero .day-info {
+    margin-bottom: 50px;
+  }
   body.stpaul-stPaulHome #content .hero .wrapper .hero-start-btns {
     width: auto;
   }
@@ -6362,13 +6667,6 @@ body.stpaul-oneCommunity .r_map_full_modal {
   z-index: 400000;
 }
 
-body.stpaul-oneCommunity .r_map_full_modal .bg-fade {
-  position: inherit;
-  width: 100%;
-  height: 100%;
-  background: #202020;
-}
-
 body.stpaul-oneCommunity .r_map_full_modal #r_map_full {
   position: relative;
   display: block;
@@ -8465,7 +8763,7 @@ body #content .content-body .section .wrapper .posting .txt .date {
 }
 
 body #content .content-body .section .wrapper .posting .txt p {
-  color: #202020;
+  color: #4d4d4d;
   margin-top: 5px;
   margin-bottom: 0;
   font-weight: 400;
@@ -8741,6 +9039,16 @@ body #content .content-body .section .wrapper .posting.gallery ul li {
   }
 }
 
+body #content .content-body .section .wrapper .posting.gallery a.photo-btn {
+  clear: both;
+  width: 97.77778%;
+  float: left;
+  margin-left: 1.11111%;
+  margin-right: 1.11111%;
+  width: 100%;
+  margin: 0;
+}
+
 body #content .content-body .section .wrapper .posting.gallery .thumbnail {
   display: block;
   width: 100%;
@@ -8798,6 +9106,7 @@ body #content .content-body .section .wrapper .posting.gallery .txt .title {
 }
 
 body #content .content-body .section .wrapper .posting.gallery .txt .date {
+  color: #c6c6c6;
   float: left;
 }
 
@@ -8807,11 +9116,7 @@ body #content .content-body .section .wrapper .posting.gallery .txt p {
   margin-left: 10px;
   font-size: .8em;
   font-weight: 700;
-  color: #dfdfdf;
-}
-
-body #content .content-body .section .wrapper .posting.gallery .txt p span {
-  color: #afafaf;
+  color: #c6c6c6;
 }
 
 body #content .content-body .section .wrapper .posting.gallery .txt p span.divider {
