@@ -12,12 +12,15 @@ STPAULQUEENS.main.nav = (function($) {
 		$SUBNAV,
 		$SUBNAV_TOP_BTN,
 		$SUBNAV_BTN;
+
+	var pageType;
 		
 	var init = function() {
-	    cache_dom();
 	    OBJ_MAIN = STPAULQUEENS.main;
   		OBJ_SECT = STPAULQUEENS.main.landing;
 	    
+	    pageType = OBJ_MAIN.get_pageType();
+	    cache_dom();
 	    nav_handler.init();
 	    anchorLinkInit();
 	};
@@ -27,18 +30,32 @@ STPAULQUEENS.main.nav = (function($) {
 		$HEADER = $('#header');
 		$NAV_TOGGLE = $('#nav-toggle');
 		$NAV_BTN = $HEADER.find('.navigation a');
-		$STICKYNAV_TOP_BTN = $HEADER.find('.sub-nav .sprite-top-btn');
-		$SUBNAV = $('#content .sub-nav');
-		$SUBNAV_TOP_BTN = $SUBNAV.find('.sprite-top-btn');
-		$SUBNAV_BTN = $SUBNAV.find('.sub-nav-btn');
+
+		if (pageType == "main")
+		{
+			$STICKYNAV_TOP_BTN = $HEADER.find('.sub-nav .sprite-top-btn');
+			$SUBNAV = $('#content .sub-nav');
+			$SUBNAV_TOP_BTN = $SUBNAV.find('.sprite-top-btn');
+			$SUBNAV_BTN = $SUBNAV.find('.sub-nav-btn');
+		}
+		else
+		{
+			$SUBNAV_BTN = $HEADER.find('.sub-nav .sub-nav-btn');
+			$SUBNAV_BTN.addClass('on');
+		}
 	};
 
 	var nav_handler = {
 		init: function() {
 			$NAV_TOGGLE.on('click', this.nav_toggle_on.bind(this));
 			$NAV_BTN.on('click', this.nav_btn_on.bind(this));
-			$STICKYNAV_TOP_BTN.on('click', this.subnav_topbtn_on.bind(this));
-			$SUBNAV_TOP_BTN.on('click', this.subnav_topbtn_on.bind(this));
+			
+			if (pageType == "main")
+			{
+				if ($STICKYNAV_TOP_BTN) $STICKYNAV_TOP_BTN.on('click', this.subnav_topbtn_on.bind(this));
+				if ($SUBNAV_TOP_BTN) $SUBNAV_TOP_BTN.on('click', this.subnav_topbtn_on.bind(this));
+			}
+
 			$SUBNAV_BTN.on('mouseover', this.subnav_btn_hover.bind(this));
 			$SUBNAV_BTN.on('mouseout', this.subnav_btn_hout.bind(this));
 		},
@@ -72,6 +89,7 @@ STPAULQUEENS.main.nav = (function($) {
 		    
 			OBJ_MAIN.anchorAnim(0, " ");
 		},
+
 		subnav_btn_hover: function(e) {
 		    e.preventDefault();
 		    e.stopPropagation();
@@ -86,7 +104,7 @@ STPAULQUEENS.main.nav = (function($) {
 		    e.preventDefault();
 		    e.stopPropagation();
 
-		    if (OBJ_MAIN.getSectID() <= 0) $SUBNAV_BTN.addClass('on');
+		    if (OBJ_MAIN.getSectID() <= 0 || pageType == "sub") $SUBNAV_BTN.addClass('on');
 		}
 	};
 

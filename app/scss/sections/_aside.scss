@@ -146,6 +146,17 @@ body #content .content-body {
 				}
 			}
 
+			.thumbnail {
+				width: 100%;
+				border: 1px solid $col-grey;
+				font-size: 0;
+				line-height: 0;
+
+				img {
+					width: 100%;
+				}
+			}
+
 			ul {
 				@extend %no-style-ul;
 				font-size: 1em;
@@ -155,8 +166,25 @@ body #content .content-body {
 					@include span(full inside no-gutters);
 					border-top: 1px solid $col-grey-l;
 
+					.content-image {
+						margin: 35px auto 15px;
+						max-width: 200px;
+
+						@include breakpoint($tablet-wide-width) {
+							margin: 15px 15px 0 0;
+						}
+					}
+
 					&:first-child {
 						border: none;
+
+						.content-image {
+							margin: 15px auto;
+
+							@include breakpoint($tablet-wide-width) {
+								margin: 0 15px 0 0;
+							}
+						}
 					}
 
 					&.text {
@@ -224,6 +252,7 @@ body #content .content-body {
 			}
 
 			&.calendar {
+				position: relative;
 				background: $col-grey;
 				border: none;
 
@@ -297,6 +326,18 @@ body #content .content-body {
 							padding: 3px 5px;
 						}
 					}
+				}
+
+				.event-box {
+					position: absolute;
+					display: none;
+					padding: 10px;
+					color: $col-white;
+					background: $col-black;
+					white-space: nowrap;
+
+					left: 60px;
+					top: 100px;
 				}
 			}
 
@@ -431,6 +472,7 @@ body #content .content-body {
 
 		.content-image {
 			margin: 35px auto 15px;
+			max-width: 200px;
 
 			@include breakpoint($tablet-wide-width) {
 				margin: 5px 15px 0 0;

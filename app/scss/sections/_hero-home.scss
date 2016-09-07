@@ -20,6 +20,7 @@ body.stpaul-stPaulHome #content {
 		max-height: 1024px;
 
 		.day-info {
+			display: none;
 			position: relative;
 			width: 100%;
 			padding-top: 70px;
@@ -45,6 +46,7 @@ body.stpaul-stPaulHome #content {
 		}
 
 		.wrapper {
+			display: none;
 			text-align: center;
 
 			.hero-start-btns {
@@ -275,7 +277,8 @@ body.stpaul-stPaulHome #content {
 			}
 
 			min-height: 580px;
-			max-height: 1024px;
+			max-height: none;
+			// max-height: 1024px;
 		}
 
 		@include breakpoint($laptop-width) {

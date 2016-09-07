@@ -142,6 +142,7 @@ $spritePNG: url("../images/sprite.png");
 
 
 
+
 .sprite-top-btn {
 	@extend %sprite-div;
 	position: relative;
@@ -158,21 +159,6 @@ $spritePNG: url("../images/sprite.png");
 
 
 
-.sprite-down-btn {
-	@extend %sprite-div;
-	position: relative;
-	background-position: -200px -190px;
-	width: 30px;
-	height: 20px;
-}
-
-.black .sprite-down-btn {
-	@extend .sprite-down-btn;
-	background-position: -250px -190px;
-}
-
-
-
 
 .sprite-down-sm-btn {
 	@extend %sprite-div;
@@ -185,6 +171,38 @@ $spritePNG: url("../images/sprite.png");
 .black .sprite-down-sm-btn {
 	@extend .sprite-down-sm-btn;
 	background-position: -380px -190px;
+}
+
+
+
+
+
+.sprite-grid {
+	@extend %sprite-div;
+	position: relative;
+	background-position: -220px -190px;
+	width: 20px;
+	height: 20px;
+}
+
+
+
+
+
+.sprite-slide-arrow {
+	@extend %sprite-div;
+	position: relative;
+	// background-position: -380px -240px;
+	width: 40px;
+	height: 50px;
+
+	&.left {
+		background-position: -380px -240px;
+	}
+
+	&.right {
+		background-position: -423px -240px;
+	}
 }
 
 

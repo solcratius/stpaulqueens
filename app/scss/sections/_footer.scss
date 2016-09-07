@@ -281,38 +281,96 @@
 		a.grid-btn, a.slide-btn {
 			display: none;
 			position: fixed;
+			font: 0/0 a;
 			z-index: 1000;
 		}
 
 		a.grid-btn {
-			left: 30px;
-			top: 30px;
+			bottom: 45px;
+			left: 50%;
+			margin-left: -10px;
+
+			@include breakpoint($tablet-width) {
+				bottom: 45px;
+			}
+
+			&:active {
+				background-position: -310px -190px;
+			}
 		}
 
 		a.slide-btn {
-			top: 50%;
-			margin-top: -8px;
+			width: 50px;
+			height: 50px;
+			top: 100%;
+			margin-top: -80px;
+
+			@include breakpoint($tablet-width) {
+				top: 50%;
+				margin-top: -25px;
+			}
+
+			.sprite-slide-arrow {
+				@include trans(.25s, transform);
+			}
 
 			&.left {
-				left: 30px;
+				left: 0;
+
+				.sprite-slide-arrow {
+					transform: translateX(10px);
+				}
+
+				@include breakpoint($laptop-width) {
+					left: 30px;
+				}
 			}
 
 			&.right {
-				right: 30px;
+				right: 0;
+
+				.sprite-slide-arrow {
+					transform: translateX(-10px);
+				}
+
+				@include breakpoint($laptop-width) {
+					right: 30px;
+				}
+			}
+
+			&:active {
+				&.left .sprite-slide-arrow {
+					transform: translateX(0);
+					background-position: -540px -240px;
+				}
+
+				&.right .sprite-slide-arrow {
+					transform: translateX(0);
+					background-position: -583px -240px;
+				}
 			}
 		}
 
 		&.gallery-module {
-			a.grid-btn, a.slide-btn {
+			a.grid-btn {
 				display: block;
 			}
+
+			a.slide-btn {
+				display: block;
+			}
+			// @include breakpoint($tablet-width) {
+			// 	a.slide-btn {
+			// 		display: block;
+			// 	}
+			// }
 		}
 		
 		.title {
 			position: absolute;
 			display: block;
 			width: 100%;
-			top: 70px;
+			top: 80px;
 			color: $col-white;
 			font-size: 1.15em;
 			z-index: 500;
@@ -379,7 +437,7 @@
 			.title {
 				position: relative;
 				top: auto;
-				padding-top: 70px;
+				padding-top: 80px;
 
 				@include breakpoint($tablet-width) {
 					padding-top: 45px;
@@ -426,15 +484,43 @@
 	}
 }
 
-.noTouch body #modal-layer a.close-btn {
-	background-position: -570px -190px;
+.noTouch body #modal-layer {
+	a.grid-btn {
+		background-position: -250px -190px;
 
-	&:hover {
-		background-position: -520px -190px;
+		&:hover {
+			background-position: -220px -190px;
+		}
+
+		&:active {
+			background-position: -310px -240px;
+		}
 	}
 
-	&:active {
-		background-position: -620px -240px;
+	#container a.slide-btn {
+		&.left:hover {
+			.sprite-slide-arrow {
+				transform: translateX(0);
+			}
+		}
+
+		&.right:hover {
+			.sprite-slide-arrow {
+				transform: translateX(0);
+			}
+		}
+	}
+
+	a.close-btn {
+		background-position: -570px -190px;
+
+		&:hover {
+			background-position: -520px -190px;
+		}
+
+		&:active {
+			background-position: -620px -240px;
+		}
 	}
 }
 

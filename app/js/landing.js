@@ -27,9 +27,11 @@ STPAULQUEENS.main.landing = (function($) {
 	    if (id == 1) spiritualLife_handler.init();
 	    if (id == 2) oneCommunity_handler.init();
 	    if (id == 3) ourParish_handler.init();
-	    if (id == 4) educationCenter_handler.init();
-	    if (id == 5) mediaLibrary_handler.init();
+	    // if (id == 4) educationCenter_handler.init();
+	    // if (id == 5) mediaLibrary_handler.init();
 	    if (id >= 100) homePage_handler.init();
+
+	    photoBtn_handler.init();
 	};
 
 	var cacheDom = function() {
@@ -45,10 +47,14 @@ STPAULQUEENS.main.landing = (function($) {
 
 	var homePage_handler = {
 		$HOME_START_BTN: null,
+		$PHOTO_BTN: null,
 
 		init: function() {
 			this.$HOME_START_BTN = $HERO.find('a.home-start-btn');
+			this.$PHOTO_BTN = $CONTENT_SECT.find('a.photo-btn');
+			
 			this.$HOME_START_BTN.on('click', this.home_start_on.bind(this));
+			this.$PHOTO_BTN.on('click', this.photo_btn_on.bind(this));
 		},
 
 		home_start_on: function(e) {
@@ -56,6 +62,24 @@ STPAULQUEENS.main.landing = (function($) {
 		    e.preventDefault();
 
 		    OBJ_MAIN.anchorAnim(1);
+		},
+
+		photo_btn_on: function(e) {
+			e.stopPropagation();
+		    e.preventDefault();
+
+		    var $THIS = $(e.currentTarget),
+		    	postParam,
+		    	_gallery = false;
+
+		    postParam = OBJ_MAIN.getUrl_Param($THIS.attr('href'));
+
+		    if (postParam['post-type'] == "gallery" && postParam['amount'] > 1) _gallery = true;
+		    modal_layer.show(postParam, homePage_handler.photo_callback, _gallery);
+		},
+
+		photo_callback: function() {
+			console.log("cb - home");
 		}
 	};
 
@@ -344,7 +368,7 @@ STPAULQUEENS.main.landing = (function($) {
 		$H_ITEM: null,
 		$H_TL: null,
 		$H_BTN: null,
-		$PHOTO_BTN: null,
+		// $PHOTO_BTN: null,
 
 		h_height: 0,
 		h_total: 0,
@@ -362,7 +386,7 @@ STPAULQUEENS.main.landing = (function($) {
 			this.$H_TL = this.$H_LIST.find('.timeline');
 			this.$H_BTN = this.$H_LIST.find('.show-more');
 
-			this.$PHOTO_BTN = $CONTENT_SECT.find('a.photo-btn');
+			// this.$PHOTO_BTN = $CONTENT_SECT.find('a.photo-btn');
 			
 			this.p_grid_update('current');
 			this.$P_NAV_L.on('click', this.p_nav_on.bind(this));
@@ -375,7 +399,7 @@ STPAULQUEENS.main.landing = (function($) {
 			this.h_list_update(5);
 			this.$H_BTN.on('click', this.h_btn_on.bind(this));
 
-			this.$PHOTO_BTN.on('click', this.photo_btn_on.bind(this));
+			// this.$PHOTO_BTN.on('click', this.photo_btn_on.bind(this));
 		},
 
 		p_nav_on: function(e) {
@@ -424,7 +448,7 @@ STPAULQUEENS.main.landing = (function($) {
 		p_item_show: function(id, delay) {
 			setTimeout(function() {
 				ourParish_handler.$P_GRID_ITEM.eq(id).addClass('show');
-			}, 100 * delay);
+			}, 50 * delay);
 		},
 
 		h_btn_on: function(e) {
@@ -471,46 +495,81 @@ STPAULQUEENS.main.landing = (function($) {
 			}, (150 * delay) + 150);
 		},
 
-		photo_btn_on: function(e) {
-			e.stopPropagation();
-		    e.preventDefault();
+		// photo_btn_on: function(e) {
+		// 	e.stopPropagation();
+		//     e.preventDefault();
 
-		    var $THIS = $(e.currentTarget),
-		    	postParam = OBJ_MAIN.getUrl_Param($THIS.attr('href'));
+		//     var $THIS = $(e.currentTarget),
+		//     	postParam,
+		//     	_gallery = false;
 
-		    modal_layer.show($THIS.find('.thumbnail').html(), ourParish_handler.photo_callback);
-		},
+		//     postParam = OBJ_MAIN.getUrl_Param($THIS.attr('href'));
 
-		photo_callback: function() {
-			console.log("cb - ourParish");
-		}
+		//     if (postParam['post-type'] == "gallery" && postParam['amount'] > 1) _gallery = true;
+		//     modal_layer.show(postParam, ourParish_handler.photo_callback, _gallery);
+		// },
+
+		// photo_callback: function() {
+		// 	console.log("cb - ourParish");
+		// }
 	};
 
-	var educationCenter_handler = {
-		$PHOTO_BTN: null,
+	// var educationCenter_handler = {
+	// 	$PHOTO_BTN: null,
 
-		init: function() {
-			this.$PHOTO_BTN = $CONTENT_SECT.find('a.photo-btn');
+	// 	init: function() {
+	// 		this.$PHOTO_BTN = $CONTENT_SECT.find('a.photo-btn');
 
-			this.$PHOTO_BTN.on('click', this.photo_btn_on.bind(this));
-		},
+	// 		this.$PHOTO_BTN.on('click', this.photo_btn_on.bind(this));
+	// 	},
 
-		photo_btn_on: function(e) {
-			e.stopPropagation();
-		    e.preventDefault();
+	// 	photo_btn_on: function(e) {
+	// 		e.stopPropagation();
+	// 	    e.preventDefault();
 
-		    var $THIS = $(e.currentTarget),
-		    	postParam = OBJ_MAIN.getUrl_Param($THIS.attr('href'));
+	// 	    var $THIS = $(e.currentTarget),
+	// 	    	postParam,
+	// 	    	_gallery = false;
 
-		    modal_layer.show($THIS.find('.thumbnail').html(), educationCenter_handler.photo_callback);
-		},
+	// 	    postParam = OBJ_MAIN.getUrl_Param($THIS.attr('href'));
 
-		photo_callback: function() {
-			console.log("cb - educationCenter");
-		}
-	};
+	// 	    if (postParam['post-type'] == "gallery" && postParam['amount'] > 1) _gallery = true;
+	// 	    modal_layer.show(postParam, educationCenter_handler.photo_callback, _gallery);
+	// 	},
 
-	var mediaLibrary_handler = {
+	// 	photo_callback: function() {
+	// 		console.log("cb - educationCenter");
+	// 	}
+	// };
+
+	// var mediaLibrary_handler = {
+	// 	$PHOTO_BTN: null,
+
+	// 	init: function() {
+	// 		this.$PHOTO_BTN = $CONTENT_SECT.find('a.photo-btn');
+	// 		this.$PHOTO_BTN.on('click', this.photo_btn_on.bind(this));
+	// 	},
+
+	// 	photo_btn_on: function(e) {
+	// 		e.stopPropagation();
+	// 	    e.preventDefault();
+
+	// 	    var $THIS = $(e.currentTarget),
+	// 	    	postParam,
+	// 	    	_gallery = false;
+
+	// 	    postParam = OBJ_MAIN.getUrl_Param($THIS.attr('href'));
+
+	// 	    if (postParam['post-type'] == "gallery" && postParam['amount'] > 1) _gallery = true;
+	// 	    modal_layer.show(postParam, mediaLibrary_handler.photo_callback, _gallery);
+	// 	},
+
+	// 	photo_callback: function() {
+	// 		console.log("cb - mediaLibrary");
+	// 	}
+	// };
+	
+	var photoBtn_handler = {
 		$PHOTO_BTN: null,
 
 		init: function() {
@@ -529,11 +588,11 @@ STPAULQUEENS.main.landing = (function($) {
 		    postParam = OBJ_MAIN.getUrl_Param($THIS.attr('href'));
 
 		    if (postParam['post-type'] == "gallery" && postParam['amount'] > 1) _gallery = true;
-		    modal_layer.show(postParam, mediaLibrary_handler.photo_callback, _gallery);
+		    modal_layer.show(postParam, photoBtn_handler.photo_callback, _gallery);
 		},
 
 		photo_callback: function() {
-			console.log("cb - mediaLibrary");
+			console.log("cb - photoBtn");
 		}
 	};
 
@@ -549,6 +608,7 @@ STPAULQUEENS.main.landing = (function($) {
 		$MODAL_TITLE: null,
 
 		cbHolder: null,
+		curP: null,
 		totalP: null,
 
 		init: function (_gallery) {
@@ -564,7 +624,7 @@ STPAULQUEENS.main.landing = (function($) {
 				this.$MODAL_UL = this.$MODAL_CONTAINER.find('ul');
 
 				this.$MODAL_GRID_BTN.on('click', this.grid_view_on.bind(this));
-				this.$MODAL_SLIDE_BTN.on('click', this.hide.bind(this));
+				this.$MODAL_SLIDE_BTN.on('click', this.slide_btn_on.bind(this));
 			}
 
 			this.$MODAL_CLOSE_BTN.on('click', this.hide.bind(this));
@@ -596,15 +656,19 @@ STPAULQUEENS.main.landing = (function($) {
 		    modal_layer.$MODAL_TITLE.html('');
 
 			modal_layer.$MODAL.fadeOut(250, 'easeInOutCubic', function() {
-				// modal_layer.$MODAL_CLOSE_BTN.off();
+				if (modal_layer.$MODAL_CLOSE_BTN) modal_layer.$MODAL_CLOSE_BTN.off();
+				if (modal_layer.$MODAL_GRID_BTN) modal_layer.$MODAL_GRID_BTN.off();
+				if (modal_layer.$MODAL_SLIDE_BTN) modal_layer.$MODAL_SLIDE_BTN.off();
 				modal_layer.$MODAL = null;
 				modal_layer.$MODAL_CLOSE_BTN = null;
-				modal_layer.$MODAL_GRID_BTN = null,
-				modal_layer.$MODAL_SLIDE_BTN = null,
-				modal_layer.$MODAL_CONTAINER = null,
-				modal_layer.$MODAL_TITLE = null,
-				modal_layer.cbHolder = null,
-				modal_layer.totalP = null
+				modal_layer.$MODAL_GRID_BTN = null;
+				modal_layer.$MODAL_SLIDE_BTN = null;
+				modal_layer.$MODAL_CONTAINER = null;
+				modal_layer.$MODAL_TITLE = null;
+				modal_layer.cbHolder = null;
+				modal_layer.totalP = null;
+
+				modal_layer.$MODAL_P_ITEM_BTN = null;
 			});
 		},
 
@@ -619,7 +683,7 @@ STPAULQUEENS.main.landing = (function($) {
 
 			for (var i = 0; i < this.totalP; i ++)
 			{
-				temp_Content += '<li><a class="p_item_btn" href="images/pics/pic30.jpg"><div class="thumbnail"><img src="images/pics/pic30.jpg" /></div></a></li>';
+				temp_Content += '<li><a class="p_item_btn" href="images/pics/pic' + (i+1) + '.jpg"><div class="thumbnail"><img src="images/pics/pic' + (i+1) + '.jpg" /></div></a></li>';
 			}
 
 			this.$MODAL_UL.html(temp_Content);
@@ -638,15 +702,44 @@ STPAULQUEENS.main.landing = (function($) {
 		    e.preventDefault();
 
 		    var $THIS = $(e.currentTarget);
-		    console.log($THIS.parent().index());
+		    this.curP = $THIS.parent().index();
+		    console.log(this.curP);
 
 		    this.$MODAL_CONTAINER.removeClass('grid-view');
-		    this.$MODAL_PHOTO.html('<div class="thumbnail"><img src="images/pics/pic30.jpg" /></div>');
+		    this.$MODAL_PHOTO.html('<div class="thumbnail"><img src="' + $THIS.attr('href') + '" /></div>');
 		},
 
 		grid_view_on: function(e) {
+			e.stopPropagation();
+		    e.preventDefault();
+
 			this.$MODAL_CONTAINER.addClass('grid-view');
 		    this.$MODAL_PHOTO.html('');
+		},
+
+		slide_btn_on: function(e) {
+			e.stopPropagation();
+		    e.preventDefault();
+
+		    var $THIS = $(e.currentTarget);
+
+		    if ($THIS.hasClass('left'))
+		    {
+		    	if (this.curP > 0) this.curP -= 1;
+		    	else this.curP = this.totalP - 1;
+
+		    	console.log("LEFT " + this.curP);
+		    }
+		    else
+		    {
+		    	if (this.curP < (this.totalP - 1)) this.curP += 1;
+		    	else this.curP = 0;
+
+		    	console.log("RIGHT " + this.curP);
+		    }
+
+		    var imgSrc = this.$MODAL_UL.find('li').eq(this.curP).find('a.p_item_btn').attr('href');
+	    	this.$MODAL_PHOTO.html('<div class="thumbnail"><img src="' + imgSrc + '" /></div>');
 		}
 	};
 

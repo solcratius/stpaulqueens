@@ -371,7 +371,8 @@ body #content .content-body .section {
 					.title {
 						font-size: 1em;
 						line-height: 1.4em;
-						margin-bottom: 10px;
+						// margin-bottom: 10px;
+						margin-bottom: 5px;
 						@include trans(.25s, color);
 					}
 
@@ -387,7 +388,7 @@ body #content .content-body .section {
 						font-size: .8em;
 						font-weight: 700;
 						color: $col-grey-d;
-						
+
 						span.divider {
 							font-size: .8em;
 							margin-right: 10px;

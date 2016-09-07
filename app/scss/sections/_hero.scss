@@ -1,5 +1,5 @@
 // ***********************************
-// HERO & SUBNAV
+// HERO, SUBNAV & GROUP-HERO 
 // ***********************************
 
 @each $theme, $color in $themes {
@@ -477,6 +477,97 @@ body #content {
 			}
 		}
 	}
+
+	.group-hero {
+		display: block;
+		position: relative;
+		background: $col-black;
+		margin: 0;
+		padding: 0;
+		padding-top: 55px;
+		color: $col-white;
+	    
+	    @include breakpoint($tablet-width) {
+	    	padding-top: 108px;
+		}
+
+		.group-img {
+			display: block;
+			position: relative;
+			background: $col-grey-d;//$col-grey-l;
+			width: 100%;
+			height: 100%;
+			line-height: 0;
+			text-align: center;
+			overflow: hidden;
+			height: 260px;
+
+			@include breakpoint($tablet-width) {
+				height: 380px;
+			}
+
+			img {
+				height: 100%;
+				// margin: 0 auto;
+				margin: 0 -50%;
+			}
+		}
+
+		.title {
+			border-top: 1px solid $col-black;
+			border-bottom: 1px solid $col-grey-d3;
+			text-align: center;
+			padding: 10px 0 20px;
+
+			@include breakpoint($tablet-width) {
+				padding: 15px 0 25px;
+			}
+
+			h3 {
+				margin: 15px 0;
+
+				a {
+					font-weight: 400;
+					color: $col-white;
+
+					&:active {
+						color: $col-black;
+					}
+				}
+			}
+
+			span {
+				font-size: .86em;
+				letter-spacing: .5pt;
+			}
+
+			.schedule {
+				display: inline-block;
+				border-top: 1px solid $col-white;
+				padding-top: 20px;
+			}
+
+			.contact {
+				display: block;
+				margin-top: 5px;
+
+				a {
+					color: $col-white;
+
+					&:active {
+						color: $col-black;
+					}
+				}
+
+				span.divider {
+					font-size: .7rem;
+					border-right: 1px solid $col-white;
+					margin-right: 10px;
+					padding-left: 7px;
+				}
+			}
+		}	
+	}
 }
 
 .noTouch {
@@ -502,6 +593,34 @@ body #content {
 					opacity: 1;
 					&:active {
 						opacity: .5;
+					}
+				}
+			}
+		}
+
+		.group-hero {
+			.title {
+				h3 {
+					a {
+						&:hover {
+							color: $col-black;
+						}
+
+						&:active {
+							opacity: .5;
+						}
+					}
+				}
+
+				.contact {
+					a {
+						&:hover {
+							color: $col-black;
+						}
+
+						&:active {
+							opacity: .5;
+						}
 					}
 				}
 			}

@@ -690,3 +690,86 @@ body #content .content-body .main-body {
 	}
 }
 
+
+body.sub-page #content .content-body {
+	.section {
+		padding-top: 120px;
+
+		@include breakpoint($tablet-width) {
+			padding-top: 170px;
+		}
+
+		@include breakpoint($tablet-wide-width) {
+			padding-top: 190px;
+		}
+
+		.main-body {
+			&.posting {
+				ul {
+					li:first-child {
+						border-top: none !important;
+						padding-top: 0 !important;
+					}
+
+					&.post-list {
+						margin-top: 50px;
+
+						@include breakpoint($tablet-wide-width) {
+							margin-top: 80px;
+						}
+
+						li:first-child {
+							border-top: 1px solid $col-grey !important;
+							padding-top: 10px !important;
+
+							@include breakpoint($tablet-width) {
+								padding-top: 20px !important;
+							}
+
+							@include breakpoint($tablet-wide-width) {
+								padding-top: 30px !important;
+							}
+						}
+					}
+				}
+			}
+
+			h4 {
+				padding: 10px 0;
+				line-height: 1.4em;
+			}
+
+			.author {
+				margin-right: 10px;
+			}
+
+			.date {
+				color: $col-grey-d;
+			}
+
+			.content {
+				margin-top: 40px;
+			}
+		}
+	}
+}
+
+
+body.group-page #content .content-body {
+	.section {
+		padding-top: 60px;
+
+		@include breakpoint($tablet-width) {
+			padding-top: 70px;
+		}
+
+		@include breakpoint($tablet-wide-width) {
+			&:first-child {
+				// padding-top: 90px;
+				padding-top: 70px;
+			}
+
+			padding-top: 80px;
+		}
+	}
+}

@@ -7,6 +7,7 @@ STPAULQUEENS.main = (function($) {
 	var $WIN,
 		$ROOT,
 		$HTML,
+		$BODY,
 		$BODY_P_NAME,
 		$HEADER,
 		$NAV_SECT,
@@ -17,6 +18,8 @@ STPAULQUEENS.main = (function($) {
 		$SUBNAV_UL,
 		$SUBNAV_BTN,
 		$CONTENT_SECT;
+
+	var pageType = "main";
 		
 	var init = function() {
 	    cache_dom();
@@ -31,11 +34,17 @@ STPAULQUEENS.main = (function($) {
 
 		user_agent.init();
 		w_resize.init();
-		w_scroll.init();
+		if ($BODY.hasClass('sub-page')) pageType = "sub";
 
 		p_main.init();
-		p_sect.init();
-		p_sect.setPosId();
+
+		if (pageType == "main")
+		{
+			w_scroll.init();
+			
+			p_sect.init();
+			p_sect.setPosId();
+		}
 
 		if (subHash)
 		{
@@ -56,6 +65,7 @@ STPAULQUEENS.main = (function($) {
 		$WIN = $(window);
 		$ROOT = $('html, body');
 		$HTML = $('html');
+		$BODY = $('body');
 		$BODY_P_NAME = $('body[class^="stpaul-"]');
 		$HEADER = $('#header');
 		$NAV_SECT = $HEADER.find('ul.navigation li.section');
@@ -181,6 +191,7 @@ STPAULQUEENS.main = (function($) {
 			$NAV_SECT.each(function(i) {
 				var navClass = $(this).find('*[class^="stpaul-"]').attr('class');
 				if (navClass == curPageClass) p_main.id = i;
+				else if ($BODY.hasClass('sub-page')) p_main.id = 99;
 			});
 
 			OBJ_SECT.handler(p_main.id);
@@ -190,6 +201,8 @@ STPAULQUEENS.main = (function($) {
 			if (p_main.id >= 100 && !w_resize.m_view)
 			{
 				if (!w_resize.m_view) $HERO.css('height', w_resize.height+'px');
+				$HERO.find('.day-info').fadeIn(250);
+				$HERO.find('.wrapper').fadeIn(250);
 			}
 			else
 			{
@@ -262,10 +275,6 @@ STPAULQUEENS.main = (function($) {
 	};
 
 	var url_obj = {
-		// vars: [],
-		// hash: [],
-		// hashs: [],
-
 		getUrlParam: function(u) {
 			var vars = [],
 				hash = [],
@@ -297,6 +306,7 @@ STPAULQUEENS.main = (function($) {
 
 	return {
 		init: init,
+		get_pageType: function() { return pageType; },
 		getSectID: function() { return p_sect.id; },
 		getM_view: function() { return w_resize.m_view; },
 		pSectUpdate: function() { p_sect.init() },

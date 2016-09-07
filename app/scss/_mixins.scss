@@ -158,6 +158,12 @@ $width:auto;
         }
       }
     }
+
+    .group-hero {
+      .title {
+        background: $primary;
+      }
+    }
   }
 
   .noTouch body.#{$theme} #content {
@@ -315,6 +321,16 @@ $width:auto;
               color: $col-black !important;
             }
           }
+        }
+      }
+    }
+  }
+
+  body.#{$theme}.sub-page #content {
+    .content-body {
+      .section {
+        .author {
+          color: $primary;
         }
       }
     }
