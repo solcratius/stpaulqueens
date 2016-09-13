@@ -3778,7 +3778,7 @@ body #content .group-hero {
 body #content .group-hero .group-img {
   display: block;
   position: relative;
-  background: #c6c6c6;
+  background: #ececec;
   width: 100%;
   height: 100%;
   line-height: 0;
@@ -3816,7 +3816,7 @@ body #content .group-hero .title h3 {
 }
 
 body #content .group-hero .title h3 a {
-  font-weight: 400;
+  font-weight: 700;
   color: #fff;
 }
 
